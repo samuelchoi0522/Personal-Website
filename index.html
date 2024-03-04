@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html>  
+<html>
 <head>
-    <title>
-        Homepage
-    </title>
+    <title>Homepage</title>
     <style>
         body {
             background-color: #0f1328f7;
@@ -11,99 +9,303 @@
             padding: 0;
             font-family: Arial, sans-serif;
             color: rgba(255, 255, 255, 0.877);
+            position: relative;
         }
 
         .name-text {
-            font-size: 4vw; /* Adjust font size relative to viewport width */
-            position: sticky;
-            top: 10%; /* Adjust distance from top as needed */
-            margin-left: 10%; /* Adjust distance from left as needed */
+            font-size: 4vw;
+            width: 400px;
+            position: fixed;
+            top: 5%;
+            margin-left: 10%;
             z-index: 100;
         }
 
         .school-text {
-            font-size: 1.7vw; /* Adjust font size relative to viewport width */
-            position: sticky;
-            top: 18%; /* Adjust distance from top as needed */
-            margin-left: 10%; /* Adjust distance from left as needed */
-            z-index: 100; /* Ensure school-text stays above other content */
+            font-size: 1.7vw;
+            position: fixed;
+            width: 700px;
+            top: 15%;
+            margin-left: 10%;
+            z-index: 100;
         }
 
         #navbar {
-            position: sticky;
-            top: 25%; /* Adjust distance from top as needed */
+            position: fixed;
+            top: 40%;
             left: 10%;
             height: 100%;
-            width: 150px; /* Adjust width as needed */
+            width: 100px;
             color: rgba(255, 255, 255, 0.877);
             padding: 0px;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
+            z-index: 100;
         }
 
         #navbar a {
             color: rgba(255, 255, 255, 0.305);
             text-decoration: none;
-            margin: 10px 0; /* Adjust spacing between items as needed */
+            margin: 10px 0;
             transition: all 0.3s ease;
-            position: relative;
+            position: sticky;
         }
 
         #navbar a.active {
-            color: rgba(255, 255, 255, 0.877); /* Change to desired active color */
+            position: relative;
+            color: rgba(255, 255, 255, 0.877);
             left: 50px;
-            width: 150px; /* Increase width when active */
+            width: 150px;
         }
 
         #navbar a::before {
             content: "";
-            position: absolute;
-            left: -50px; /* Adjust the position of the line */
-            top: 50%; /* Align the line vertically */
-            width: 35px; /* Width of the line */
-            background-color: rgb(255, 255, 255); /* Color of the line */
-            transition: height 0.3s ease; /* Smooth transition for height change */
+            position: fixed;
+            left: -50px;
+            top: 8px;
+            width: 35px;
+            background-color: rgb(255, 255, 255);
+            transition: height 0.3s ease;
             transform: translateY(-50%);
         }
 
         #navbar a.active::before {
             position: absolute;
-            height: 2px; /* Increase height when active */
+            height: 2px;
+        }
+
+        #navbar a:hover {
+            color: rgba(255, 255, 255, 0.877);
+            content: "";
         }
 
         #sections {
-            margin-left: 500px; /* Adjust margin to accommodate navbar width */
             margin-top: 0px;
+            margin-left: 850px;
         }
 
         section {
-            height: 100vh;
+            position: absolute;
             padding: 20px;
             color: rgba(255, 255, 255, 0.877);
         }
-        
+
+        #about-me{
+            position:absolute;
+            margin-top: 3%;
+        }
+
+        #projects{
+            position: absolute;
+            margin-top: 30%;
+        }
+
+        #experience{
+            position: absolute;
+            margin-top: 400%;
+        }
+
+        .sticky-image-git:hover,
+        .sticky-image-linkedin:hover,
+        .sticky-image-ig:hover {
+            filter: brightness(100%);
+        }
+
+        .sticky-image-git {
+            filter: brightness(65%);
+            transition:  0.3s ease;
+            position: fixed;
+            margin-left: 100px;
+            bottom: 90px;
+            z-index: 1000;
+        }
+
+        .sticky-image-linkedin {
+            filter: brightness(65%);
+            transition:  0.3s ease;
+            position: fixed;
+            left: 150px;
+            bottom: 88px;
+            z-index: 1000;
+        }
+
+        .sticky-image-ig {
+            filter: brightness(65%);
+            transition:  0.3s ease;
+            position: fixed;
+            left: 205px;
+            bottom: 89px;
+            z-index: 1000;
+        }
+
         ::selection {
-            background-color: #00bbff; /* Change to desired highlighting color */
-            color: rgba(255, 255, 255, 0.877); /* Change to desired text color */
+            background-color: #00bbff;
+            color: rgba(255, 255, 255, 0.877);
+        }
+
+        @media only screen and (max-width: 768px) {
+            .name-text {
+                position: absolute;
+                margin-top: -40%;
+                margin-left: 5%;
+                font-size: 7vw;
+            }
+
+            .school-text {
+                position: absolute;
+                margin-top: -30%;
+                width: 80%;
+                margin-left: 5%;
+                font-size: 3vw;
+            }
+
+            #navbar {
+                margin-left: 15%;
+                margin-right: auto;
+                justify-content: center;
+                z-index: 100;
+                top: 0%;
+                display: flex;
+                flex-direction: row;
+            }
+
+            #navbar a {
+                z-index: 100;
+                margin-right: 75%; /* Add some spacing between navbar items */
+                justify-content: center;
+                width: 30%;
+                text-align: center;
+            }
+
+            #navbar::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                width: 10000px;
+                height: 5%;
+                background-color: rgba(15, 19, 40, 1); /* Adjust opacity as needed */
+                z-index: 99;
+            }
+
+            #navbar a.active {
+                position: fixed;
+                color: rgba(255, 255, 255, 0.877);
+                left: 0px;
+                width: 0px;
+            }
+
+            #navbar a::before {
+                content: "";
+                position: fixed;
+                left: 0px;
+                top: 8px;
+                width: 0px;
+                background-color: rgb(255, 255, 255);
+                transition: height 0.3s ease;
+                transform: translateY(-50%);
+                display: none;
+            }
+
+            #navbar a.active::before {
+                display: none;
+                margin-left: 0px;
+            }
+
+            #sections {
+                margin-top: 50%;
+                margin-left: 2%;
+            }
+            
+            #about-me{
+            position:absolute;
+            margin-top: 3%;
+            }
+
+            #projects{
+                position: absolute;
+                margin-top: 150%;
+            }
+
+            #experience{
+                position: absolute;
+                margin-top: 300%;
+            }
+
+            .sticky-image-git {
+                filter: brightness(65%);
+                transition:  0.3s ease;
+                position: absolute;
+                margin-left: 27px;
+                top: -60px;
+                z-index: 99;
+            }
+
+            .sticky-image-linkedin {
+                filter: brightness(65%);
+                transition:  0.3s ease;
+                position: absolute;
+                left: 77px;
+                top: -58px;
+                z-index: 99;
+            }
+
+            .sticky-image-ig {
+                filter: brightness(65%);
+                transition:  0.3s ease;
+                position: absolute;
+                left: 132px;
+                top: -59px;
+                z-index: 99;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .name-text {
+                margin-left: 2%;
+                font-size: 6vw;
+            }
+
+            .school-text {
+                width: 80%;
+                margin-left: 2%;
+                font-size: 1.2vw;
+            }
+
+            #navbar {
+                left: 2%;
+                top: 10%;
+            }
+
+            #sections {
+                margin-left: 10%;
+            }
+
+            .sticky-image-git,
+            .sticky-image-linkedin,
+            .sticky-image-ig {
+                display: none;
+            }
         }
     </style>
 </head>
-
 <body>
-    <h1 class="name-text"> Samuel Choi </h1>
-    <p class="school-text"> Computer Science Student at Baylor University </p>
-
-    <div id="navbar">
-        <a href="#about-me">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-    </div>
-
     <div id="sections">
         <section id="about-me" class="about-me">
-            <h2>About Me</h2>
-            <p>Insert your About Me content here</p>
+            <p>
+                Welcome to my portfolio website! I'm a sophomore at Baylor University pursuing a degree in 
+                Computer Science with a concentration in Software Engineering. 
+                Passionate about leveraging technology to solve real-world problems, 
+                I'm constantly exploring new technologies and honing my skills to develop innovative solutions.
+                <br><br>
+                With a solid foundation in programming languages like C++, Java, and Python, I enjoy delving 
+                into various aspects of software development. Additionally, my coursework and projects have 
+                provided me with experience in software engineering principles, version control systems, and 
+                agile methodologies.
+                <br><br>
+                When I'm not on my computer or doing homework, I'm usually riding my bike, rock climbing, 
+                hanging out with my friends, or sleeping.
+            </p>
         </section>
 
         <section id="projects" class="projects">
@@ -117,19 +319,29 @@
         </section>
     </div>
 
+    <h1 class="name-text"> Samuel Choi </h1>
+    <p class="school-text"> Computer Science Student at Baylor University </p>
+
+    <div id="navbar">
+        <a href="#about-me">ABOUT</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#experience">EXPERIENCE</a>
+    </div>
+
+    <a href="https://github.com/samuelchoi0522" target="_blank"><img src="github.png" class="sticky-image-git" alt="GitHub icon" width="25"></a>
+    <a href="https://www.linkedin.com/in/jaedolc/" target="_blank"><img src="linkedin.png" class="sticky-image-linkedin" alt="Linkedin icon" width="25"></a>
+    <a href="https://www.instagram.com/slaowlhc_/" target="_blank"><img src="ig.png" class="sticky-image-ig" alt="instagram icon" width="25"></a>
+    
     <script>
-        // Smooth scrolling for section links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
             });
         });
 
-        // Update active link on scroll
         window.addEventListener('scroll', function() {
             var scrollPosition = window.scrollY;
             var aboutMe = document.getElementById('about-me').offsetTop;
