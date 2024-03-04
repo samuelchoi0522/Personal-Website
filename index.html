@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <title>
+        Homepage
+    </title>
+    <style>
+        body {
+            background-color: #0f1328f7;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: rgba(255, 255, 255, 0.877);
+        }
+
+        .name-text {
+            font-size: 4vw; /* Adjust font size relative to viewport width */
+            position: sticky;
+            top: 10%; /* Adjust distance from top as needed */
+            margin-left: 10%; /* Adjust distance from left as needed */
+            z-index: 100;
+        }
+
+        .school-text {
+            font-size: 1.7vw; /* Adjust font size relative to viewport width */
+            position: sticky;
+            top: 18%; /* Adjust distance from top as needed */
+            margin-left: 10%; /* Adjust distance from left as needed */
+            z-index: 100; /* Ensure school-text stays above other content */
+        }
+
+        #navbar {
+            position: sticky;
+            top: 25%; /* Adjust distance from top as needed */
+            left: 10%;
+            height: 100%;
+            width: 150px; /* Adjust width as needed */
+            color: rgba(255, 255, 255, 0.877);
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        #navbar a {
+            color: rgba(255, 255, 255, 0.305);
+            text-decoration: none;
+            margin: 10px 0; /* Adjust spacing between items as needed */
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        #navbar a.active {
+            color: rgba(255, 255, 255, 0.877); /* Change to desired active color */
+            left: 50px;
+            width: 150px; /* Increase width when active */
+        }
+
+        #navbar a::before {
+            content: "";
+            position: absolute;
+            left: -50px; /* Adjust the position of the line */
+            top: 50%; /* Align the line vertically */
+            width: 35px; /* Width of the line */
+            background-color: rgb(255, 255, 255); /* Color of the line */
+            transition: height 0.3s ease; /* Smooth transition for height change */
+            transform: translateY(-50%);
+        }
+
+        #navbar a.active::before {
+            position: absolute;
+            height: 2px; /* Increase height when active */
+        }
+
+        #sections {
+            margin-left: 500px; /* Adjust margin to accommodate navbar width */
+            margin-top: 0px;
+        }
+
+        section {
+            height: 100vh;
+            padding: 20px;
+            color: rgba(255, 255, 255, 0.877);
+        }
+        
+        ::selection {
+            background-color: #00bbff; /* Change to desired highlighting color */
+            color: rgba(255, 255, 255, 0.877); /* Change to desired text color */
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="name-text"> Samuel Choi </h1>
+    <p class="school-text"> Computer Science Student at Baylor University </p>
+
+    <div id="navbar">
+        <a href="#about-me">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+    </div>
+
+    <div id="sections">
+        <section id="about-me" class="about-me">
+            <h2>About Me</h2>
+            <p>Insert your About Me content here</p>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <p>Insert your Projects content here</p>
+        </section>
+
+        <section id="experience" class="experience">
+            <h2>Experience</h2>
+            <p>Insert your Experience content here</p>
+        </section>
+    </div>
+
+    <script>
+        // Smooth scrolling for section links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Update active link on scroll
+        window.addEventListener('scroll', function() {
+            var scrollPosition = window.scrollY;
+            var aboutMe = document.getElementById('about-me').offsetTop;
+            var projects = document.getElementById('projects').offsetTop;
+            var experience = document.getElementById('experience').offsetTop;
+
+            if (scrollPosition < projects) {
+                updateActiveLink('about-me');
+            } else if (scrollPosition >= projects && scrollPosition < experience) {
+                updateActiveLink('projects');
+            } else {
+                updateActiveLink('experience');
+            }
+        });
+
+        function updateActiveLink(id) {
+            var links = document.querySelectorAll('#navbar a');
+            links.forEach(function(link) {
+                link.classList.remove('active');
+            });
+            document.querySelector('#navbar a[href="#' + id + '"]').classList.add('active');
+        }
+    </script>
+</body>
+</html>
