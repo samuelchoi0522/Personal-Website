@@ -17,7 +17,7 @@
             width: 400px;
             position: fixed;
             top: 5%;
-            margin-left: 10%;
+            margin-left: 130px;
             z-index: 100;
         }
 
@@ -26,14 +26,14 @@
             position: fixed;
             width: 700px;
             top: 15%;
-            margin-left: 10%;
+            margin-left: 130px;
             z-index: 100;
         }
 
         #navbar {
             position: fixed;
             top: 40%;
-            left: 10%;
+            margin-left: 130px;
             height: 100%;
             width: 100px;
             color: rgba(255, 255, 255, 0.877);
@@ -116,7 +116,7 @@
             filter: brightness(65%);
             transition:  0.3s ease;
             position: fixed;
-            margin-left: 10%;
+            margin-left: 130px;
             bottom: 90px;
             z-index: 1000;
         }
@@ -125,7 +125,7 @@
             filter: brightness(65%);
             transition:  0.3s ease;
             position: fixed;
-            margin-left: 15%;
+            margin-left: 200px;
             bottom: 88px;
             z-index: 1000;
         }
@@ -134,7 +134,7 @@
             filter: brightness(65%);
             transition:  0.3s ease;
             position: fixed;
-            margin-left: 20%;
+            margin-left: 270px;
             bottom: 89px;
             z-index: 1000;
         }
@@ -147,28 +147,29 @@
         @media only screen and (max-width: 1024px){
             .name-text {
                 font-size: 50px;
-                position: relative;
-                margin-left: 35%;
+                position: absolute;
+                margin-top: 75px;
+                margin-left: 250px;
                 z-index: 100;
                 transform: translateX(-50%);
-                top: 5vw; /* Adjusted to move it down by 15% */
             }
 
             .school-text {
                 font-size: 25px;
-                position: relative;
-                margin-left: 50%;
-                z-index: 100;
+                position: absolute;
+                margin-top: 125px;
+                margin-left: 400px; /* Adjusted margin-left to left */
                 transform: translateX(-50%);
-                top: 1vw; /* Adjusted to move it down by 15% */
+                z-index: 100;
             }
+
 
             #navbar {
                 position: fixed;
                 top: 0;
-                left: 0;
+                margin-left: 0px;
                 height: 50px; /* Adjust the height of the horizontal bar */
-                width: 105%; /* Make it span the entire width */
+                width: 100%; /* Make it span the entire width */
                 background-color: rgba(15, 19, 40, 1); /* Background color of the horizontal bar */
                 color: rgba(188, 36, 36, 0.877);
                 padding: 0;
@@ -211,19 +212,22 @@
             }
 
             section {
-                position: absolute;
+                position: relative;
                 padding: 20px;
                 color: rgba(255, 255, 255, 0.877);
             }
 
             #about-me{
                 position:absolute;
-                margin-top: 30%;
+                margin-top: 300px;
+                left: 40px;
+                right: 40px;
             }
 
             #projects{
                 position: absolute;
-                margin-top: 30%;
+                top: 400px;
+                left: 10px;
             }
 
             #experience{
@@ -241,8 +245,8 @@
                 filter: brightness(65%);
                 transition:  0.3s ease;
                 position: absolute;
-                margin-left: 10%;
-                bottom: 90px;
+                margin-left: 50px;
+                top: 200px;
                 z-index: 99;
             }
 
@@ -250,8 +254,8 @@
                 filter: brightness(65%);
                 transition:  0.3s ease;
                 position: absolute;
-                margin-left: 15%;
-                bottom: 88px;
+                margin-left: 120px;
+                top: 200px;
                 z-index: 99;
             }
 
@@ -259,8 +263,8 @@
                 filter: brightness(65%);
                 transition:  0.3s ease;
                 position: absolute;
-                margin-left: 20%;
-                bottom: 89px;
+                margin-left: 190px;
+                top: 200px;
                 z-index: 99;
             }
         }
@@ -343,6 +347,11 @@
                 link.classList.remove('active');
             });
             document.querySelector('#navbar a[href="#' + id + '"]').classList.add('active');
+
+            if (id === 'projects') {
+                var aboutMeHeight = document.getElementById('about-me').offsetHeight;
+                document.getElementById('projects').style.marginTop = aboutMeHeight + 'px';
+            }
         }
     </script>
 </body>
