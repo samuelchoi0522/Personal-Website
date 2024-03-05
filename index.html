@@ -165,8 +165,8 @@
         .project-title-1 {
             font-size: 20px;
             position: absolute;
-            top: 5px; /* Adjust this value to move the title up or down */
-            left: 150px; /* Adjust this value to move the title left or right */
+            top: 8px; /* Adjust this value to move the title up or down */
+            left: 160px; /* Adjust this value to move the title left or right */
         }
 
         .project-box-1-image {
@@ -174,6 +174,12 @@
             top: 92px; /* Adjust this value to vertically center the image */
             left: 12px; /* Adjust this value to move the image left or right */
             transform: translateY(-50%); /* Center the image vertically */
+        }
+
+        .project-box-1-description{
+            position: absolute;
+            top: 45px;
+            left: 162px;
         }
 
 
@@ -352,12 +358,37 @@
                 border-radius: 6px;
             }
 
+            .project-title-1{
+                left: 225px;
+            }
+
+            .project-box-1-description{
+                left: 225px;
+            }
+
             .project-box-1-image {
                 position: absolute;
-                top: 92px; /* Adjust this value to vertically center the image */
-                left: 12px; /* Adjust this value to move the image left or right */
+                top: 60px; /* Adjust this value to vertically center the image */
+                left: 10px; /* Adjust this value to move the image left or right */
                 transform: translateY(-50%); /* Center the image vertically */
             }
+
+            .pill {
+                background-color: #00bbff6b; /* Set your desired background color */
+                position: absolute;
+                color: #00bbff; /* Set your desired text color */
+                top: 150px;
+                left: 225px;
+                border-radius: 50px; /* Set the border-radius to create a pill shape */
+                padding: 10px 10px; /* Adjust padding as needed */
+                height: 15px; /* Adjust the height of the pill */
+                width: 40px; /* Adjust the width of the pill */
+                display: inline-flex; /* Display as inline-flex to vertically center the content */
+                align-items: center; /* Center the content vertically */
+                justify-content: center; /* Center the content horizontally */
+                text-align: center;
+            }
+
 
             
         }
@@ -383,9 +414,21 @@
             </p>
             <p id = "projects">
                 <div class="project-box-1">
-                    <span class="project-title-1">Tetris Remake</span>
+                    <span class="project-title-1">
+                        Tetris Remake
+                    </span>
+                    
+                    <span class="project-box-1-description">
+                        My version of the childhood classic, Tetris. Infused with fresh 
+                        graphics, innovative gameplay mechanics, and personalized twists that offers a nostalgic yet refreshing 
+                        experience. 
+                    </span>
                     <div class="project-box-1-image">
                         <img src="tetris.png" alt="image of a tetris game" width="130">
+                    </div>
+
+                    <div class="pill">
+                        C++
                     </div>
                 </div>
                 
@@ -458,6 +501,67 @@
 
 
         }
+
+        function adjustProjectBoxHeight() {
+            var projectBox1 = document.querySelector('.project-box-1');
+            var projectTitle1 = document.querySelector('.project-title-1');
+            var projectBox1Description = document.querySelector('.project-box-1-description');
+            var pill = document.querySelector('.pill');
+            
+            var minHeight = 140; // Set your desired minimum height here
+            var totalHeight = projectTitle1.offsetHeight + projectBox1Description.offsetHeight + 70; // Add some padding
+            // Ensure that the total height does not fall below the minimum height
+            totalHeight = Math.max(totalHeight, minHeight);
+            projectBox1.style.height = totalHeight + 30+ 'px';
+            
+            // Adjust the height of the pill
+            var pillHeight = totalHeight - 25; // Adjust this value as needed
+            pill.style.top = pillHeight + 'px';
+        }
+
+        // Call the adjustProjectBoxHeight function when the page loads
+        window.addEventListener('load', function() {
+            adjustProjectBoxHeight();
+        });
+
+        // Call the adjustProjectBoxHeight function when the window is resized
+        window.addEventListener('resize', function() {
+            adjustProjectBoxHeight();
+        });
+
+
+
+        function adjustProjectBoxImageSize() {
+            var projectBox1 = document.querySelector('.project-box-1');
+            var projectBox1Image = projectBox1.querySelector('.project-box-1-image img');
+            var containerWidth = projectBox1.offsetWidth;
+            var aspectRatio = 130 / 92; // Width / Height of the original image
+            var newWidth = containerWidth * 0.8; // Adjust the multiplier as needed
+            var newHeight = newWidth / aspectRatio;
+            // Limit the maximum and minimum width of the image
+            var maxWidth = 200; // Set your desired maximum width here
+            var minWidth = 100; // Set your desired minimum width here
+            if (newWidth > maxWidth) {
+                newWidth = maxWidth;
+                newHeight = newWidth / aspectRatio;
+            } else if (newWidth < minWidth) {
+                newWidth = minWidth;
+                newHeight = newWidth / aspectRatio;
+            }
+            projectBox1Image.style.width = newWidth - 10+ 'px';
+            projectBox1Image.style.height = newHeight - 40+ 'px';
+            projectBox1Image.style.top = containerWidth + 10 + 'px';
+        }
+
+        // Call the adjustProjectBoxImageSize function when the page loads
+        window.addEventListener('load', function() {
+            adjustProjectBoxImageSize();
+        });
+
+        // Call the adjustProjectBoxImageSize function when the window is resized
+        window.addEventListener('resize', function() {
+            adjustProjectBoxImageSize();
+        });
     </script>
 </body>
 </html>
