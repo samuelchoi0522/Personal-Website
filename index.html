@@ -118,7 +118,7 @@
             transition:  0.3s ease;
             position: fixed;
             margin-left: 130px;
-            top: 836px;
+            bottom: 128px;
             z-index: 1000;
         }
 
@@ -127,7 +127,7 @@
             transition:  0.3s ease;
             position: fixed;
             margin-left: 200px;
-            top: 836px;
+            bottom: 128px;
             z-index: 1000;
         }
 
@@ -136,7 +136,7 @@
             transition:  0.3s ease;
             position: fixed;
             margin-left: 270px;
-            top: 836px;
+            bottom: 128px;
             z-index: 1000;
         }
 
@@ -146,66 +146,72 @@
         }
 
         .project-box-1 {
-                width: 95%;
-                height: 180px;
-                background-color: #0f132800;
-                transition: background-color 0.3s ease;
-                position: absolute;
-                left: 1.5%;
-                right: 1.5%;
-                margin-top: 0%;
-                z-index: 0;
-                border-radius: 6px;
-            }
+            width: 95%;
+            height: 180px;
+            background-color: #0f132800;
+            transition: background-color 0.3s ease;
+            position: absolute;
+            left: 1.5%;
+            right: 1.5%;
+            margin-top: 0%;
+            z-index: 0;
+            border-radius: 6px;
+        }
 
-            .project-box-2 {
-                width: 95%;
-                height: 180px;
-                background-color: #0f132800;
-                transition: background-color 0.3s ease;
-                position: absolute;
-                left: 1.5%;
-                right: 1.5%;
-                margin-top: 200px;
-                z-index: 0;
-                border-radius: 6px;
-            }
+        .project-box-1 img{
+            border-radius: 6px;
+        }
 
-            .project-box-1:hover {
-                background-color: #ffffff46;
-                
-            }
+        .project-title-1 {
+            font-size: 20px;
+            position: absolute;
+            top: 5px; /* Adjust this value to move the title up or down */
+            left: 150px; /* Adjust this value to move the title left or right */
+        }
 
-            .project-box-2:hover {
-                background-color: #ffffff46;
-                
-            }
+        .project-box-1-image {
+            position: absolute;
+            top: 92px; /* Adjust this value to vertically center the image */
+            left: 12px; /* Adjust this value to move the image left or right */
+            transform: translateY(-50%); /* Center the image vertically */
+        }
 
-            .project-box-1:hover .project-title {
-                color: #00bbff;
-            }
 
-            .project-box-2:hover .project-title {
-                color: #00bbff;
-            }
+        .project-box-2 {
+            width: 95%;
+            height: 180px;
+            background-color: #0f132800;
+            transition: background-color 0.3s ease;
+            position: absolute;
+            left: 1.5%;
+            right: 1.5%;
+            margin-top: 200px;
+            z-index: 0;
+            border-radius: 6px;
+        }
+
+        
+
+        .project-box-1:hover {
+            background-color: #ffffff46;
+            
+        }
+
+        .project-box-2:hover {
+            background-color: #ffffff46;
+            
+        }
+
+        .project-box-1:hover .project-title-1 {
+            color: #00bbff;
+        }
+        .project-box-2:hover .project-title-2 {
+            color: #00bbff;
+        }
 
         .geo{
             font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size:14px;
-        }
-
-        .project-title{
-            font-size: 20px;
-            position: relative;
-            margin-top: 0px;
-            margin-left: 25px;
-        }
-
-        .project-box-1 img {
-            position: relative;
-            margin-top: 8px; /* Adjust the margin-top value to move the image down */
-            margin-left: 8px;
-            border-radius: 6px;
         }
         /* tablet */
         @media only screen and (max-width: 1024px){
@@ -334,7 +340,7 @@
             }
 
             .project-box-1 {
-                width: 98%;
+                width: 99%;
                 height: 180px;
                 background-color: #0f132800;
                 transition: background-color 0.3s ease;
@@ -346,38 +352,11 @@
                 border-radius: 6px;
             }
 
-            .project-box-2 {
-                width: 98%;
-                height: 180px;
-                background-color: #0f132800;
-                transition: background-color 0.3s ease;
+            .project-box-1-image {
                 position: absolute;
-                left: 1.5%;
-                right: 1.5%;
-                margin-top: 200px;
-                z-index: 0;
-                border-radius: 6px;
-            }
-
-            .project-box-1:hover {
-                background-color: #ffffff46;
-                
-            }
-
-            .project-box-2:hover {
-                background-color: #ffffff46;
-                
-            }
-
-            .project-box-1:hover .project-title {
-                color: #00bbff;
-            }
-
-            .project-box-2:hover .project-title {
-                color: #00bbff;
-            }
-            .project-box-1 img {
-                margin-top: 60px; /* Adjust the margin-top value to move the image down */
+                top: 92px; /* Adjust this value to vertically center the image */
+                left: 12px; /* Adjust this value to move the image left or right */
+                transform: translateY(-50%); /* Center the image vertically */
             }
 
             
@@ -404,11 +383,13 @@
             </p>
             <p id = "projects">
                 <div class="project-box-1">
+                    <span class="project-title-1">Tetris Remake</span>
+                    <div class="project-box-1-image">
                         <img src="tetris.png" alt="image of a tetris game" width="130">
-                        <span class="project-title">Tetris Remake</span>
-                    <p>
-                    </p>
+                    </div>
                 </div>
+                
+
                 <div class="project-box-2">
                     <p>
                         &nbsp; <span class="geo">2024 - Present</span>
