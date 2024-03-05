@@ -13,7 +13,7 @@
         }
 
         .name-text {
-            font-size: 4vw;
+            font-size: 50px;
             width: 400px;
             position: fixed;
             top: 5%;
@@ -22,7 +22,7 @@
         }
 
         .school-text {
-            font-size: 1.7vw;
+            font-size: 25px;
             position: fixed;
             width: 700px;
             top: 15%;
@@ -82,7 +82,7 @@
 
         #sections {
             margin-top: 0px;
-            margin-left: 850px;
+            margin-left: 50%;
         }
 
         section {
@@ -116,7 +116,7 @@
             filter: brightness(65%);
             transition:  0.3s ease;
             position: fixed;
-            margin-left: 100px;
+            margin-left: 10%;
             bottom: 90px;
             z-index: 1000;
         }
@@ -125,7 +125,7 @@
             filter: brightness(65%);
             transition:  0.3s ease;
             position: fixed;
-            left: 150px;
+            margin-left: 15%;
             bottom: 88px;
             z-index: 1000;
         }
@@ -134,7 +134,7 @@
             filter: brightness(65%);
             transition:  0.3s ease;
             position: fixed;
-            left: 205px;
+            margin-left: 20%;
             bottom: 89px;
             z-index: 1000;
         }
@@ -143,101 +143,106 @@
             background-color: #00bbff;
             color: rgba(255, 255, 255, 0.877);
         }
-
-        @media only screen and (max-width: 768px) {
+        /* tablet */
+        @media only screen and (max-width: 1024px){
             .name-text {
+                font-size: 50px;
                 position: absolute;
-                margin-top: -40%;
-                margin-left: 5%;
-                font-size: 7vw;
+                left: 45%;
+                z-index: 100;
+                transform: translateX(-50%);
+                top: 0%; /* Adjusted to move it down by 15% */
             }
 
             .school-text {
+                font-size: 25px;
                 position: absolute;
-                margin-top: -30%;
-                width: 80%;
-                margin-left: 5%;
-                font-size: 3vw;
+                left: 50%;
+                z-index: 100;
+                transform: translateX(-50%);
+                top: 100%; /* Adjusted to move it down by 15% */
             }
 
             #navbar {
-                margin-left: 15%;
-                margin-right: auto;
-                justify-content: center;
-                z-index: 100;
-                top: 0%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 50px; /* Adjust the height of the horizontal bar */
+                width: 105%; /* Make it span the entire width */
+                background-color: rgba(15, 19, 40, 1); /* Background color of the horizontal bar */
+                color: rgba(188, 36, 36, 0.877);
+                padding: 0;
                 display: flex;
                 flex-direction: row;
-            }
-
-            #navbar a {
+                justify-content: space-evenly; /* Distribute items evenly along the main axis */
+                align-items: center; /* Center the content vertically */
                 z-index: 100;
-                margin-right: 75%; /* Add some spacing between navbar items */
-                justify-content: center;
-                width: 30%;
-                text-align: center;
-            }
-
-            #navbar::after {
-                content: "";
-                position: absolute;
-                top: 0;
-                width: 10000px;
-                height: 5%;
-                background-color: rgba(15, 19, 40, 1); /* Adjust opacity as needed */
-                z-index: 99;
-            }
-
-            #navbar a.active {
-                position: fixed;
-                color: rgba(255, 255, 255, 0.877);
-                left: 0px;
-                width: 0px;
-            }
-
-            #navbar a::before {
-                content: "";
-                position: fixed;
-                left: 0px;
-                top: 8px;
-                width: 0px;
-                background-color: rgb(255, 255, 255);
-                transition: height 0.3s ease;
-                transform: translateY(-50%);
-                display: none;
             }
 
             #navbar a.active::before {
-                display: none;
-                margin-left: 0px;
+                position: absolute;
+                height: 0px;
             }
 
-            #sections {
-                margin-top: 50%;
-                margin-left: 2%;
+            #navbar a.active {
+                position: relative;
+                color: rgb(177, 17, 17);
+                left: 0px;
             }
-            
+
+            #navbar a {
+                color: rgba(255, 255, 255, 0.305);
+                text-decoration: none;
+                transition: all 0.3s ease;
+                padding: 0 10px; /* Add padding to create space around the link */
+                width: 150px; /* Set a fixed width for all links */
+            }
+
+            #navbar a.active,
+            #navbar a:hover {
+                color: rgba(255, 255, 255, 0.877);
+            }
+
+
+
+            #sections {
+                margin-top: 0px;
+                margin-left: 50%;
+            }
+
+            section {
+                position: absolute;
+                padding: 20px;
+                color: rgba(255, 255, 255, 0.877);
+            }
+
             #about-me{
-            position:absolute;
-            margin-top: 3%;
+                position:absolute;
+                margin-top: 30%;
             }
 
             #projects{
                 position: absolute;
-                margin-top: 150%;
+                margin-top: 30%;
             }
 
             #experience{
                 position: absolute;
-                margin-top: 300%;
+                margin-top: 400%;
+            }
+
+            .sticky-image-git:hover,
+            .sticky-image-linkedin:hover,
+            .sticky-image-ig:hover {
+                filter: brightness(100%);
             }
 
             .sticky-image-git {
                 filter: brightness(65%);
                 transition:  0.3s ease;
                 position: absolute;
-                margin-left: 27px;
-                top: -60px;
+                margin-left: 10%;
+                bottom: 90px;
                 z-index: 99;
             }
 
@@ -245,8 +250,8 @@
                 filter: brightness(65%);
                 transition:  0.3s ease;
                 position: absolute;
-                left: 77px;
-                top: -58px;
+                margin-left: 15%;
+                bottom: 88px;
                 z-index: 99;
             }
 
@@ -254,39 +259,14 @@
                 filter: brightness(65%);
                 transition:  0.3s ease;
                 position: absolute;
-                left: 132px;
-                top: -59px;
+                margin-left: 20%;
+                bottom: 89px;
                 z-index: 99;
             }
         }
 
-        @media only screen and (max-width: 480px) {
-            .name-text {
-                margin-left: 2%;
-                font-size: 6vw;
-            }
 
-            .school-text {
-                width: 80%;
-                margin-left: 2%;
-                font-size: 1.2vw;
-            }
 
-            #navbar {
-                left: 2%;
-                top: 10%;
-            }
-
-            #sections {
-                margin-left: 10%;
-            }
-
-            .sticky-image-git,
-            .sticky-image-linkedin,
-            .sticky-image-ig {
-                display: none;
-            }
-        }
     </style>
 </head>
 <body>
@@ -320,7 +300,7 @@
     </div>
 
     <h1 class="name-text"> Samuel Choi </h1>
-    <p class="school-text"> Computer Science Student at Baylor University </p>
+    <p class="school-text"> Computer Science Student <br>at Baylor University </p>
 
     <div id="navbar">
         <a href="#about-me">ABOUT</a>
