@@ -193,7 +193,7 @@
             position: absolute;
             left: 1.5%;
             right: 1.5%;
-            margin-top: 0px;
+            margin-top: 210px;
             z-index: 0;
             border-radius: 6px;
         }
@@ -243,7 +243,7 @@
                 position: absolute;
                 color: #00bbff; /* Set your desired text color */
                 top: 150px;
-                left: 250px;
+                left: 237px;
                 border-radius: 50px; /* Set the border-radius to create a pill shape */
                 padding: 10px 10px; /* Adjust padding as needed */
                 height: 15px; /* Adjust the height of the pill */
@@ -494,9 +494,9 @@
                 
 
                 <div class="project-box-2">
-                    <p>
-                        &nbsp; <span class="geo">2024 - Present</span>
-                    </p>
+                    <span class="geo">
+                        2024 - Present
+                    </span>
                 </div>
             </p>
         </section>
@@ -554,13 +554,13 @@
 
             var aboutMeBottom = document.getElementById('about-me').offsetTop - document.getElementById('about-me').offsetHeight + 100;
             var projectBox2 = document.querySelector('.project-box-2');
-            document.getElementById('projects').style.marginTop = aboutMeBottom + 'px';
 
             // Calculate the bottom position of project-box-1
             var projectBox1Bottom = document.querySelector('.project-box-1').offsetTop + document.querySelector('.project-box-1').offsetHeight;
             
             // Set the margin-top of project-box-2 based on project-box-1's bottom position
             projectBox2.style.top = projectBox1Bottom + 30 + 'px'; // Changed 'project-box-2' to 'projects'
+            projectBox2.style.marginTop = 0 + 'px';
         }
 
 
