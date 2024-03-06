@@ -186,6 +186,11 @@
             color: white; /* Or any other color you prefer */
         }
 
+        .project-box-2 .project-title-2,
+        .project-box-2 .project-box-2-description {
+            color: white; /* Or any other color you prefer */
+        }
+
 
         .project-box-1 {
             width: 95%;
@@ -240,6 +245,32 @@
             border-radius: 6px;
         }
 
+        .project-box-2 img{
+            border-radius: 6px;
+        }
+
+        .project-title-2 {
+            font-size: 20px;
+            position: absolute;
+            top: 8px; /* Adjust this value to move the title up or down */
+            left: 160px; /* Adjust this value to move the title left or right */
+        }
+
+        .project-box-2-image {
+            position: absolute;
+            top: 30px; /* Adjust this value to vertically center the image */
+            left: 12px; /* Adjust this value to move the image left or right */
+            transform: translateY(-50%); /* Center the image vertically */
+            width: 10px;
+            height: 30px;
+        }
+
+        .project-box-2-description{
+            position: absolute;
+            top: 45px;
+            left: 162px;
+        }
+
         
 
         .project-box-1:hover {
@@ -274,9 +305,41 @@
             filter: brightness(100%);
         }
 
+        .project-box-2 .svgarrow-2 img {
+            content: url('link.svg');
+            position: absolute;
+            width: 20px;
+            transition: all 0.3s ease-out; /* Transition for all properties */
+            left: 0; /* Add initial left position */
+            top: 0; /* Add initial top position */
+        }
+
+        .project-box-2:hover .svgarrow-2 img {
+            content: url('bluearrow.svg');
+            left: 5px;
+            top: -5px;
+            filter: brightness(100%);
+        }
+
         .geo{
             font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size:14px;
+        }
+
+        .pill-cpp {
+            background-color: #00bbff6b; /* Set your desired background color */
+            position: absolute;
+            color: #00bbff; /* Set your desired text color */
+            top: 150px;
+            left: 160px;
+            border-radius: 50px; /* Set the border-radius to create a pill shape */
+            padding: 10px 10px; /* Adjust padding as needed */
+            height: 15px; /* Adjust the height of the pill */
+            width: 40px; /* Adjust the width of the pill */
+            display: inline-flex; /* Display as inline-flex to vertically center the content */
+            align-items: center; /* Center the content vertically */
+            justify-content: center; /* Center the content horizontally */
+            text-align: center;
         }
 
         .pill-cpp {
@@ -345,6 +408,77 @@
 
         .svgarrow{
             left: 290px;
+            top: 10px;
+            position: absolute;
+        }
+
+
+        .pill-cpp-2 {
+            background-color: #00bbff6b; /* Set your desired background color */
+            position: absolute;
+            color: #00bbff; /* Set your desired text color */
+            top: 200px;
+            left: 160px;
+            border-radius: 50px; /* Set the border-radius to create a pill shape */
+            padding: 10px 10px; /* Adjust padding as needed */
+            height: 15px; /* Adjust the height of the pill */
+            width: 40px; /* Adjust the width of the pill */
+            display: inline-flex; /* Display as inline-flex to vertically center the content */
+            align-items: center; /* Center the content vertically */
+            justify-content: center; /* Center the content horizontally */
+            text-align: center;
+        }
+
+        .pill-react-2 {
+            background-color: #00bbff6b; /* Set your desired background color */
+            position: absolute;
+            color: #00bbff; /* Set your desired text color */
+            top: 200px;
+            left: 237px;
+            border-radius: 50px; /* Set the border-radius to create a pill shape */
+            padding: 10px 10px; /* Adjust padding as needed */
+            height: 15px; /* Adjust the height of the pill */
+            width: 45px; /* Adjust the width of the pill */
+            display: inline-flex; /* Display as inline-flex to vertically center the content */
+            align-items: center; /* Center the content vertically */
+            justify-content: center; /* Center the content horizontally */
+            text-align: center;
+        }
+
+        .pill-github-2 {
+            background-color: #00bbff6b; /* Set your desired background color */
+            position: absolute;
+            color: #00bbff; /* Set your desired text color */
+            top: 200px;
+            left: 320px;
+            border-radius: 50px; /* Set the border-radius to create a pill shape */
+            padding: 10px 10px; /* Adjust padding as needed */
+            height: 15px; /* Adjust the height of the pill */
+            width: 55px; /* Adjust the width of the pill */
+            display: inline-flex; /* Display as inline-flex to vertically center the content */
+            align-items: center; /* Center the content vertically */
+            justify-content: center; /* Center the content horizontally */
+            text-align: center;
+        }
+
+        .pill-vscode-2 {
+            background-color: #00bbff6b; /* Set your desired background color */
+            position: absolute;
+            color: #00bbff; /* Set your desired text color */
+            top: 200px;
+            left: 413px;
+            border-radius: 50px; /* Set the border-radius to create a pill shape */
+            padding: 10px 10px; /* Adjust padding as needed */
+            height: 15px; /* Adjust the height of the pill */
+            width: 75px; /* Adjust the width of the pill */
+            display: inline-flex; /* Display as inline-flex to vertically center the content */
+            align-items: center; /* Center the content vertically */
+            justify-content: center; /* Center the content horizontally */
+            text-align: center;
+        }
+
+        .svgarrow-2{
+            left: 255px;
             top: 10px;
             position: absolute;
         }
@@ -509,6 +643,41 @@
                 width: 30px;
             }
 
+            .project-box-2 {
+                width: 99%;
+                height: 180px;
+                background-color: #0f132800;
+                transition: background-color 0.3s ease;
+                position: absolute;
+                left: 1.5%;
+                right: 1.5%;
+                margin-top: 0%;
+                z-index: 0;
+                border-radius: 6px;
+            }
+
+            .project-box-2 img{
+                width: 200px;
+                height: 130px;
+            }
+
+            .project-title-2{
+                left: 225px;
+            }
+
+            .project-box-2-description{
+                left: 225px;
+            }
+
+            .project-box-2-image {
+                position: absolute;
+                top: 30px; /* Adjust this value to vertically center the image */
+                left: 10px; /* Adjust this value to move the image left or right */
+                transform: translateY(-50%); /* Center the image vertically */
+                width: 30px;
+            }
+
+
             .pill-cpp {
                 background-color: #00bbff6b; /* Set your desired background color */
                 position: absolute;
@@ -622,6 +791,75 @@
             }
 
 
+            .pill-cpp-2 {
+                background-color: #00bbff6b; /* Set your desired background color */
+                position: absolute;
+                color: #00bbff; /* Set your desired text color */
+                top: 200px;
+                left: 225px;
+                border-radius: 50px; /* Set the border-radius to create a pill shape */
+                padding: 10px 10px; /* Adjust padding as needed */
+                height: 15px; /* Adjust the height of the pill */
+                width: 40px; /* Adjust the width of the pill */
+                display: inline-flex; /* Display as inline-flex to vertically center the content */
+                align-items: center; /* Center the content vertically */
+                justify-content: center; /* Center the content horizontally */
+                text-align: center;
+            }
+
+            .pill-react-2 {
+                background-color: #00bbff6b; /* Set your desired background color */
+                position: absolute;
+                color: #00bbff; /* Set your desired text color */
+                top: 200px;
+                left: 300px;
+                border-radius: 50px; /* Set the border-radius to create a pill shape */
+                padding: 10px 10px; /* Adjust padding as needed */
+                height: 15px; /* Adjust the height of the pill */
+                width: 45px; /* Adjust the width of the pill */
+                display: inline-flex; /* Display as inline-flex to vertically center the content */
+                align-items: center; /* Center the content vertically */
+                justify-content: center; /* Center the content horizontally */
+                text-align: center;
+            }
+
+            .pill-github-2 {
+                background-color: #00bbff6b; /* Set your desired background color */
+                position: absolute;
+                color: #00bbff; /* Set your desired text color */
+                top: 200px;
+                left: 380px;
+                border-radius: 50px; /* Set the border-radius to create a pill shape */
+                padding: 10px 10px; /* Adjust padding as needed */
+                height: 15px; /* Adjust the height of the pill */
+                width: 55px; /* Adjust the width of the pill */
+                display: inline-flex; /* Display as inline-flex to vertically center the content */
+                align-items: center; /* Center the content vertically */
+                justify-content: center; /* Center the content horizontally */
+                text-align: center;
+            }
+
+            .pill-vscode-2 {
+                background-color: #00bbff6b; /* Set your desired background color */
+                position: absolute;
+                color: #00bbff; /* Set your desired text color */
+                top: 200px;
+                left: 470px;
+                border-radius: 50px; /* Set the border-radius to create a pill shape */
+                padding: 10px 10px; /* Adjust padding as needed */
+                height: 15px; /* Adjust the height of the pill */
+                width: 75px; /* Adjust the width of the pill */
+                display: inline-flex; /* Display as inline-flex to vertically center the content */
+                align-items: center; /* Center the content vertically */
+                justify-content: center; /* Center the content horizontally */
+                text-align: center;
+            }
+
+            .svgarrow-2{
+                left: 316px;
+                top: -44px;
+                position: absolute;
+            }
 
             
         }
@@ -647,44 +885,72 @@
                 hanging out with my friends, or drinking coffee.
             </p>
             <p id = "projects">
-                <a href="https://github.com/luke-bryant1/CSI-Group-Project/tree/main" target="_blank"><div class="project-box-1">
-                    <span class="project-title-1">
-                        Tetris Remake
-                    </span>
-                    
-                    <span class="project-box-1-description">
-                        My version of the popular childhood classic, Tetris. Infused with fresh 
-                        graphics, innovative gameplay mechanics, and personalized twists that offers a nostalgic yet refreshing 
-                        experience. 
+                <a href="https://github.com/luke-bryant1/CSI-Group-Project/tree/main" target="_blank">
+                    <div class="project-box-1">
+                        <span class="project-title-1">
+                            Tetris Remake
+                        </span>
+                        
+                        <span class="project-box-1-description">
+                            My version of the popular childhood classic, Tetris. Infused with fresh 
+                            graphics, innovative gameplay mechanics, and personalized twists that offers a nostalgic yet refreshing 
+                            experience. 
 
-                    </span>
-                    <div class="project-box-1-image">
-                        <img src="tetris.png" alt="image of a tetris game" width="130">
-                    </div>
+                        </span>
+                        <div class="project-box-1-image">
+                            <img src="tetris.png" alt="image of a tetris game" width="130">
+                        </div>
 
-                    <div class="pill-cpp">
-                        C++
+                        <div class="pill-cpp">
+                            C++
+                        </div>
+                        <div class="pill-sdl2">
+                            SDL2
+                        </div>
+                        <div class="pill-github">
+                            GitHub
+                        </div>
+                        <div class="pill-vscode">
+                            VS Code
+                        </div>
+                        <div class="svgarrow">
+                            <img src="link.svg" width="20">
+                        </div>
                     </div>
-                    <div class="pill-sdl2">
-                        SDL2
-                    </div>
-                    <div class="pill-github">
-                        GitHub
-                    </div>
-                    <div class="pill-vscode">
-                        VS Code
-                    </div>
-                    <div class="svgarrow">
-                        <img src="link.svg" width="20">
-                    </div>
-                </div></a>
+                </a>
                 
+                <a href="https://github.com/Zer0-bit/gaggiuino/" target="_blank">
+                    <div class="project-box-2">
+                        <span class="project-title-2">
+                            Gaggiuino
+                        </span>
 
-                <div class="project-box-2">
-                    <span class="geo">
-                        2024 - Present
-                    </span>
-                </div>
+                        <span class="project-box-2-description">
+                            Currently creating a comprehensive platform that aims to enhance 
+                            the functionality of Gaggia espresso machines by integrating them 
+                            with various devices and enabling remote access over the web.
+                        </span>
+                        <div class="project-box-2-image">
+                            <img src="gaggiuino.png" alt="image of a tetris game" width="130">
+                        </div>
+
+                        <div class="pill-cpp-2">
+                            C++
+                        </div>
+                        <div class="pill-react-2">
+                            React
+                        </div>
+                        <div class="pill-github-2">
+                            GitHub
+                        </div>
+                        <div class="pill-vscode-2">
+                            VS Code
+                        </div>
+                        <div class="svgarrow-2">
+                            <img src="link.svg" width="20">
+                        </div>
+                    </div>
+                </a>
             </p>
         </section>
 
@@ -764,6 +1030,13 @@
 
 
         function adjustProjectBoxHeight() {
+            var minHeightDesktop = 160; // Minimum height for desktop mode
+            var minHeightTablet = 150; // Minimum height for tablet mode
+            var mode = window.innerWidth <= 1024 ? 'tablet' : 'desktop';
+            var minHeight = mode === 'tablet' ? minHeightTablet : minHeightDesktop;
+
+
+            //p1
             var projectBox1 = document.querySelector('.project-box-1');
             var projectTitle1 = document.querySelector('.project-title-1');
             var projectBox1Description = document.querySelector('.project-box-1-description');
@@ -771,27 +1044,40 @@
             var pill_sdl = document.querySelector('.pill-sdl2');
             var pill_github = document.querySelector('.pill-github');
             var pill_vsc = document.querySelector('.pill-vscode');
-            
-            var minHeightDesktop = 160; // Minimum height for desktop mode
-            var minHeightTablet = 150; // Minimum height for tablet mode
 
-            // Determine the mode based on window width
-            var mode = window.innerWidth <= 1024 ? 'tablet' : 'desktop';
 
-            // Set the minimum height based on the mode
-            var minHeight = mode === 'tablet' ? minHeightTablet : minHeightDesktop;
+            //p2
+            var projectBox2 = document.querySelector('.project-box-2');
+            var projectTitle2 = document.querySelector('.project-title-2');
+            var projectBox2Description = document.querySelector('.project-box-2-description');
+            var pill2 = document.querySelector('.pill-cpp-2');
+            var pill_sdl2 = document.querySelector('.pill-react-2');
+            var pill_github2 = document.querySelector('.pill-github-2');
+            var pill_vsc2 = document.querySelector('.pill-vscode-2');
 
-            var totalHeight = projectTitle1.offsetHeight + projectBox1Description.offsetHeight + 70; // Add some padding
+            var totalHeight1 = projectTitle1.offsetHeight + projectBox1Description.offsetHeight + 70; // Add some padding
             // Ensure that the total height does not fall below the minimum height
-            totalHeight = Math.max(totalHeight, minHeight);
-            projectBox1.style.height = totalHeight + 30 + 'px';
+            totalHeight1 = Math.max(totalHeight1, minHeight);
+            projectBox1.style.height = totalHeight1 + 30 + 'px';
+
+            var totalHeight2 = projectTitle2.offsetHeight + projectBox2Description.offsetHeight + 70; // Add some padding
+            // Ensure that the total height does not fall below the minimum height
+            totalHeight2 = Math.max(totalHeight2, minHeight);
+            projectBox2.style.height = totalHeight1 + 10 + 'px';
+            
             
             // Adjust the height of the pill
-            var pillHeight = totalHeight - 25; // Adjust this value as needed
+            var pillHeight = totalHeight1 - 25; // Adjust this value as needed
             pill.style.top = pillHeight + 'px';
             pill_sdl.style.top = pillHeight + 'px';
             pill_vsc.style.top = pillHeight + 'px';
             pill_github.style.top = pillHeight + 'px';
+
+            var pillHeight2 = totalHeight2 - 40;
+            pill2.style.top = pillHeight2 + 'px';
+            pill_sdl2.style.top = pillHeight2 + 'px';
+            pill_vsc2.style.top = pillHeight2 + 'px';
+            pill_github2.style.top = pillHeight2 + 'px';
         }
 
 
