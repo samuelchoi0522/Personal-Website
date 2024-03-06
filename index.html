@@ -145,6 +145,12 @@
             color: rgba(255, 255, 255, 0.877);
         }
 
+        .project-box-1 .project-title-1,
+        .project-box-1 .project-box-1-description {
+            color: white; /* Or any other color you prefer */
+        }
+
+
         .project-box-1 {
             width: 95%;
             height: 180px;
@@ -193,7 +199,7 @@
             position: absolute;
             left: 1.5%;
             right: 1.5%;
-            margin-top: 220px;
+            margin-top: 246px;
             z-index: 0;
             border-radius: 6px;
         }
@@ -215,6 +221,22 @@
         }
         .project-box-2:hover .project-title-2 {
             color: #00bbff;
+        }
+
+        .project-box-1 .svgarrow img {
+            content: url('link.svg');
+            position: absolute;
+            width: 20px;
+            transition: all 0.3s ease-out; /* Transition for all properties */
+            left: 0; /* Add initial left position */
+            top: 0; /* Add initial top position */
+        }
+
+        .project-box-1:hover .svgarrow img {
+            content: url('bluearrow.svg');
+            left: 5px;
+            top: -5px;
+            filter: brightness(100%);
         }
 
         .geo{
@@ -252,6 +274,12 @@
                 align-items: center; /* Center the content vertically */
                 justify-content: center; /* Center the content horizontally */
                 text-align: center;
+            }
+
+            .svgarrow{
+                left: 290px;
+                top: 10px;
+                position: absolute;
             }
 
         /* tablet */
@@ -450,6 +478,28 @@
                 margin-top: 210px;
             }
 
+            .project-box-1 .svgarrow img {
+                content: url('link.svg');
+                position: absolute;
+                width: 20px;
+                transition: all 0.3s ease-out; /* Transition for all properties */
+                left: 0; /* Add initial left position */
+                top: 0; /* Add initial top position */
+            }
+
+            .project-box-1:hover .svgarrow img {
+                content: url('bluearrow.svg');
+                left: 5px;
+                top: -5px;
+                filter: brightness(100%);
+            }
+
+            .svgarrow{
+                left: 353px;
+                top: -54px;
+                position: absolute;
+            }
+
 
             
         }
@@ -474,7 +524,7 @@
                 hanging out with my friends, or sleeping.
             </p>
             <p id = "projects">
-                <div class="project-box-1">
+                <a href="https://github.com/luke-bryant1/CSI-Group-Project/tree/main" target="_blank"><div class="project-box-1">
                     <span class="project-title-1">
                         Tetris Remake
                     </span>
@@ -483,6 +533,7 @@
                         My version of the childhood classic, Tetris. Infused with fresh 
                         graphics, innovative gameplay mechanics, and personalized twists that offers a nostalgic yet refreshing 
                         experience. 
+
                     </span>
                     <div class="project-box-1-image">
                         <img src="tetris.png" alt="image of a tetris game" width="130">
@@ -494,7 +545,10 @@
                     <div class="pill-sdl2">
                         SDL2
                     </div>
-                </div>
+                    <div class="svgarrow">
+                        <img src="link.svg" width="20">
+                    </div>
+                </div></a>
                 
 
                 <div class="project-box-2">
