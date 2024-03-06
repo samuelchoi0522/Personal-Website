@@ -28,6 +28,27 @@
             filter: blur(200px); /* Add blur effect */
         }
 
+        .say-hello-button {
+            display: inline-block;
+            position: fixed;
+            padding: 10px 20px;
+            color: #fff; /* Set your desired text color */
+            border: 2px solid #00bbff; /* Set border color and style */
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            
+            filter: brightness(100%);
+            margin-left: 340px;
+            bottom: 123px;
+        }
+
+
+        .say-hello-button:hover {
+            background-color: #0099dd; /* Set your desired background color on hover */
+        }
+
         .name-text {
             font-size: 50px;
             width: 400px;
@@ -170,13 +191,13 @@
             width: 95%;
             height: 180px;
             background-color: #0f132800;
-            transition: background-color 0.3s ease;
             position: absolute;
             left: 1.5%;
             right: 1.5%;
             margin-top: 0%;
             z-index: 0;
             border-radius: 6px;
+            transition: background-color 0.3s ease-in-out; /* Define transition for both default and hover states */
         }
 
         .project-box-1 img{
@@ -222,8 +243,7 @@
         
 
         .project-box-1:hover {
-            background-color: #ffffff46;
-            
+            background-color: #ffffff46; /* Change the background color on hover */
         }
 
         .project-box-2:hover {
@@ -276,26 +296,58 @@
         }
 
         .pill-sdl2 {
-                background-color: #00bbff6b; /* Set your desired background color */
-                position: absolute;
-                color: #00bbff; /* Set your desired text color */
-                top: 150px;
-                left: 237px;
-                border-radius: 50px; /* Set the border-radius to create a pill shape */
-                padding: 10px 10px; /* Adjust padding as needed */
-                height: 15px; /* Adjust the height of the pill */
-                width: 45px; /* Adjust the width of the pill */
-                display: inline-flex; /* Display as inline-flex to vertically center the content */
-                align-items: center; /* Center the content vertically */
-                justify-content: center; /* Center the content horizontally */
-                text-align: center;
-            }
+            background-color: #00bbff6b; /* Set your desired background color */
+            position: absolute;
+            color: #00bbff; /* Set your desired text color */
+            top: 150px;
+            left: 237px;
+            border-radius: 50px; /* Set the border-radius to create a pill shape */
+            padding: 10px 10px; /* Adjust padding as needed */
+            height: 15px; /* Adjust the height of the pill */
+            width: 45px; /* Adjust the width of the pill */
+            display: inline-flex; /* Display as inline-flex to vertically center the content */
+            align-items: center; /* Center the content vertically */
+            justify-content: center; /* Center the content horizontally */
+            text-align: center;
+        }
 
-            .svgarrow{
-                left: 290px;
-                top: 10px;
-                position: absolute;
-            }
+        .pill-github {
+            background-color: #00bbff6b; /* Set your desired background color */
+            position: absolute;
+            color: #00bbff; /* Set your desired text color */
+            top: 150px;
+            left: 320px;
+            border-radius: 50px; /* Set the border-radius to create a pill shape */
+            padding: 10px 10px; /* Adjust padding as needed */
+            height: 15px; /* Adjust the height of the pill */
+            width: 55px; /* Adjust the width of the pill */
+            display: inline-flex; /* Display as inline-flex to vertically center the content */
+            align-items: center; /* Center the content vertically */
+            justify-content: center; /* Center the content horizontally */
+            text-align: center;
+        }
+
+        .pill-vscode {
+            background-color: #00bbff6b; /* Set your desired background color */
+            position: absolute;
+            color: #00bbff; /* Set your desired text color */
+            top: 150px;
+            left: 413px;
+            border-radius: 50px; /* Set the border-radius to create a pill shape */
+            padding: 10px 10px; /* Adjust padding as needed */
+            height: 15px; /* Adjust the height of the pill */
+            width: 75px; /* Adjust the width of the pill */
+            display: inline-flex; /* Display as inline-flex to vertically center the content */
+            align-items: center; /* Center the content vertically */
+            justify-content: center; /* Center the content horizontally */
+            text-align: center;
+        }
+
+        .svgarrow{
+            left: 290px;
+            top: 10px;
+            position: absolute;
+        }
 
         /* tablet */
         @media only screen and (max-width: 1024px){
@@ -489,6 +541,38 @@
                 text-align: center;
             }
 
+            .pill-github {
+                background-color: #00bbff6b; /* Set your desired background color */
+                position: absolute;
+                color: #00bbff; /* Set your desired text color */
+                top: 150px;
+                left: 380px;
+                border-radius: 50px; /* Set the border-radius to create a pill shape */
+                padding: 10px 10px; /* Adjust padding as needed */
+                height: 15px; /* Adjust the height of the pill */
+                width: 55px; /* Adjust the width of the pill */
+                display: inline-flex; /* Display as inline-flex to vertically center the content */
+                align-items: center; /* Center the content vertically */
+                justify-content: center; /* Center the content horizontally */
+                text-align: center;
+            }
+
+            .pill-vscode {
+                background-color: #00bbff6b; /* Set your desired background color */
+                position: absolute;
+                color: #00bbff; /* Set your desired text color */
+                top: 150px;
+                left: 470px;
+                border-radius: 50px; /* Set the border-radius to create a pill shape */
+                padding: 10px 10px; /* Adjust padding as needed */
+                height: 15px; /* Adjust the height of the pill */
+                width: 75px; /* Adjust the width of the pill */
+                display: inline-flex; /* Display as inline-flex to vertically center the content */
+                align-items: center; /* Center the content vertically */
+                justify-content: center; /* Center the content horizontally */
+                text-align: center;
+            }
+
             .project-box-2{
                 margin-top: 210px;
             }
@@ -514,6 +598,29 @@
                 top: -54px;
                 position: absolute;
             }
+
+            .say-hello-button {
+                display: inline-block;
+                position: absolute;
+                padding: 18px 20px;
+                color: #fff; /* Set your desired text color */
+                border: 2px solid #00bbff; /* Set border color and style */
+                border-radius: 5px;
+                font-size: 16px;
+                text-decoration: none;
+                transition: background-color 0.3s ease;
+                z-index: 0;
+                text-align: center; /* Center the text horizontally */
+                filter: brightness(100%);
+                margin-left: 265px; /* Adjust this value to position horizontally */
+                top: 230px; /* Adjust this value to position vertically */
+                line-height: 0px; /* Adjust this value to vertically center the text */
+            }
+
+            .say-hello-button:hover {
+                background-color: #0099dd; /* Set your desired background color on hover */
+            }
+
 
 
             
@@ -561,6 +668,12 @@
                     <div class="pill-sdl2">
                         SDL2
                     </div>
+                    <div class="pill-github">
+                        GitHub
+                    </div>
+                    <div class="pill-vscode">
+                        VS Code
+                    </div>
                     <div class="svgarrow">
                         <img src="link.svg" width="20">
                     </div>
@@ -593,7 +706,7 @@
     <a href="https://github.com/samuelchoi0522" target="_blank"><img src="github.png" class="sticky-image-git" alt="GitHub icon" width="25"></a>
     <a href="https://www.linkedin.com/in/jaedolc/" target="_blank"><img src="linkedin.png" class="sticky-image-linkedin" alt="Linkedin icon" width="25"></a>
     <a href="https://www.instagram.com/slaowlhc_/" target="_blank"><img src="ig.png" class="sticky-image-ig" alt="instagram icon" width="25"></a>
-    
+    <a href="mailto:jaedolc@gmail.com" class="say-hello-button">Say Hello!</a>
     <script>
         document.addEventListener('mousemove', function(event) {
             const flashlight = document.querySelector('.flashlight');
@@ -656,6 +769,8 @@
             var projectBox1Description = document.querySelector('.project-box-1-description');
             var pill = document.querySelector('.pill-cpp');
             var pill_sdl = document.querySelector('.pill-sdl2');
+            var pill_github = document.querySelector('.pill-github');
+            var pill_vsc = document.querySelector('.pill-vscode');
             
             var minHeightDesktop = 160; // Minimum height for desktop mode
             var minHeightTablet = 150; // Minimum height for tablet mode
@@ -675,6 +790,8 @@
             var pillHeight = totalHeight - 25; // Adjust this value as needed
             pill.style.top = pillHeight + 'px';
             pill_sdl.style.top = pillHeight + 'px';
+            pill_vsc.style.top = pillHeight + 'px';
+            pill_github.style.top = pillHeight + 'px';
         }
 
 
