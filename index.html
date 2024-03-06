@@ -13,6 +13,21 @@
             position: relative;
         }
 
+        .flashlight {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 150%;
+            background: radial-gradient(transparent, rgba(255, 255, 255, 1)); /* Use radial gradient for fading */
+            pointer-events: none; /* Ensure the flashlight does not interfere with cursor interaction */
+            z-index: 9999; /* Ensure the flashlight appears on top of other elements */
+            transition: all 0.1s ease; /* Smooth transition for the flashlight effect */
+            mix-blend-mode: difference; /* Blend mode for the flashlight effect */
+            transform: translate(-50%, -50%); /* Center the flashlight on the cursor */
+            pointer-events: none; /* Prevent the flashlight from capturing mouse events */
+            filter: blur(200px); /* Add blur effect */
+        }
+
         .name-text {
             font-size: 50px;
             width: 400px;
@@ -507,6 +522,7 @@
     </style>
 </head>
 <body>
+    <div class="flashlight"></div>
     <div id="sections">
         <section id="about-me" class="about-me">
             <p>
@@ -521,7 +537,7 @@
                 agile methodologies.
                 <br><br>
                 When I'm not on my computer or doing homework, I'm usually riding my bike, rock climbing, 
-                hanging out with my friends, or sleeping.
+                hanging out with my friends, or drinking coffee.
             </p>
             <p id = "projects">
                 <a href="https://github.com/luke-bryant1/CSI-Group-Project/tree/main" target="_blank"><div class="project-box-1">
@@ -530,7 +546,7 @@
                     </span>
                     
                     <span class="project-box-1-description">
-                        My version of the childhood classic, Tetris. Infused with fresh 
+                        My version of the popular childhood classic, Tetris. Infused with fresh 
                         graphics, innovative gameplay mechanics, and personalized twists that offers a nostalgic yet refreshing 
                         experience. 
 
@@ -579,6 +595,12 @@
     <a href="https://www.instagram.com/slaowlhc_/" target="_blank"><img src="ig.png" class="sticky-image-ig" alt="instagram icon" width="25"></a>
     
     <script>
+        document.addEventListener('mousemove', function(event) {
+            const flashlight = document.querySelector('.flashlight');
+            flashlight.style.left = event.pageX + 'px';
+            flashlight.style.top = event.pageY + 'px';
+        });
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
