@@ -191,6 +191,11 @@
             color: white; /* Or any other color you prefer */
         }
 
+        .project-box-3 .project-title-3,
+        .project-box-3 .project-box-3-description {
+            color: white; /* Or any other color you prefer */
+        }
+
 
         .project-box-1 {
             width: 95%;
@@ -231,6 +236,29 @@
             left: 162px;
         }
 
+        .project-box-1:hover {
+            background-color: #ffffff46; /* Change the background color on hover */
+        }
+
+        .project-box-1:hover .project-title-1 {
+            color: #00bbff;
+        }
+
+        .project-box-1 .svgarrow img {
+            content: url('link.svg');
+            position: absolute;
+            width: 20px;
+            transition: all 0.3s ease-out; /* Transition for all properties */
+            left: 0; /* Add initial left position */
+            top: 0; /* Add initial top position */
+        }
+
+        .project-box-1:hover .svgarrow img {
+            content: url('bluearrow.svg');
+            left: 5px;
+            top: -5px;
+            filter: brightness(100%);
+        }
 
         .project-box-2 {
             width: 95%;
@@ -240,7 +268,7 @@
             position: absolute;
             left: 1.5%;
             right: 1.5%;
-            margin-top: 246px;
+            top: 168%;
             z-index: 0;
             border-radius: 6px;
         }
@@ -271,39 +299,14 @@
             left: 162px;
         }
 
-        
-
-        .project-box-1:hover {
-            background-color: #ffffff46; /* Change the background color on hover */
-        }
-
         .project-box-2:hover {
             background-color: #ffffff46;
             
-        }
-
-        .project-box-1:hover .project-title-1 {
-            color: #00bbff;
         }
         .project-box-2:hover .project-title-2 {
             color: #00bbff;
         }
 
-        .project-box-1 .svgarrow img {
-            content: url('link.svg');
-            position: absolute;
-            width: 20px;
-            transition: all 0.3s ease-out; /* Transition for all properties */
-            left: 0; /* Add initial left position */
-            top: 0; /* Add initial top position */
-        }
-
-        .project-box-1:hover .svgarrow img {
-            content: url('bluearrow.svg');
-            left: 5px;
-            top: -5px;
-            filter: brightness(100%);
-        }
 
         .project-box-2 .svgarrow-2 img {
             content: url('link.svg');
@@ -321,25 +324,76 @@
             filter: brightness(100%);
         }
 
+
+        .project-box-3 {
+            width: 95%;
+            height: 250px;
+            background-color: #0f132800;
+            transition: background-color 0.3s ease;
+            position: absolute;
+            left: 1.5%;
+            right: 1.5%;
+            margin-top: 440px;
+            z-index: 0;
+            border-radius: 6px;
+        }
+
+        .project-box-3 img{
+            border-radius: 6px;
+        }
+
+        .project-title-3 {
+            font-size: 20px;
+            position: absolute;
+            top: 8px; /* Adjust this value to move the title up or down */
+            left: 160px; /* Adjust this value to move the title left or right */
+        }
+
+        .project-box-3-image {
+            position: absolute;
+            top: 30px; /* Adjust this value to vertically center the image */
+            left: 12px; /* Adjust this value to move the image left or right */
+            transform: translateY(-50%); /* Center the image vertically */
+            width: 10px;
+            height: 30px;
+        }
+
+        .project-box-3-description{
+            position: absolute;
+            top: 45px;
+            left: 162px;
+        }
+
+        .project-box-3:hover {
+            background-color: #ffffff46;
+            
+        }
+        .project-box-3:hover .project-title-2 {
+            color: #00bbff;
+        }
+
+
+        .project-box-3 .svgarrow-3 img {
+            content: url('link.svg');
+            position: absolute;
+            width: 20px;
+            transition: all 0.3s ease-out; /* Transition for all properties */
+            left: 0; /* Add initial left position */
+            top: 0; /* Add initial top position */
+        }
+
+        .project-box-3:hover .svgarrow-3 img {
+            content: url('bluearrow.svg');
+            left: 5px;
+            top: -5px;
+            filter: brightness(100%);
+        }
+
+
+
         .geo{
             font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size:14px;
-        }
-
-        .pill-cpp {
-            background-color: #00bbff6b; /* Set your desired background color */
-            position: absolute;
-            color: #00bbff; /* Set your desired text color */
-            top: 150px;
-            left: 160px;
-            border-radius: 50px; /* Set the border-radius to create a pill shape */
-            padding: 10px 10px; /* Adjust padding as needed */
-            height: 15px; /* Adjust the height of the pill */
-            width: 40px; /* Adjust the width of the pill */
-            display: inline-flex; /* Display as inline-flex to vertically center the content */
-            align-items: center; /* Center the content vertically */
-            justify-content: center; /* Center the content horizontally */
-            text-align: center;
         }
 
         .pill-cpp {
@@ -417,7 +471,7 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            top: 200px;
+            top: 150px;
             left: 160px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
@@ -433,7 +487,7 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            top: 200px;
+            top: 150px;
             left: 237px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
@@ -449,7 +503,7 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            top: 200px;
+            top: 150px;
             left: 320px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
@@ -465,7 +519,7 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            top: 200px;
+            top: 150px;
             left: 413px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
@@ -479,6 +533,108 @@
 
         .svgarrow-2{
             left: 255px;
+            top: 10px;
+            position: absolute;
+        }
+
+        .pill-HTML-3 {
+            background-color: #00bbff6b; /* Set your desired background color */
+            position: absolute;
+            color: #00bbff; /* Set your desired text color */
+            top: 200px;
+            left: 160px;
+            border-radius: 50px; /* Set the border-radius to create a pill shape */
+            padding: 10px 10px; /* Adjust padding as needed */
+            height: 15px; /* Adjust the height of the pill */
+            width: 40px; /* Adjust the width of the pill */
+            display: inline-flex; /* Display as inline-flex to vertically center the content */
+            align-items: center; /* Center the content vertically */
+            justify-content: center; /* Center the content horizontally */
+            text-align: center;
+        }
+
+        .pill-CSS-3 {
+            background-color: #00bbff6b; /* Set your desired background color */
+            position: absolute;
+            color: #00bbff; /* Set your desired text color */
+            top: 200px;
+            left: 237px;
+            border-radius: 50px; /* Set the border-radius to create a pill shape */
+            padding: 10px 10px; /* Adjust padding as needed */
+            height: 15px; /* Adjust the height of the pill */
+            width: 45px; /* Adjust the width of the pill */
+            display: inline-flex; /* Display as inline-flex to vertically center the content */
+            align-items: center; /* Center the content vertically */
+            justify-content: center; /* Center the content horizontally */
+            text-align: center;
+        }
+
+        .pill-Javascript-3 {
+            background-color: #00bbff6b; /* Set your desired background color */
+            position: absolute;
+            color: #00bbff; /* Set your desired text color */
+            top: 200px;
+            left: 237px;
+            border-radius: 50px; /* Set the border-radius to create a pill shape */
+            padding: 10px 10px; /* Adjust padding as needed */
+            height: 15px; /* Adjust the height of the pill */
+            width: 45px; /* Adjust the width of the pill */
+            display: inline-flex; /* Display as inline-flex to vertically center the content */
+            align-items: center; /* Center the content vertically */
+            justify-content: center; /* Center the content horizontally */
+            text-align: center;
+        }
+
+        .pill-aws-3 {
+            background-color: #00bbff6b; /* Set your desired background color */
+            position: absolute;
+            color: #00bbff; /* Set your desired text color */
+            top: 200px;
+            left: 237px;
+            border-radius: 50px; /* Set the border-radius to create a pill shape */
+            padding: 10px 10px; /* Adjust padding as needed */
+            height: 15px; /* Adjust the height of the pill */
+            width: 45px; /* Adjust the width of the pill */
+            display: inline-flex; /* Display as inline-flex to vertically center the content */
+            align-items: center; /* Center the content vertically */
+            justify-content: center; /* Center the content horizontally */
+            text-align: center;
+        }
+
+        .pill-github-3 {
+            background-color: #00bbff6b; /* Set your desired background color */
+            position: absolute;
+            color: #00bbff; /* Set your desired text color */
+            top: 200px;
+            left: 320px;
+            border-radius: 50px; /* Set the border-radius to create a pill shape */
+            padding: 10px 10px; /* Adjust padding as needed */
+            height: 15px; /* Adjust the height of the pill */
+            width: 55px; /* Adjust the width of the pill */
+            display: inline-flex; /* Display as inline-flex to vertically center the content */
+            align-items: center; /* Center the content vertically */
+            justify-content: center; /* Center the content horizontally */
+            text-align: center;
+        }
+
+        .pill-vscode-3 {
+            background-color: #00bbff6b; /* Set your desired background color */
+            position: absolute;
+            color: #00bbff; /* Set your desired text color */
+            top: 200px;
+            left: 413px;
+            border-radius: 50px; /* Set the border-radius to create a pill shape */
+            padding: 10px 10px; /* Adjust padding as needed */
+            height: 15px; /* Adjust the height of the pill */
+            width: 75px; /* Adjust the width of the pill */
+            display: inline-flex; /* Display as inline-flex to vertically center the content */
+            align-items: center; /* Center the content vertically */
+            justify-content: center; /* Center the content horizontally */
+            text-align: center;
+        }
+
+        .svgarrow-3{
+            left: 317px;
             top: 10px;
             position: absolute;
         }
@@ -884,7 +1040,7 @@
                 When I'm not on my computer or doing homework, I'm usually riding my bike, rock climbing, 
                 hanging out with my friends, or drinking coffee.
             </p>
-            <p id = "projects">
+            <p id = "projects" class="projects">
                 <a href="https://github.com/luke-bryant1/CSI-Group-Project/tree/main" target="_blank">
                     <div class="project-box-1">
                         <span class="project-title-1">
@@ -951,6 +1107,45 @@
                         </div>
                     </div>
                 </a>
+                
+                <a href="https://jaeminschoi.com" target="_blank">
+                    <div class="project-box-3">
+                        <span class="project-title-3">
+                            Jaeminschoi.com
+                        </span>
+
+                        <span class="project-box-3-description">
+                            Currently creating a comprehensive platform that aims to enhance 
+                            the functionality of Gaggia espresso machines by integrating them 
+                            with various devices and enabling remote access over the web.
+                        </span>
+                        <div class="project-box-3-image">
+                            <img src="website.png" alt="image of my website" width="130">
+                        </div>
+
+                        <div class="pill-HTML-3">
+                            HTML
+                        </div>
+                        <div class="pill-CSS-3">
+                            CSS
+                        </div>
+                        <div class="pill-Javascript-3">
+                            JavaScript
+                        </div>
+                        <div class="pill-aws-3">
+                            AWS
+                        </div>
+                        <div class="pill-github-3">
+                            GitHub
+                        </div>
+                        <div class="pill-vscode-3">
+                            VS Code
+                        </div>
+                        <div class="svgarrow-3">
+                            <img src="link.svg" width="20">
+                        </div>
+                    </div>
+                </a>
             </p>
         </section>
 
@@ -1013,6 +1208,7 @@
 
             var aboutMeBottom = document.getElementById('about-me').offsetTop - document.getElementById('about-me').offsetHeight + 100;
             var projectBox2 = document.querySelector('.project-box-2');
+            var projectBox3 = document.querySelector('.project-box-3');
 
             // Calculate the bottom position of project-box-1
             var projectBox1Bottom = document.querySelector('.project-box-1').offsetTop + document.querySelector('.project-box-1').offsetHeight;
@@ -1020,6 +1216,12 @@
             // Set the margin-top of project-box-2 based on project-box-1's bottom position
             projectBox2.style.top = projectBox1Bottom + 30 + 'px'; // Changed 'project-box-2' to 'projects'
             projectBox2.style.marginTop = 0 + 'px';
+
+
+
+            var projectBox2Bottom = document.querySelector('.project-box-2').offsetTop + document.querySelector('.project-box-2').offsetHeight;
+            projectBox3.style.top = projectBox2Bottom + 30 + 'px'; // Changed 'project-box-2' to 'projects'
+            projectBox3.style.marginTop = 0 + 'px';
         }
 
 
@@ -1055,16 +1257,36 @@
             var pill_github2 = document.querySelector('.pill-github-2');
             var pill_vsc2 = document.querySelector('.pill-vscode-2');
 
+            //p3
+            var projectBox3 = document.querySelector('.project-box-3');
+            var projectTitle3 = document.querySelector('.project-title-3');
+            var projectBo32Description = document.querySelector('.project-box-3-description');
+            var pill_HTML3 = document.querySelector('.pill-HTML-3');
+            var pill_CSS3 = document.querySelector('.pill-CSS-3');
+            var pill_Javascript3 = document.querySelector('.pill-Javascript-3');
+            var pill_aws3 = document.querySelector('.pill-aws-3');
+            var pill_github3 = document.querySelector('.pill-github-3');
+            var pill_vscode3 = document.querySelector('.pill-vscode-3');
+
+            //p1
             var totalHeight1 = projectTitle1.offsetHeight + projectBox1Description.offsetHeight + 70; // Add some padding
             // Ensure that the total height does not fall below the minimum height
             totalHeight1 = Math.max(totalHeight1, minHeight);
             projectBox1.style.height = totalHeight1 + 30 + 'px';
 
+            //p2
             var totalHeight2 = projectTitle2.offsetHeight + projectBox2Description.offsetHeight + 70; // Add some padding
             // Ensure that the total height does not fall below the minimum height
             totalHeight2 = Math.max(totalHeight2, minHeight);
-            projectBox2.style.height = totalHeight1 + 10 + 'px';
+            projectBox2.style.height = totalHeight2 + 30 + 'px';
             
+            //p3
+            var totalHeight3 = projectTitle3.offsetHeight + projectBox3Description.offsetHeight + 70; // Add some padding
+            // Ensure that the total height does not fall below the minimum height
+            totalHeight3 = Math.max(totalHeight3, minHeight);
+            projectBox3.style.height = totalHeight3 + 30 + 'px';
+
+
             
             // Adjust the height of the pill
             var pillHeight = totalHeight1 - 25; // Adjust this value as needed
@@ -1073,11 +1295,26 @@
             pill_vsc.style.top = pillHeight + 'px';
             pill_github.style.top = pillHeight + 'px';
 
-            var pillHeight2 = totalHeight2 - 40;
+            var pillHeight2 = totalHeight2 - 25;
             pill2.style.top = pillHeight2 + 'px';
             pill_sdl2.style.top = pillHeight2 + 'px';
             pill_vsc2.style.top = pillHeight2 + 'px';
-            pill_github2.style.top = pillHeight2 + 'px';
+            pill_github2.style.top = pillHeight1 + 'px';
+
+            var pill_HTML3 = document.querySelector('.pill-HTML-3');
+            var pill_CSS3 = document.querySelector('.pill-CSS-3');
+            var pill_Javascript3 = document.querySelector('.pill-Javascript-3');
+            var pill_aws3 = document.querySelector('.pill-aws-3');
+            var pill_github3 = document.querySelector('.pill-github-3');
+            var pill_vscode3 = document.querySelector('.pill-vscode-3');
+
+            var pillHeight3 = totalHeight3 - 25;
+            pill_HTML3.style.top = pillHeight3 + 'px';
+            pill_CSS3.style.top = pillHeight3 + 'px';
+            pill_Javascript3.style.top = pillHeight3 + 'px';
+            pill_aws3.style.top = pillHeight3 + 'px';
+            pill_github3.style.top = pillHeight3 + 'px';
+            pill_vscode3.style.top = pillHeight3 + 'px';
         }
 
 
@@ -1091,9 +1328,9 @@
             adjustProjectBoxHeight();
         });
 
-        document.querySelectorAll('.project-box-1, .project-box-2').forEach(box => {
+        document.querySelectorAll('.project-box-1, .project-box-2, .project-box-3').forEach(box => {
             box.addEventListener('mouseenter', () => {
-                document.querySelectorAll('.project-box-1, .project-box-2').forEach(otherBox => {
+                document.querySelectorAll('.project-box-1, .project-box-2, project-box-3').forEach(otherBox => {
                     if (otherBox !== box) {
                         otherBox.style.transition = 'opacity 0.3s ease'; // Add transition effect
                         otherBox.style.opacity = '0.5'; // Dim other boxes
@@ -1102,7 +1339,7 @@
             });
 
             box.addEventListener('mouseleave', () => {
-                document.querySelectorAll('.project-box-1, .project-box-2').forEach(otherBox => {
+                document.querySelectorAll('.project-box-1, .project-box-2, .project-box-3').forEach(otherBox => {
                     otherBox.style.transition = 'opacity 0.3s ease'; // Add transition effect
                     otherBox.style.opacity = '1'; // Restore original opacity
                 });
