@@ -368,7 +368,7 @@
             background-color: #ffffff46;
             
         }
-        .project-box-3:hover .project-title-2 {
+        .project-box-3:hover .project-title-3 {
             color: #00bbff;
         }
 
@@ -400,7 +400,7 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            top: 150px;
+            bottom: 15px;
             left: 160px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
@@ -416,7 +416,7 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            top: 150px;
+            bottom: 15px;
             left: 237px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
@@ -432,7 +432,7 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            top: 150px;
+            bottom: 15px;
             left: 320px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
@@ -448,7 +448,7 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            top: 150px;
+            bottom: 15px;
             left: 413px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
@@ -471,7 +471,7 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            top: 150px;
+            bottom: 15px;
             left: 160px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
@@ -487,7 +487,7 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            top: 150px;
+            bottom: 15px;
             left: 237px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
@@ -503,7 +503,7 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            top: 150px;
+            bottom: 15px;
             left: 320px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
@@ -519,7 +519,7 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            top: 150px;
+            bottom: 15px;
             left: 413px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
@@ -1206,7 +1206,7 @@
             });
             document.querySelector('#navbar a[href="#' + id + '"]').classList.add('active');
 
-            var aboutMeBottom = document.getElementById('about-me').offsetTop - document.getElementById('about-me').offsetHeight + 100;
+            var aboutMeBottom = document.getElementById('about-me').offsetTop - document.getElementById('about-me').offsetHeight;
             var projectBox2 = document.querySelector('.project-box-2');
             var projectBox3 = document.querySelector('.project-box-3');
 
@@ -1260,7 +1260,7 @@
             //p3
             var projectBox3 = document.querySelector('.project-box-3');
             var projectTitle3 = document.querySelector('.project-title-3');
-            var projectBo32Description = document.querySelector('.project-box-3-description');
+            var projectBoxDescription = document.querySelector('.project-box-3-description');
             var pill_HTML3 = document.querySelector('.pill-HTML-3');
             var pill_CSS3 = document.querySelector('.pill-CSS-3');
             var pill_Javascript3 = document.querySelector('.pill-Javascript-3');
@@ -1289,17 +1289,16 @@
 
             
             // Adjust the height of the pill
-            var pillHeight = totalHeight1 - 25; // Adjust this value as needed
-            pill.style.top = pillHeight + 'px';
-            pill_sdl.style.top = pillHeight + 'px';
-            pill_vsc.style.top = pillHeight + 'px';
-            pill_github.style.top = pillHeight + 'px';
+            pill.style.top = (parseInt(pill.style.top) - 50) + 'px';
+pill_sdl.style.top = (parseInt(pill_sdl.style.top) - 30) + 'px';
+pill_github.style.top = (parseInt(pill_github.style.top) - 30) + 'px';
+pill_vsc.style.top = (parseInt(pill_vsc.style.top) - 30) + 'px';
 
             var pillHeight2 = totalHeight2 - 25;
             pill2.style.top = pillHeight2 + 'px';
             pill_sdl2.style.top = pillHeight2 + 'px';
             pill_vsc2.style.top = pillHeight2 + 'px';
-            pill_github2.style.top = pillHeight1 + 'px';
+            pill_github2.style.top = pillHeight2 + 'px';
 
             var pill_HTML3 = document.querySelector('.pill-HTML-3');
             var pill_CSS3 = document.querySelector('.pill-CSS-3');
@@ -1330,7 +1329,7 @@
 
         document.querySelectorAll('.project-box-1, .project-box-2, .project-box-3').forEach(box => {
             box.addEventListener('mouseenter', () => {
-                document.querySelectorAll('.project-box-1, .project-box-2, project-box-3').forEach(otherBox => {
+                document.querySelectorAll('.project-box-1, .project-box-2, .project-box-3').forEach(otherBox => {
                     if (otherBox !== box) {
                         otherBox.style.transition = 'opacity 0.3s ease'; // Add transition effect
                         otherBox.style.opacity = '0.5'; // Dim other boxes
