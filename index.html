@@ -601,7 +601,6 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            bottom: 60px;
             left: 525px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
@@ -617,7 +616,6 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            bottom: 15px;
             left: 160px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
@@ -1243,7 +1241,7 @@
     var projectBox1 = document.querySelector('.project-box-1');
     var projectTitle1 = document.querySelector('.project-title-1');
     var projectBox1Description = document.querySelector('.project-box-1-description');
-    var pill = document.querySelector('.pill-cpp');
+    var pill_cpp = document.querySelector('.pill-cpp');
     var pill_sdl = document.querySelector('.pill-sdl2');
     var pill_github = document.querySelector('.pill-github');
     var pill_vsc = document.querySelector('.pill-vscode');
@@ -1278,7 +1276,7 @@
     projectBox3.style.height = totalHeight3 + 30 + 'px';
 
     // Function to move pills to the next line if they exceed the available width
-    function movePillsToNextLine(pills, projectBoxWidth) {
+    function movePillsToNextLine1(pills, projectBoxWidth) {
         var currentLine = 0;
         var currentLineWidth = 0;
         var lineHeight = 25; // Adjust according to your layout
@@ -1293,10 +1291,22 @@
             if (currentLineWidth + pill.offsetWidth + pillSpacing + pill.offsetWidth + 50 > projectBoxWidth) {
                 currentLine--; // Move to the next line
                 currentLineWidth = 0; // Reset the line width
+                
+                projectBox1.style.height = 240 + 'px';
+                pill_cpp.style.bottom = 55 + 'px';
+                pill_sdl.style.bottom = 55 + 'px';
+                pill_vsc.style.bottom = 10 + 'px'; 
+                pill_github.style.bottom = 55 + 'px';
+            }
+            else{
+                projectBox1.style.height = 200 + 'px';
+                pill_cpp.style.bottom = 20 + 'px';
+                pill_sdl.style.bottom = 20 + 'px';
+                pill_vsc.style.bottom = 20 + 'px'; 
+                pill_github.style.bottom = 20 + 'px';
             }
 
             // Set the position of the pill
-            pill.style.bottom = ((currentLine - 1) * (lineHeight + pillSpacing)) + 60 + 'px';
             pill.style.left = initialLeft + currentLineWidth + 'px';
 
             // Update the current line width
@@ -1304,27 +1314,84 @@
         });
     }
 
-    var pillsInP1 = [pill, pill_sdl, pill_github, pill_vsc];
-    movePillsToNextLine(pillsInP1, projectBox1.clientWidth - 30); // Adjusted for padding
+    function movePillsToNextLine2(pills, projectBoxWidth) {
+        var currentLine = 0;
+        var currentLineWidth = 0;
+        var lineHeight = 25; // Adjust according to your layout
+        var pillSpacing = 15; // Adjust according to your layout
+        var initialLeft = 160; // Adjust according to your layout
+
+        // Calculate the maximum bottom position of existing pills
+        var maxBottom = Math.max(...pills.map(pill => parseInt(pill.style.bottom)));
+
+        pills.forEach(pill => {
+            // Check if placing the next pill exceeds the project box width
+            if (currentLineWidth + pill.offsetWidth + pillSpacing + pill.offsetWidth + 50 > projectBoxWidth) {
+                currentLine--; // Move to the next line
+                currentLineWidth = 0; // Reset the line width
+                
+                projectBox2.style.height = 240 + 'px';
+                pill2.style.bottom = 55 + 'px';
+                pill_sdl2.style.bottom = 55 + 'px';
+                pill_vsc2.style.bottom = 10 + 'px'; 
+                pill_github2.style.bottom = 55 + 'px';
+            }
+            else{
+                projectBox2.style.height = 200 + 'px';
+                pill2.style.bottom = 20 + 'px';
+                pill_sdl2.style.bottom = 20 + 'px';
+                pill_vsc2.style.bottom = 20 + 'px'; 
+                pill_github2.style.bottom = 20 + 'px';
+            }
+
+            // Set the position of the pill
+            pill.style.left = initialLeft + currentLineWidth + 'px';
+
+            // Update the current line width
+            currentLineWidth += pill.offsetWidth + pillSpacing;
+        });
+    }
+
+function movePillsToNextLine3(pills, projectBoxWidth) {
+    var currentLine = 0;
+    var currentLineWidth = 0;
+    var lineHeight = 25; // Adjust according to your layout
+    var pillSpacing = 15; // Adjust according to your layout
+    var initialLeft = 160; // Adjust according to your layout
+
+    // Calculate the maximum bottom position of existing pills
+    var maxBottom = Math.max(...pills.map(pill => parseInt(pill.style.bottom)));
+
+    pills.forEach(pill => {
+        // Check if placing the next pill exceeds the project box width
+        if (currentLineWidth + pill.offsetWidth + pillSpacing + pill.offsetWidth + 50 > projectBoxWidth) {
+            currentLine--; // Move to the next line
+            currentLineWidth = 0; // Reset the line width
+            // Update the bottom position of all pills to bring them up
+            pills.forEach(p => {
+                p.style.bottom = parseInt(p.style.bottom) - (lineHeight + pillSpacing) + 45 + 'px';
+            });
+        }
+
+        // Set the position of the pill
+        pill.style.bottom = (currentLine * (lineHeight + pillSpacing)) + 60 + 'px';
+        pill.style.left = initialLeft + currentLineWidth + 'px';
+
+        // Update the current line width
+        currentLineWidth += pill.offsetWidth + pillSpacing;
+    });
+}
+
+
+    var pillsInP1 = [pill_cpp, pill_sdl, pill_github, pill_vsc];
+    movePillsToNextLine1(pillsInP1, projectBox1.clientWidth - 30); // Adjusted for padding
 
     var pillsInP2 = [pill2, pill_sdl2, pill_github2, pill_vsc2];
-    movePillsToNextLine(pillsInP2, projectBox2.clientWidth - 30); // Adjusted for padding
+    movePillsToNextLine2(pillsInP2, projectBox2.clientWidth - 30); // Adjusted for padding
 
     var pillsInP3 = [pill_HTML3, pill_CSS3, pill_Javascript3, pill_aws3, pill_github3, pill_vscode3];
-    movePillsToNextLine(pillsInP3, projectBox3.clientWidth - 30); // Adjusted for padding
+    movePillsToNextLine3(pillsInP3, projectBox3.clientWidth - 30); // Adjusted for padding
 
-    // Calculate the maximum bottom position among all pills in projectBox3
-    var maxBottom3 = Math.max(
-        parseInt(pill_HTML3.style.bottom),
-        parseInt(pill_CSS3.style.bottom),
-        parseInt(pill_Javascript3.style.bottom),
-        parseInt(pill_aws3.style.bottom),
-        parseInt(pill_github3.style.bottom),
-        parseInt(pill_vscode3.style.bottom)
-    );
-
-    // Set the height of projectBox3 based on the maximum bottom position
-    projectBox3.style.height = totalHeight3 + maxBottom3 + 30 + 'px';
 }
 
 // Call the adjustProjectBoxHeight function when the page loads
