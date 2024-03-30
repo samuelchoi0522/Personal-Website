@@ -327,7 +327,7 @@
 
         .project-box-3 {
             width: 95%;
-            height: 250px;
+            height: 3500px;
             background-color: #0f132800;
             transition: background-color 0.3s ease;
             position: absolute;
@@ -400,7 +400,6 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            bottom: 15px;
             left: 160px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
@@ -416,7 +415,6 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            bottom: 15px;
             left: 237px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
@@ -432,7 +430,6 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            bottom: 15px;
             left: 320px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
@@ -448,7 +445,6 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            bottom: 15px;
             left: 413px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
@@ -541,12 +537,12 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            top: 200px;
+            bottom: 60px;
             left: 160px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
             height: 15px; /* Adjust the height of the pill */
-            width: 40px; /* Adjust the width of the pill */
+            width: 50px; /* Adjust the width of the pill */
             display: inline-flex; /* Display as inline-flex to vertically center the content */
             align-items: center; /* Center the content vertically */
             justify-content: center; /* Center the content horizontally */
@@ -557,8 +553,8 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            top: 200px;
-            left: 237px;
+            bottom: 60px;
+            left: 245px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
             height: 15px; /* Adjust the height of the pill */
@@ -573,12 +569,12 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            top: 200px;
-            left: 237px;
+            bottom: 60px;
+            left: 325px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
             height: 15px; /* Adjust the height of the pill */
-            width: 45px; /* Adjust the width of the pill */
+            width: 85px; /* Adjust the width of the pill */
             display: inline-flex; /* Display as inline-flex to vertically center the content */
             align-items: center; /* Center the content vertically */
             justify-content: center; /* Center the content horizontally */
@@ -589,8 +585,8 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            top: 200px;
-            left: 237px;
+            bottom: 60px;
+            left: 445px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
             height: 15px; /* Adjust the height of the pill */
@@ -605,8 +601,8 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            top: 200px;
-            left: 320px;
+            bottom: 60px;
+            left: 525px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
             height: 15px; /* Adjust the height of the pill */
@@ -621,8 +617,8 @@
             background-color: #00bbff6b; /* Set your desired background color */
             position: absolute;
             color: #00bbff; /* Set your desired text color */
-            top: 200px;
-            left: 413px;
+            bottom: 15px;
+            left: 160px;
             border-radius: 50px; /* Set the border-radius to create a pill shape */
             padding: 10px 10px; /* Adjust padding as needed */
             height: 15px; /* Adjust the height of the pill */
@@ -1115,9 +1111,15 @@
                         </span>
 
                         <span class="project-box-3-description">
-                            Currently creating a comprehensive platform that aims to enhance 
-                            the functionality of Gaggia espresso machines by integrating them 
-                            with various devices and enabling remote access over the web.
+                            This project represents my ongoing website development endeavor, an
+                             exciting digital platform aimed at showcasing my portfolio, skills, 
+                             and accomplishments. Through meticulous design and implementation, 
+                             this website serves as a dynamic hub for visitors to explore my 
+                             professional journey, projects, and expertise. Utilizing a blend 
+                             of HTML, CSS, and JavaScript, the site offers an immersive user 
+                             experience with seamless navigation and visually engaging content. 
+                             AWS (Amazon Web Services) integration ensures optimal performance 
+                             and scalability, guaranteeing reliable access to visitors worldwide. 
                         </span>
                         <div class="project-box-3-image">
                             <img src="website.png" alt="image of my website" width="130">
@@ -1232,124 +1234,159 @@
 
 
         function adjustProjectBoxHeight() {
-            var minHeightDesktop = 160; // Minimum height for desktop mode
-            var minHeightTablet = 150; // Minimum height for tablet mode
-            var mode = window.innerWidth <= 1024 ? 'tablet' : 'desktop';
-            var minHeight = mode === 'tablet' ? minHeightTablet : minHeightDesktop;
+    var minHeightDesktop = 160; // Minimum height for desktop mode
+    var minHeightTablet = 150; // Minimum height for tablet mode
+    var mode = window.innerWidth <= 1024 ? 'tablet' : 'desktop';
+    var minHeight = mode === 'tablet' ? minHeightTablet : minHeightDesktop;
 
+    //p1
+    var projectBox1 = document.querySelector('.project-box-1');
+    var projectTitle1 = document.querySelector('.project-title-1');
+    var projectBox1Description = document.querySelector('.project-box-1-description');
+    var pill = document.querySelector('.pill-cpp');
+    var pill_sdl = document.querySelector('.pill-sdl2');
+    var pill_github = document.querySelector('.pill-github');
+    var pill_vsc = document.querySelector('.pill-vscode');
+    var totalHeight1 = projectTitle1.offsetHeight + projectBox1Description.offsetHeight + 70; // Add some padding
+    totalHeight1 = Math.max(totalHeight1, minHeight);
+    projectBox1.style.height = totalHeight1 + 30 + 'px';
 
-            //p1
-            var projectBox1 = document.querySelector('.project-box-1');
-            var projectTitle1 = document.querySelector('.project-title-1');
-            var projectBox1Description = document.querySelector('.project-box-1-description');
-            var pill = document.querySelector('.pill-cpp');
-            var pill_sdl = document.querySelector('.pill-sdl2');
-            var pill_github = document.querySelector('.pill-github');
-            var pill_vsc = document.querySelector('.pill-vscode');
+    //p2
+    var projectBox2 = document.querySelector('.project-box-2');
+    var projectTitle2 = document.querySelector('.project-title-2');
+    var projectBox2Description = document.querySelector('.project-box-2-description');
+    var pill2 = document.querySelector('.pill-cpp-2');
+    var pill_sdl2 = document.querySelector('.pill-react-2');
+    var pill_github2 = document.querySelector('.pill-github-2');
+    var pill_vsc2 = document.querySelector('.pill-vscode-2');
+    var totalHeight2 = projectTitle2.offsetHeight + projectBox2Description.offsetHeight + 70; // Add some padding
+    totalHeight2 = Math.max(totalHeight2, minHeight);
+    projectBox2.style.height = totalHeight2 + 30 + 'px';
 
+    //p3
+    var projectBox3 = document.querySelector('.project-box-3');
+    var projectTitle3 = document.querySelector('.project-title-3');
+    var projectBox3Description = document.querySelector('.project-box-3-description');
+    var pill_HTML3 = document.querySelector('.pill-HTML-3');
+    var pill_CSS3 = document.querySelector('.pill-CSS-3');
+    var pill_Javascript3 = document.querySelector('.pill-Javascript-3');
+    var pill_aws3 = document.querySelector('.pill-aws-3');
+    var pill_github3 = document.querySelector('.pill-github-3');
+    var pill_vscode3 = document.querySelector('.pill-vscode-3');
+    var totalHeight3 = projectTitle3.offsetHeight + projectBox3Description.offsetHeight + 120; // Add some padding
+    totalHeight3 = Math.max(totalHeight3, minHeight);
+    projectBox3.style.height = totalHeight3 + 30 + 'px';
 
-            //p2
-            var projectBox2 = document.querySelector('.project-box-2');
-            var projectTitle2 = document.querySelector('.project-title-2');
-            var projectBox2Description = document.querySelector('.project-box-2-description');
-            var pill2 = document.querySelector('.pill-cpp-2');
-            var pill_sdl2 = document.querySelector('.pill-react-2');
-            var pill_github2 = document.querySelector('.pill-github-2');
-            var pill_vsc2 = document.querySelector('.pill-vscode-2');
+    // Function to move pills to the next line if they exceed the available width
+    function movePillsToNextLine(pills, projectBoxWidth) {
+        var currentLine = 0;
+        var currentLineWidth = 0;
+        var lineHeight = 25; // Adjust according to your layout
+        var pillSpacing = 15; // Adjust according to your layout
+        var initialLeft = 160; // Adjust according to your layout
 
-            //p3
-            var projectBox3 = document.querySelector('.project-box-3');
-            var projectTitle3 = document.querySelector('.project-title-3');
-            var projectBoxDescription = document.querySelector('.project-box-3-description');
-            var pill_HTML3 = document.querySelector('.pill-HTML-3');
-            var pill_CSS3 = document.querySelector('.pill-CSS-3');
-            var pill_Javascript3 = document.querySelector('.pill-Javascript-3');
-            var pill_aws3 = document.querySelector('.pill-aws-3');
-            var pill_github3 = document.querySelector('.pill-github-3');
-            var pill_vscode3 = document.querySelector('.pill-vscode-3');
+        // Calculate the maximum bottom position of existing pills
+        var maxBottom = Math.max(...pills.map(pill => parseInt(pill.style.bottom)));
 
-            //p1
-            var totalHeight1 = projectTitle1.offsetHeight + projectBox1Description.offsetHeight + 70; // Add some padding
-            // Ensure that the total height does not fall below the minimum height
-            totalHeight1 = Math.max(totalHeight1, minHeight);
-            projectBox1.style.height = totalHeight1 + 30 + 'px';
+        pills.forEach(pill => {
+            // Check if placing the next pill exceeds the project box width
+            if (currentLineWidth + pill.offsetWidth + pillSpacing + pill.offsetWidth + 50 > projectBoxWidth) {
+                currentLine--; // Move to the next line
+                currentLineWidth = 0; // Reset the line width
+            }
 
-            //p2
-            var totalHeight2 = projectTitle2.offsetHeight + projectBox2Description.offsetHeight + 70; // Add some padding
-            // Ensure that the total height does not fall below the minimum height
-            totalHeight2 = Math.max(totalHeight2, minHeight);
-            projectBox2.style.height = totalHeight2 + 30 + 'px';
-            
-            //p3
-            var totalHeight3 = projectTitle3.offsetHeight + projectBox3Description.offsetHeight + 70; // Add some padding
-            // Ensure that the total height does not fall below the minimum height
-            totalHeight3 = Math.max(totalHeight3, minHeight);
-            projectBox3.style.height = totalHeight3 + 30 + 'px';
+            // Set the position of the pill
+            pill.style.bottom = ((currentLine - 1) * (lineHeight + pillSpacing)) + 60 + 'px';
+            pill.style.left = initialLeft + currentLineWidth + 'px';
 
-
-            
-            // Adjust the height of the pill
-            pill.style.top = (parseInt(pill.style.top) - 50) + 'px';
-pill_sdl.style.top = (parseInt(pill_sdl.style.top) - 30) + 'px';
-pill_github.style.top = (parseInt(pill_github.style.top) - 30) + 'px';
-pill_vsc.style.top = (parseInt(pill_vsc.style.top) - 30) + 'px';
-
-            var pillHeight2 = totalHeight2 - 25;
-            pill2.style.top = pillHeight2 + 'px';
-            pill_sdl2.style.top = pillHeight2 + 'px';
-            pill_vsc2.style.top = pillHeight2 + 'px';
-            pill_github2.style.top = pillHeight2 + 'px';
-
-            var pill_HTML3 = document.querySelector('.pill-HTML-3');
-            var pill_CSS3 = document.querySelector('.pill-CSS-3');
-            var pill_Javascript3 = document.querySelector('.pill-Javascript-3');
-            var pill_aws3 = document.querySelector('.pill-aws-3');
-            var pill_github3 = document.querySelector('.pill-github-3');
-            var pill_vscode3 = document.querySelector('.pill-vscode-3');
-
-            var pillHeight3 = totalHeight3 - 25;
-            pill_HTML3.style.top = pillHeight3 + 'px';
-            pill_CSS3.style.top = pillHeight3 + 'px';
-            pill_Javascript3.style.top = pillHeight3 + 'px';
-            pill_aws3.style.top = pillHeight3 + 'px';
-            pill_github3.style.top = pillHeight3 + 'px';
-            pill_vscode3.style.top = pillHeight3 + 'px';
-        }
-
-
-        // Call the adjustProjectBoxHeight function when the page loads
-        window.addEventListener('load', function() {
-            adjustProjectBoxHeight();
+            // Update the current line width
+            currentLineWidth += pill.offsetWidth + pillSpacing;
         });
+    }
 
-        // Call the adjustProjectBoxHeight function when the window is resized
-        window.addEventListener('resize', function() {
-            adjustProjectBoxHeight();
+    var pillsInP1 = [pill, pill_sdl, pill_github, pill_vsc];
+    movePillsToNextLine(pillsInP1, projectBox1.clientWidth - 30); // Adjusted for padding
+
+    var pillsInP2 = [pill2, pill_sdl2, pill_github2, pill_vsc2];
+    movePillsToNextLine(pillsInP2, projectBox2.clientWidth - 30); // Adjusted for padding
+
+    var pillsInP3 = [pill_HTML3, pill_CSS3, pill_Javascript3, pill_aws3, pill_github3, pill_vscode3];
+    movePillsToNextLine(pillsInP3, projectBox3.clientWidth - 30); // Adjusted for padding
+
+    // Calculate the maximum bottom position among all pills in projectBox3
+    var maxBottom3 = Math.max(
+        parseInt(pill_HTML3.style.bottom),
+        parseInt(pill_CSS3.style.bottom),
+        parseInt(pill_Javascript3.style.bottom),
+        parseInt(pill_aws3.style.bottom),
+        parseInt(pill_github3.style.bottom),
+        parseInt(pill_vscode3.style.bottom)
+    );
+
+    // Set the height of projectBox3 based on the maximum bottom position
+    projectBox3.style.height = totalHeight3 + maxBottom3 + 30 + 'px';
+}
+
+// Call the adjustProjectBoxHeight function when the page loads
+window.addEventListener('load', function() {
+    adjustProjectBoxHeight();
+});
+
+// Call the adjustProjectBoxHeight function when the window is resized
+window.addEventListener('resize', function() {
+    adjustProjectBoxHeight();
+});
+
+document.querySelectorAll('.project-box-1, .project-box-2, .project-box-3').forEach(box => {
+    box.addEventListener('mouseenter', () => {
+        document.querySelectorAll('.project-box-1, .project-box-2, .project-box-3').forEach(otherBox => {
+            if (otherBox !== box) {
+                otherBox.style.transition = 'opacity 0.3s ease'; // Add transition effect
+                otherBox.style.opacity = '0.5'; // Dim other boxes
+            }
         });
+    });
 
-        document.querySelectorAll('.project-box-1, .project-box-2, .project-box-3').forEach(box => {
-            box.addEventListener('mouseenter', () => {
-                document.querySelectorAll('.project-box-1, .project-box-2, .project-box-3').forEach(otherBox => {
-                    if (otherBox !== box) {
-                        otherBox.style.transition = 'opacity 0.3s ease'; // Add transition effect
-                        otherBox.style.opacity = '0.5'; // Dim other boxes
-                    }
-                });
-            });
+    box.addEventListener('mouseleave', () => {
+        document.querySelectorAll('.project-box-1, .project-box-2, .project-box-3').forEach(otherBox => {
+            otherBox.style.transition = 'opacity 0.3s ease'; // Add transition effect
+            otherBox.style.opacity = '1'; // Restore original opacity
+        });
+    });
+});
 
-            box.addEventListener('mouseleave', () => {
-                document.querySelectorAll('.project-box-1, .project-box-2, .project-box-3').forEach(otherBox => {
+
+    // Call the adjustProjectBoxHeight function when the page loads
+    window.addEventListener('load', function() {
+        adjustProjectBoxHeight();
+    });
+
+    // Call the adjustProjectBoxHeight function when the window is resized
+    window.addEventListener('resize', function() {
+        adjustProjectBoxHeight();
+    });
+
+    document.querySelectorAll('.project-box-1, .project-box-2, .project-box-3').forEach(box => {
+        box.addEventListener('mouseenter', () => {
+            document.querySelectorAll('.project-box-1, .project-box-2, .project-box-3').forEach(otherBox => {
+                if (otherBox !== box) {
                     otherBox.style.transition = 'opacity 0.3s ease'; // Add transition effect
-                    otherBox.style.opacity = '1'; // Restore original opacity
-                });
+                    otherBox.style.opacity = '0.5'; // Dim other boxes
+                }
             });
         });
 
+        box.addEventListener('mouseleave', () => {
+            document.querySelectorAll('.project-box-1, .project-box-2, .project-box-3').forEach(otherBox => {
+                otherBox.style.transition = 'opacity 0.3s ease'; // Add transition effect
+                otherBox.style.opacity = '1'; // Restore original opacity
+            });
+        });
+    });
+
+    updateActiveLink(); 
 
 
-
-
-
-    </script>
-</body>
-</html>
+        </script>
+    </body>
+    </html>
