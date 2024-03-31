@@ -1527,13 +1527,16 @@
 
     // Call the adjustProjectBoxHeight function when the page loads
     window.addEventListener('load', function() {
+        updateActiveLink();
         adjustProjectBoxHeight();
         updateActiveLink();
     });
 
     // Call the adjustProjectBoxHeight function when the window is resized
     window.addEventListener('resize', function() {
+        updateActiveLink();
         adjustProjectBoxHeight();
+        updateActiveLink();
     });
 
     document.querySelectorAll('.project-box-1, .project-box-2, .project-box-3').forEach(box => {
