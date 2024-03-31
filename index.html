@@ -1236,7 +1236,6 @@
         window.addEventListener('resize', function() {
             updateActiveLink('projects');
         });
-
         window.addEventListener('load', function() {
             updateActiveLink('projects');
         });
@@ -1556,6 +1555,17 @@
                 otherBox.style.opacity = '1'; // Restore original opacity
             });
         });
+    });
+
+
+    // Call the adjustProjectBoxHeight function when the page loads
+    window.addEventListener('load', function() {
+        adjustProjectBoxHeight();
+    });
+
+    // Call the adjustProjectBoxHeight function when the window is resized
+    window.addEventListener('resize', function() {
+        adjustProjectBoxHeight();
     });
 
     document.querySelectorAll('.project-box-1, .project-box-2, .project-box-3').forEach(box => {
