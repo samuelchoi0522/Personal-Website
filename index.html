@@ -1033,8 +1033,8 @@
             <p>
                 Welcome to my portfolio website! I'm a sophomore at Baylor University pursuing a degree in 
                 Computer Science with a concentration in Software Engineering. 
-                Passionate about leveraging technology to solve real-world problems, 
-                I'm constantly exploring new technologies and honing my skills to develop innovative solutions.
+                I am passionate about leveraging technology to solve real-world problems, 
+                constantly exploring new technologies, and honing my skills to develop innovative solutions.
                 <br><br>
                 With a solid foundation in programming languages like C++, Java, and Python, I enjoy delving 
                 into various aspects of software development. Additionally, my coursework and projects have 
@@ -1119,15 +1119,12 @@
                         </span>
 
                         <span class="project-box-3-description">
-                            This project represents my ongoing website development endeavor, an
-                             exciting digital platform aimed at showcasing my portfolio, skills, 
-                             and accomplishments. Through meticulous design and implementation, 
-                             this website serves as a dynamic hub for visitors to explore my 
-                             professional journey, projects, and expertise. Utilizing a blend 
-                             of HTML, CSS, and JavaScript, the site offers an immersive user 
-                             experience with seamless navigation and visually engaging content. 
-                             AWS (Amazon Web Services) integration ensures optimal performance 
-                             and scalability, guaranteeing reliable access to visitors worldwide. 
+                            This is version 1 of a career-long project. This project represents
+                             my ongoing website development endeavor, an exciting digital platform 
+                             aimed at showcasing my portfolio, skills, and accomplishments. Designed
+                             with HTML, CSS, and Javascript. Deployed with AWS to ensure optimal 
+                             performance and scalability, whilst guaranteeing reliable access at all 
+                             times.
                         </span>
                         <div class="project-box-3-image">
                             <img src="website.png" alt="image of my website" width="130">
@@ -1237,6 +1234,10 @@
 
         // Call the updateActiveLink function when the window is resized
         window.addEventListener('resize', function() {
+            updateActiveLink('projects');
+        });
+
+        window.addEventListener('load', function() {
             updateActiveLink('projects');
         });
 
@@ -1555,17 +1556,6 @@
                 otherBox.style.opacity = '1'; // Restore original opacity
             });
         });
-    });
-
-
-    // Call the adjustProjectBoxHeight function when the page loads
-    window.addEventListener('load', function() {
-        adjustProjectBoxHeight();
-    });
-
-    // Call the adjustProjectBoxHeight function when the window is resized
-    window.addEventListener('resize', function() {
-        adjustProjectBoxHeight();
     });
 
     document.querySelectorAll('.project-box-1, .project-box-2, .project-box-3').forEach(box => {
