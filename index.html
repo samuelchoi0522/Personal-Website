@@ -1015,6 +1015,12 @@
                 position: absolute;
             }
 
+            .svgarrow-3{
+                left: 380px;
+                top: -44px;
+                position: absolute;
+            }
+
             
         }
 
@@ -1489,7 +1495,7 @@
 
                 pills.forEach(pill => {
                     // Check if placing the next pill exceeds the project box width
-                    if (currentLineWidth + pill.offsetWidth + pillSpacing + pill.offsetWidth + 100 > projectBoxWidth) {
+                    if (currentLineWidth + pill.offsetWidth + pillSpacing + pill.offsetWidth + 130 > projectBoxWidth) {
                         currentLine--; // Move to the next line
                         currentLineWidth = 0; // Reset the line width
                         // Update the bottom position of all pills to bring them up
