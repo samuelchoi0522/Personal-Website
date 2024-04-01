@@ -1203,6 +1203,52 @@
     <a href="https://www.instagram.com/slaowlhc_/" target="_blank"><img src="ig.png" class="sticky-image-ig" alt="instagram icon" width="25"></a>
     <a href="mailto:jaedolc@gmail.com" class="say-hello-button">Say Hello!</a>
     <script>
+        function updateActiveLink(id) {
+            var links = document.querySelectorAll('#navbar a');
+            links.forEach(function(link) {
+                link.classList.remove('active');
+            });
+            document.querySelector('#navbar a[href="#' + id + '"]').classList.add('active');
+
+            var aboutMeBottom = document.getElementById('about-me').offsetTop - document.getElementById('about-me').offsetHeight;
+            var projectBox2 = document.querySelector('.project-box-2');
+            var projectBox3 = document.querySelector('.project-box-3');
+
+            // Calculate the bottom position of project-box-1
+            var projectBox1Bottom = document.querySelector('.project-box-1').offsetTop + document.querySelector('.project-box-1').offsetHeight;
+            
+            // Set the margin-top of project-box-2 based on project-box-1's bottom position
+            projectBox2.style.top = projectBox1Bottom + 30 + 'px'; // Changed 'project-box-2' to 'projects'
+            projectBox2.style.marginTop = 0 + 'px';
+
+
+
+            var projectBox2Bottom = document.querySelector('.project-box-2').offsetTop + document.querySelector('.project-box-2').offsetHeight;
+            projectBox3.style.top = projectBox2Bottom + 30 + 'px'; // Changed 'project-box-2' to 'projects'
+            projectBox3.style.marginTop = 0 + 'px';
+        }
+        window.addEventListener('load', function() {
+            updateActiveLink('projects');
+            adjustProjectBoxHeight();
+
+            var scrollPosition = window.scrollY;
+            var aboutMe = document.getElementById('about-me').offsetTop;
+            var projects = document.getElementById('projects').offsetTop;
+            var experience = document.getElementById('experience').offsetTop;
+
+            if (scrollPosition < projects) {
+                updateActiveLink('about-me');
+            } else if (scrollPosition >= projects && scrollPosition < experience) {
+                updateActiveLink('projects');
+            } else {
+                updateActiveLink('experience');
+            }
+        });
+        updateActiveLink('projects');
+        window.addEventListener('resize', function() {
+            updateActiveLink('projects');
+            adjustProjectBoxHeight();
+        });
         document.addEventListener('mousemove', function(event) {
             const flashlight = document.querySelector('.flashlight');
             flashlight.style.left = event.pageX + 'px';
@@ -1233,39 +1279,8 @@
             }
         });
 
-        function updateActiveLink(id) {
-            var links = document.querySelectorAll('#navbar a');
-            links.forEach(function(link) {
-                link.classList.remove('active');
-            });
-            document.querySelector('#navbar a[href="#' + id + '"]').classList.add('active');
-
-            var aboutMeBottom = document.getElementById('about-me').offsetTop - document.getElementById('about-me').offsetHeight;
-            var projectBox2 = document.querySelector('.project-box-2');
-            var projectBox3 = document.querySelector('.project-box-3');
-
-            // Calculate the bottom position of project-box-1
-            var projectBox1Bottom = document.querySelector('.project-box-1').offsetTop + document.querySelector('.project-box-1').offsetHeight;
-            
-            // Set the margin-top of project-box-2 based on project-box-1's bottom position
-            projectBox2.style.top = projectBox1Bottom + 30 + 'px'; // Changed 'project-box-2' to 'projects'
-            projectBox2.style.marginTop = 0 + 'px';
 
 
-
-            var projectBox2Bottom = document.querySelector('.project-box-2').offsetTop + document.querySelector('.project-box-2').offsetHeight;
-            projectBox3.style.top = projectBox2Bottom + 30 + 'px'; // Changed 'project-box-2' to 'projects'
-            projectBox3.style.marginTop = 0 + 'px';
-        }
-
-
-        // Call the updateActiveLink function when the window is resized
-        window.addEventListener('resize', function() {
-            updateActiveLink('projects');
-        });
-        window.addEventListener('load', function() {
-            updateActiveLink('projects');
-        });
 
     function adjustProjectBoxHeight() {
         var minHeightDesktop = 160; // Minimum height for desktop mode
@@ -1581,15 +1596,6 @@
     });
 
 
-    // Call the adjustProjectBoxHeight function when the page loads
-    window.addEventListener('load', function() {
-        adjustProjectBoxHeight();
-    });
-
-    // Call the adjustProjectBoxHeight function when the window is resized
-    window.addEventListener('resize', function() {
-        adjustProjectBoxHeight();
-    });
 
     document.querySelectorAll('.project-box-1, .project-box-2, .project-box-3').forEach(box => {
         box.addEventListener('mouseenter', () => {
