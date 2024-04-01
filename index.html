@@ -4,13 +4,26 @@
     <title>Homepage</title>
     <link rel="icon" href="jc-nobg.png">
     <style>
+
+        @font-face {
+            font-family: 'Calibre';
+            src: url('/Users/sam/Desktop/projecs/Personal Website/Calibre/calibre.ttf') format('truetype');
+            /* You may need to adjust the path to the font file based on your workspace structure */
+        }
+
+
         body {
             background-color: #0f1328f7;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Calibre', Arial, sans-serif;
             color: rgba(255, 255, 255, 0.877);
             position: relative;
+        }
+
+        .bolded {
+        font-weight: bold;
+        color: #ccd6f6;
         }
 
         .flashlight {
@@ -131,6 +144,10 @@
         #about-me{
             position:absolute;
             margin-top: 3%;
+            
+            color: #8892b0;
+            font-size: 18px;
+            line-height: 30px;
         }
 
         #projects{
@@ -182,17 +199,17 @@
         }
 
         .project-box-1 .project-title-1,
-        .project-box-1 .project-box-1-description {
+        .project-box-1 {
             color: white; /* Or any other color you prefer */
         }
 
         .project-box-2 .project-title-2,
-        .project-box-2 .project-box-2-description {
+        .project-box-2  {
             color: white; /* Or any other color you prefer */
         }
 
         .project-box-3 .project-title-3,
-        .project-box-3 .project-box-3-description {
+        .project-box-3 {
             color: white; /* Or any other color you prefer */
         }
 
@@ -234,6 +251,8 @@
             position: absolute;
             top: 45px;
             left: 162px;
+
+            color: #8892b0;
         }
 
         .project-box-1:hover {
@@ -297,6 +316,8 @@
             position: absolute;
             top: 45px;
             left: 162px;
+
+            color: #8892b0;
         }
 
         .project-box-2:hover {
@@ -362,6 +383,8 @@
             position: absolute;
             top: 45px;
             left: 162px;
+
+            color: #8892b0;
         }
 
         .project-box-3:hover {
@@ -712,6 +735,9 @@
                 margin-top: 250px;
                 left: 30px;
                 right: 40px;
+                color: #8892b0;
+                font-size: 18px;
+                line-height: 30px;
             }
 
             #projects{
@@ -1031,12 +1057,12 @@
     <div id="sections">
         <section id="about-me" class="about-me">
             <p>
-                Welcome to my portfolio website! I'm a sophomore at Baylor University pursuing a degree in 
-                Computer Science with a concentration in Software Engineering. 
+                Welcome to my portfolio website! I'm a <span class="bolded"> sophomore </span> at Baylor University pursuing a degree in 
+                Computer Science with a concentration in <span class="bolded"> Software Engineering</span>.
                 I am passionate about leveraging technology to solve real-world problems, 
                 constantly exploring new technologies, and honing my skills to develop innovative solutions.
                 <br><br>
-                With a solid foundation in programming languages like C++, Java, and Python, I enjoy delving 
+                With a solid foundation in programming languages like <span class="bolded"> C++ </span>, <span class="bolded"> Java</span>, and <span class="bolded"> Python</span>, I enjoy delving 
                 into various aspects of software development. Additionally, my coursework and projects have 
                 provided me with experience in software engineering principles, version control systems, and 
                 agile methodologies.
@@ -1305,14 +1331,14 @@
                         currentLine--; // Move to the next line
                         currentLineWidth = 0; // Reset the line width
                         
-                        projectBox1.style.height = 240 + 'px';
+                        projectBox1.style.height = 320 + 'px';
                         pill_cpp.style.bottom = 55 + 'px';
                         pill_sdl.style.bottom = 55 + 'px';
                         pill_vsc.style.bottom = 10 + 'px'; 
                         pill_github.style.bottom = 55 + 'px';
                     }
                     else{
-                        projectBox1.style.height = 200 + 'px';
+                        projectBox1.style.height = 260 + 'px';
                         pill_cpp.style.bottom = 20 + 'px';
                         pill_sdl.style.bottom = 20 + 'px';
                         pill_vsc.style.bottom = 20 + 'px'; 
@@ -1343,14 +1369,14 @@
                         currentLine--; // Move to the next line
                         currentLineWidth = 0; // Reset the line width
                         
-                        projectBox2.style.height = 240 + 'px';
+                        projectBox2.style.height = 320 + 'px';
                         pill2.style.bottom = 55 + 'px';
                         pill_sdl2.style.bottom = 55 + 'px';
                         pill_vsc2.style.bottom = 10 + 'px'; 
                         pill_github2.style.bottom = 55 + 'px';
                     }
                     else{
-                        projectBox2.style.height = 180 + 'px';
+                        projectBox2.style.height = 260 + 'px';
                         pill2.style.bottom = 20 + 'px';
                         pill_sdl2.style.bottom = 20 + 'px';
                         pill_vsc2.style.bottom = 20 + 'px'; 
@@ -1417,14 +1443,14 @@
                         currentLine--; // Move to the next line
                         currentLineWidth = 0; // Reset the line width
                         
-                        projectBox1.style.height = 260 + 'px';
+                        projectBox1.style.height = 320 + 'px';
                         pill_cpp.style.bottom = 55 + 'px';
                         pill_sdl.style.bottom = 55 + 'px';
                         pill_vsc.style.bottom = 10 + 'px'; 
                         pill_github.style.bottom = 55 + 'px';
                     }
                     else{
-                        projectBox1.style.height = 200 + 'px';
+                        projectBox1.style.height = 260 + 'px';
                         pill_cpp.style.bottom = 20 + 'px';
                         pill_sdl.style.bottom = 20 + 'px';
                         pill_vsc.style.bottom = 20 + 'px'; 
@@ -1455,14 +1481,14 @@
                         currentLine--; // Move to the next line
                         currentLineWidth = 0; // Reset the line width
                         
-                        projectBox2.style.height = 260 + 'px';
+                        projectBox2.style.height = 320 + 'px';
                         pill2.style.bottom = 55 + 'px';
                         pill_sdl2.style.bottom = 55 + 'px';
                         pill_vsc2.style.bottom = 10 + 'px'; 
                         pill_github2.style.bottom = 55 + 'px';
                     }
                     else{
-                        projectBox2.style.height = 200 + 'px';
+                        projectBox2.style.height = 250 + 'px';
                         pill2.style.bottom = 20 + 'px';
                         pill_sdl2.style.bottom = 20 + 'px';
                         pill_vsc2.style.bottom = 20 + 'px'; 
