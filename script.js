@@ -27,6 +27,8 @@ function updateActiveLink(id) {
     document.querySelector(".project-box-2").offsetHeight;
   projectBox3.style.top = projectBox2Bottom + 30 + "px"; // Changed 'project-box-2' to 'projects'
   projectBox3.style.marginTop = 0 + "px";
+
+  adjustProjectBoxHeight();
 }
 window.addEventListener("load", function () {
   updateActiveLink("projects");
@@ -86,6 +88,9 @@ function adjustProjectBoxHeight() {
   var mode = window.innerWidth <= 1024 ? "tablet" : "desktop";
   var minHeight = mode === "tablet" ? minHeightTablet : minHeightDesktop;
 
+
+
+
   //p1
   var projectBox1 = document.querySelector(".project-box-1");
   var projectTitle1 = document.querySelector(".project-title-1");
@@ -132,10 +137,28 @@ function adjustProjectBoxHeight() {
     projectTitle3.offsetHeight + projectBox3Description.offsetHeight + 120; // Add some padding
   totalHeight3 = Math.max(totalHeight3, minHeight);
   projectBox3.style.height = totalHeight3 + 30 + "px";
+  var projectBox3Bottom = projectBox3.offsetTop + projectBox3.offsetHeight;
+
+  // Set the position of the project archives link
+  var projectArchiveLink = document.querySelector('.project-archive');
+  var svgArrowArchive = document.querySelector('.svgarrow-archive'); // If you're adjusting the arrow position too
+
+  // Assuming you want to place the archive link 30px below the last project box
+
 
   // Function to move pills to the next line if they exceed the available width
 
   if (mode === "desktop") {
+
+    projectArchiveLink.style.position = 'absolute';
+    projectArchiveLink.style.top = (projectBox3Bottom + 50) + 'px';
+  
+    // Optionally, adjust the arrow position relative to the link if needed
+    svgArrowArchive.style.position = 'absolute';
+    svgArrowArchive.style.left = '200' + 'px'; // Adjust according to your layout
+    svgArrowArchive.style.top = '4' + 'px'; // This will be relative to the projectArchiveLink's position
+
+
     function movePillsToNextLine1(pills, projectBoxWidth) {
       var currentLine = 0;
       var currentLineWidth = 0;
@@ -271,6 +294,17 @@ function adjustProjectBoxHeight() {
       });
     }
   } else if (mode === "tablet") {
+
+    projectArchiveLink.style.position = 'absolute';
+    projectArchiveLink.style.top = (projectBox3Bottom + 30) + 'px';
+  
+    // Optionally, adjust the arrow position relative to the link if needed
+    svgArrowArchive.style.position = 'absolute';
+    svgArrowArchive.style.left = '200' + 'px'; // Adjust according to your layout
+    svgArrowArchive.style.top = '4' + 'px'; // This will be relative to the projectArchiveLink's position
+
+
+
     var aboutMeSection = document.querySelector("#about-me");
     aboutMeSection.style.top = 150 + "px";
 
