@@ -209,6 +209,46 @@ section {
   z-index: 1000;
 }
 
+.project-archive {
+    position: absolute;
+    color: #8892b0;
+    text-decoration: none; /* Hides the underline by default */
+    margin-top: 1030px;
+    display: inline-block; /* Ensures the pseudo-element aligns correctly */
+    overflow: hidden; /* Keeps the pseudo-element within the parent's bounds */
+}
+
+.project-archive::after {
+    content: '';
+    display: block;
+    margin: auto; /* Centers the underline */
+    height: 2px; /* Height of the underline */
+    width: 0; /* Starts with no width */
+    background: #00bbff; /* Color of the underline */
+    transition: width 0.5s ease; /* Animates the width */
+}
+
+.project-archive:hover::after {
+    width: 100%; /* Expands the underline to full width on hover */
+}
+
+.project-archive .svgarrow-archive img {
+    width: 50px;
+    transition: transform 0.3s ease-out, filter 0.3s ease; /* Transition for transform and filter properties */
+}
+
+.project-archive:hover .svgarrow-archive img {
+    transform: translate(5px, -5px); /* Moves the image */
+    filter: brightness(100%); /* Adjusts the image filter */
+}
+
+.svgarrow-archive {
+    position: absolute;
+    left: 255px;
+    top: 13px;
+}
+
+
 ::selection {
   background-color: #00bbff;
   color: rgba(255, 255, 255, 0.877);
@@ -228,6 +268,8 @@ section {
 .project-box-3 {
   color: white; /* Or any other color you prefer */
 }
+
+
 
 /* project 1 stuff */
 .project-box-1 {
