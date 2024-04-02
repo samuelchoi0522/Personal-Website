@@ -674,7 +674,7 @@ section {
 /* project 3 stuff */
 
 /* tablet */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) and (min-width: 750px) {
   .name-text {
     font-size: 50px;
     position: absolute;
@@ -1108,4 +1108,15 @@ section {
 .project-archive:hover .svgarrow-archive img {
     transform: translate(5px, -5px); /* Moves the image */
     filter: brightness(100%); /* Adjusts the image filter */
+}
+
+@media only screen and (max-width: 750px) {
+    .name-text {
+        font-size: 80px;
+        position: absolute;
+        margin-top: 25px;
+        margin-left: 0px;
+        z-index: 100;
+        transform: translateX(-50%);
+      }
 }
