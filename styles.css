@@ -5,12 +5,12 @@
 }
 
 body {
-  background-color: #0f1328f7;
-  margin: 0;
-  padding: 0;
-  font-family: "Calibre", Arial, sans-serif;
-  color: rgba(255, 255, 255, 0.877);
-  position: relative;
+    background-color: #0f1328f7;
+    margin: 0;
+    padding: 0;
+    font-family: "Calibre", Arial, sans-serif;
+    color: rgba(255, 255, 255, 0.877);
+    position: relative;
 }
 
 .bolded {
@@ -673,6 +673,51 @@ section {
 }
 /* project 3 stuff */
 
+.project-archive {
+    position: relative;
+    color: white;
+    text-decoration: none; /* Hides the underline by default */
+    top: 1300px;
+    display: inline-block; /* Ensures the pseudo-element aligns correctly */
+}
+
+.project-archive::after {
+    content: '';
+    display: block;
+    margin: auto; /* Centers the underline */
+    height: 2px; /* Height of the underline */
+    width: 0; /* Starts with no width */
+    background: #00bbff; /* Color of the underline */
+    transition: width 0.5s ease; /* Animates the width */
+}
+
+.project-archive:hover::after {
+    width: 100%; /* Expands the underline to full width on hover */
+}
+
+
+.project-archive .svgarrow-archive img {
+    position: absolute;
+    content: url("link.svg");
+    width: 20px;
+    left: -25px;
+    top: 3px;
+    transition: transform 0.3s ease-out, filter 0.3s ease; /* Transition for transform and filter properties */
+}
+
+.project-archive:hover .svgarrow-archive img {
+    transform: translate(5px, -5px); /* Moves the image */
+    filter: brightness(100%); /* Adjusts the image filter */
+}
+
+
+
+.svgarrow-archive {
+    position: absolute;
+    left: -100px;
+    top: 5px;
+}
+
 /* tablet */
 @media only screen and (max-width: 1024px) and (min-width: 750px) {
   .name-text {
@@ -1070,45 +1115,7 @@ section {
 }
 
 
-.project-archive {
-    position: relative;
-    color: white;
-    text-decoration: none; /* Hides the underline by default */
-    top: 1300px;
-    display: inline-block; /* Ensures the pseudo-element aligns correctly */
-}
 
-.project-archive::after {
-    content: '';
-    display: block;
-    margin: auto; /* Centers the underline */
-    height: 2px; /* Height of the underline */
-    width: 0; /* Starts with no width */
-    background: #00bbff; /* Color of the underline */
-    transition: width 0.5s ease; /* Animates the width */
-}
-
-.project-archive:hover::after {
-    width: 100%; /* Expands the underline to full width on hover */
-}
-
-.svgarrow-archive {
-    position: absolute;
-    left: 197px;
-    top: 5px;
-}
-
-
-.project-archive .svgarrow-archive img {
-    content: url("link.svg");
-    width: 20px;
-    transition: transform 0.3s ease-out, filter 0.3s ease; /* Transition for transform and filter properties */
-}
-
-.project-archive:hover .svgarrow-archive img {
-    transform: translate(5px, -5px); /* Moves the image */
-    filter: brightness(100%); /* Adjusts the image filter */
-}
 
 @media only screen and (max-width: 750px) {
     .name-text {
