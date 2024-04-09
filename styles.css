@@ -292,6 +292,7 @@ section {
   content: url("link.svg");
   position: absolute;
   width: 20px;
+  left: 0px;
   transition: all 0.3s ease-out; /* Transition for all properties */
   left: 0; /* Add initial left position */
   top: 0; /* Add initial top position */
@@ -365,8 +366,8 @@ section {
 }
 
 .svgarrow {
-  left: 290px;
-  top: 13px;
+  left: 274px;
+  top: 15px;
   position: absolute;
 }
 /* project 1 stuff */
@@ -501,8 +502,8 @@ section {
 }
 
 .svgarrow-2 {
-  left: 255px;
-  top: 13px;
+  left: 242px;
+  top: 15px;
   position: absolute;
 }
 /* project 2 stuff */
@@ -667,8 +668,8 @@ section {
 }
 
 .svgarrow-3 {
-  left: 317px;
-  top: 13px;
+  left: 296px;
+  top: 15px;
   position: absolute;
 }
 /* project 3 stuff */
@@ -701,7 +702,7 @@ section {
     content: url("link.svg");
     width: 20px;
     left: -25px;
-    top: 3px;
+    top: 2px;
     transition: transform 0.3s ease-out, filter 0.3s ease; /* Transition for transform and filter properties */
 }
 
@@ -714,8 +715,8 @@ section {
 
 .svgarrow-archive {
     position: absolute;
-    left: -100px;
-    top: 5px;
+    left: -95px;
+    top: 0px;
 }
 
 /* tablet */
@@ -1014,7 +1015,7 @@ section {
   }
 
   .svgarrow {
-    left: 355px;
+    left: 338px;
     top: -51px;
     position: absolute;
   }
@@ -1102,28 +1103,26 @@ section {
   }
 
   .svgarrow-2 {
-    left: 318px;
+    left: 305px;
     top: -41px;
     position: absolute;
   }
 
   .svgarrow-3 {
-    left: 383px;
+    left: 360px;
     top: -41px;
     position: absolute;
   }
 }
 
 
-
-
 @media only screen and (max-width: 750px) {
     .name-text {
-        font-size: 80px;
-        position: absolute;
-        margin-top: 25px;
-        margin-left: 0px;
+        font-size: 50px;
+        width: 400px;
+        position: fixed;
+        top: 60px;
+        margin-left: 130px;
         z-index: 100;
-        transform: translateX(-50%);
       }
 }
