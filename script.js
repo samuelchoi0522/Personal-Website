@@ -12,26 +12,32 @@ function updateActiveLink(id) {
     document.getElementById("about-me").offsetHeight;
   var projectBox2 = document.querySelector(".project-box-2");
   var projectBox3 = document.querySelector(".project-box-3");
+  var expBox1 = document.querySelector(".experience-box-1");
 
-  // Calculate the bottom position of project-box-1
   var projectBox1Bottom =
     document.querySelector(".project-box-1").offsetTop +
     document.querySelector(".project-box-1").offsetHeight;
 
-  // Set the margin-top of project-box-2 based on project-box-1's bottom position
-  projectBox2.style.top = projectBox1Bottom + 30 + "px"; // Changed 'project-box-2' to 'projects'
+  projectBox2.style.top = projectBox1Bottom + 30 + "px";
   projectBox2.style.marginTop = 0 + "px";
 
   var projectBox2Bottom =
     document.querySelector(".project-box-2").offsetTop +
     document.querySelector(".project-box-2").offsetHeight;
-  projectBox3.style.top = projectBox2Bottom + 30 + "px"; // Changed 'project-box-2' to 'projects'
+  projectBox3.style.top = projectBox2Bottom + 30 + "px";
   projectBox3.style.marginTop = 0 + "px";
+
+  var projectBox3Bottom =
+  document.querySelector(".project-box-3").offsetTop +
+  document.querySelector(".project-box-3").offsetHeight;
+  expBox1.style.top = projectBox3Bottom + 130 + "px";
+  expBox1.style.marginTop = 0 + "px";
 
   adjustProjectBoxHeight();
 }
 window.addEventListener("load", function () {
   updateActiveLink("projects");
+  updateActiveLink("about-me");
   adjustProjectBoxHeight();
 
   var scrollPosition = window.scrollY;
@@ -143,8 +149,18 @@ function adjustProjectBoxHeight() {
   var projectArchiveLink = document.querySelector('.project-archive');
   var svgArrowArchive = document.querySelector('.svgarrow-archive'); // If you're adjusting the arrow position too
 
-  // Assuming you want to place the archive link 30px below the last project box
 
+
+//   var expBox1 = document.querySelector(".experience-box-1");
+//   var expTitle1 = document.querySelector(".experience-title-1");
+//   var expDesc1 = document.querySelector(".experience-description-1");
+//   var expTotalHeight1 =
+//   expTitle1.offsetHeight + expDesc1.offsetHeight + 120; // Add some padding
+//   expTotalHeight1 = Math.max(expTotalHeight1, minHeight);
+//   expBox1.style.height = expTotalHeight1 + 30 + "px";
+
+
+  
 
   // Function to move pills to the next line if they exceed the available width
 
@@ -476,11 +492,11 @@ window.addEventListener("resize", function () {
 });
 
 document
-  .querySelectorAll(".project-box-1, .project-box-2, .project-box-3")
+  .querySelectorAll(".project-box-1, .project-box-2, .project-box-3, .experience-box-1")
   .forEach((box) => {
     box.addEventListener("mouseenter", () => {
       document
-        .querySelectorAll(".project-box-1, .project-box-2, .project-box-3")
+        .querySelectorAll(".project-box-1, .project-box-2, .project-box-3, .experience-box-1")
         .forEach((otherBox) => {
           if (otherBox !== box) {
             otherBox.style.transition = "opacity 0.3s ease"; // Add transition effect
@@ -491,7 +507,7 @@ document
 
     box.addEventListener("mouseleave", () => {
       document
-        .querySelectorAll(".project-box-1, .project-box-2, .project-box-3")
+        .querySelectorAll(".project-box-1, .project-box-2, .project-box-3, .experience-box-1")
         .forEach((otherBox) => {
           otherBox.style.transition = "opacity 0.3s ease"; // Add transition effect
           otherBox.style.opacity = "1"; // Restore original opacity
@@ -500,11 +516,11 @@ document
   });
 
 document
-  .querySelectorAll(".project-box-1, .project-box-2, .project-box-3")
+  .querySelectorAll(".project-box-1, .project-box-2, .project-box-3, .experience-box-1")
   .forEach((box) => {
     box.addEventListener("mouseenter", () => {
       document
-        .querySelectorAll(".project-box-1, .project-box-2, .project-box-3")
+        .querySelectorAll(".project-box-1, .project-box-2, .project-box-3, .experience-box-1")
         .forEach((otherBox) => {
           if (otherBox !== box) {
             otherBox.style.transition = "opacity 0.3s ease"; // Add transition effect
@@ -515,7 +531,7 @@ document
 
     box.addEventListener("mouseleave", () => {
       document
-        .querySelectorAll(".project-box-1, .project-box-2, .project-box-3")
+        .querySelectorAll(".project-box-1, .project-box-2, .project-box-3, .experience-box-1")
         .forEach((otherBox) => {
           otherBox.style.transition = "opacity 0.3s ease"; // Add transition effect
           otherBox.style.opacity = "1"; // Restore original opacity

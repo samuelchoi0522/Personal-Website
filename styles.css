@@ -4,6 +4,7 @@
     format("truetype");
 }
 
+
 body {
     background-color: #0f1328f7;
     margin: 0;
@@ -12,6 +13,45 @@ body {
     color: rgba(255, 255, 255, 0.877);
     position: relative;
 }
+
+.experience-box-1 {
+    width: 600px;
+    height: 180px;
+    background-color: #0f132800;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    left: 1.5%;
+    right: 1.5%;
+
+    z-index: 0;
+    border-radius: 6px;
+  }
+
+  .experience-date-1{
+    position: absolute;
+    top: 8px;
+    left: 25px;
+    color: #8892b0;
+    font-size: 17px;
+  }
+
+  .experience-title-1{
+    position: absolute;
+    top: 8px;
+    left: 160px;
+  }
+
+  .experience-description-1{
+    
+  }
+
+  .experience-box-1:hover {
+    background-color: #ffffff46; /* Change the background color on hover */
+  }
+
+  .experience-box-1:hover .experience-title-1 {
+    color: #00bbff;
+  }
 
 .counterapi{
     color: #a6a6a6;
@@ -181,7 +221,7 @@ section {
 
 #about-me {
   position: absolute;
-  margin-top: 3%;
+  margin-top: 2%;
 
   color: #8892b0;
   font-size: 18px;
@@ -245,7 +285,7 @@ section {
 }
 
 .project-box-1 .project-title-1,
-.project-box-1 {
+.project-box-1, .experience-box-1{
   color: white; /* Or any other color you prefer */
 }
 
@@ -263,7 +303,7 @@ section {
 
 /* project 1 stuff */
 .project-box-1 {
-  width: 95%;
+    width: 600px;
   height: 180px;
   background-color: #0f132800;
   position: absolute;
@@ -298,7 +338,7 @@ section {
   position: absolute;
   top: 45px;
   left: 162px;
-
+  padding-right: 1%;
   color: #8892b0;
 }
 
@@ -396,7 +436,7 @@ section {
 
 /* project 2 stuff */
 .project-box-2 {
-  width: 95%;
+    width: 600px;
   height: 180px;
   background-color: #0f132800;
   transition: background-color 0.3s ease;
@@ -429,6 +469,7 @@ section {
 }
 
 .project-box-2-description {
+    padding-right: 1%;
   position: absolute;
   top: 45px;
   left: 162px;
@@ -532,7 +573,7 @@ section {
 
 /* project 3 stuff */
 .project-box-3 {
-  width: 95%;
+    width: 600px;
   height: 3500px;
   background-color: #0f132800;
   transition: background-color 0.3s ease;
@@ -565,6 +606,7 @@ section {
 }
 
 .project-box-3-description {
+    padding-right: 1%;
   position: absolute;
   top: 45px;
   left: 162px;
@@ -741,6 +783,21 @@ section {
     top: 0px;
 }
 
+@media only screen and (max-width: 1300px) {
+    .project-box-1 {
+        width: 95%
+        /* ... your other styles ... */
+      }
+      .project-box-2 {
+        width: 95%;
+        /* ... your other styles ... */
+      }
+      .project-box-3 {
+        width: 95%
+
+      }
+}
+
 /* tablet */
 @media only screen and (max-width: 1024px) and (min-width: 750px) {
 
@@ -858,9 +915,26 @@ section {
     right: 40px;
   }
 
-  #experience {
+
+  .experience-box-1 {
+    width: 99%;
+    height: 180px;
+    background-color: #0f132800;
+    transition: background-color 0.3s ease;
     position: absolute;
-    margin-top: 400%;
+    left: 1.5%;
+    right: 1.5%;
+
+    z-index: 0;
+    border-radius: 6px;
+  }
+
+  .experience-title-1{
+
+  }
+
+  .experience-description-1{
+
   }
 
   .hidden-in-desktop {
