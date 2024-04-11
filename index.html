@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
-    
     <head>
         <title>Homepage</title>
         <link rel="icon" href="jc-nobg.png">
         <link rel="stylesheet" href="styles.css">
     </head>
     <script src="https://counterapi.com/c.js?ns=jaeminschoi.com" async ></script>
-    <div class="counterapi" bg="transparent"></div>
+
+    <div class="visits">
+        <ion-icon size="large" name="eye"></ion-icon>
+    </div>
     <body>
+        <div class="counterapi" style="min-height:44px" label="views" noCss="true" color="#a6a6a6" noIcon="true" bg="transparent" noLink="true"></div>
         <div class="flashlight"></div>
         <div id="sections">
             <section id="about-me" class="about-me">
@@ -182,6 +185,7 @@
         <a href="mailto:jaedolc@gmail.com" class="say-hello-button">Say Hello!</a>
 
         <script src="script.js"></script>
-        
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>         
     </body>
 </html>

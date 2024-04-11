@@ -522,5 +522,3 @@ document
         });
     });
   });
-
-updateActiveLink();

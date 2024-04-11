@@ -13,6 +13,28 @@ body {
     position: relative;
 }
 
+.counterapi{
+    color: #a6a6a6;
+    font-size: 18px;
+    position: fixed;
+    text-decoration: none;
+    bottom: 53px;
+    margin-left: 167px;
+}
+
+.visits{
+    color: #a6a6a6;
+    position: fixed;
+    bottom: 66px;
+    left: 126px;
+
+}
+
+.ion-icon{
+    color: #a6a6a6;
+    filter: transparent(50%);
+}
+
 .bolded {
   font-weight: bold;
   color: #ccd6f6;
@@ -56,7 +78,7 @@ body {
   display: inline-block;
   position: fixed;
   padding: 10px 20px;
-  color: #fff; /* Set your desired text color */
+  color: #bdc9eb;
   border: 2px solid #00bbff; /* Set border color and style */
   border-radius: 5px;
   font-size: 16px;
@@ -175,7 +197,6 @@ section {
   position: absolute;
   margin-top: 400%;
 }
-
 
 .sticky-image-git:hover,
 .sticky-image-linkedin:hover,
@@ -722,6 +743,30 @@ section {
 
 /* tablet */
 @media only screen and (max-width: 1024px) and (min-width: 750px) {
+
+    .counterapi{
+        color: #a6a6a6;
+        font-size: 18px;
+        position: absolute;
+        text-decoration: none;
+        top: 290px;
+        margin-left: 90px;
+    }
+    
+    .visits{
+        color: #a6a6a6;
+        position: absolute;
+        top: 286px;
+        left: 47px;
+    
+    }
+    
+    .ion-icon{
+        color: #a6a6a6;
+        filter: transparent(50%);
+    }
+
+
   .name-text {
     font-size: 50px;
     position: absolute;
@@ -1118,6 +1163,28 @@ section {
 
 
 @media only screen and (max-width: 750px) {
+    .counterapi{
+        color: #a6a6a6;
+        font-size: 18px;
+        position: absolute;
+        text-decoration: none;
+        top: 290px;
+        margin-left: 90px;
+    }
+    
+    .visits{
+        color: #a6a6a6;
+        position: absolute;
+        top: 286px;
+        left: 47px;
+    
+    }
+    
+    .ion-icon{
+        color: #a6a6a6;
+        filter: transparent(50%);
+    }
+    
     .name-text {
         font-size: 50px;
         position: absolute;
@@ -1212,11 +1279,6 @@ section {
     #experience {
         position: absolute;
         margin-top: 400%;
-    }
-
-    .counterapi{
-        top: 100px;
-        left: 100px;
     }
     
     .hidden-in-desktop {
