@@ -930,8 +930,6 @@
     filter: brightness(100%); /* Adjusts the image filter */
 }
 
-
-
 .svgarrow-viewResume {
     position: absolute;
     left: -95px;
@@ -1550,6 +1548,49 @@
 
 
 /* expereince stuff */
+
+.viewResume {
+    position: relative;
+    color: white;
+    text-decoration: none; /* Hides the underline by default */
+    top: 1300px;
+    display: inline-block; /* Ensures the pseudo-element aligns correctly */
+}
+
+.viewResume::after {
+    content: '';
+    display: block;
+    margin: auto; /* Centers the underline */
+    height: 2px; /* Height of the underline */
+    width: 0; /* Starts with no width */
+    background: #00bbff; /* Color of the underline */
+    transition: width 0.5s ease; /* Animates the width */
+}
+
+.viewResume:hover::after {
+    width: 100%; /* Expands the underline to full width on hover */
+}
+
+
+.viewResume .svgarrow-viewResume img {
+    position: absolute;
+    content: url("link.svg");
+    width: 20px;
+    left: 220px;
+    top: 5px;
+    transition: transform 0.3s ease-out, filter 0.3s ease; /* Transition for transform and filter properties */
+}
+
+.viewResume:hover .svgarrow-viewResume img {
+    transform: translate(5px, -5px); /* Moves the image */
+    filter: brightness(100%); /* Adjusts the image filter */
+}
+
+.svgarrow-viewResume {
+    position: absolute;
+    left: -95px;
+    top: 0px;
+}
   }
   
   
