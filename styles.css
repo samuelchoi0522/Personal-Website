@@ -1,1068 +1,381 @@
 @font-face {
-  font-family: "Calibre";
-  src: url("/Users/sam/Desktop/projecs/Personal Website/Calibre/calibre.ttf")
-    format("truetype");
-}
-
-
-body {
-    background-color: #0f1328f7;
-    margin: 0;
-    padding: 0;
-    font-family: "Calibre", Arial, sans-serif;
-    color: rgba(255, 255, 255, 0.877);
-    position: relative;
-}
-
-.experience-box-1 {
-    width: 600px;
-    height: 180px;
-    background-color: #0f132800;
-    transition: background-color 0.3s ease;
-    position: absolute;
-    left: 1.5%;
-    right: 1.5%;
-
-    z-index: 0;
-    border-radius: 6px;
+    font-family: "Calibre";
+    src: url("/Users/sam/Desktop/projecs/Personal Website/Calibre/calibre.ttf")
+      format("truetype");
   }
-
-  .experience-date-1{
-    position: absolute;
-    top: 8px;
-    left: 25px;
-    color: #8892b0;
+  
+  
+  body {
+      background-color: #0f1328f7;
+      margin: 0;
+      padding: 0;
+      font-family: "Calibre", Arial, sans-serif;
+      color: rgba(255, 255, 255, 0.877);
+      position: relative;
+  }
+  
+  .experience-box-1 {
+      width: 600px;
+      height: 240px;
+      background-color: #0f132800;
+      transition: background-color 0.3s ease;
+      position: absolute;
+      left: 1.5%;
+      right: 1.5%;
+  
+      z-index: 0;
+      border-radius: 6px;
+    }
+  
+    .experience-date-1{
+      position: absolute;
+      top: 8px;
+      left: 25px;
+      color: #8892b0;
+      font-size: 17px;
+    }
+  
+    .experience-title-1{
+      position: absolute;
+      top: 8px;
+      left: 160px;
+    }
+  
+    .experience-description-1{
+        position: absolute;
+        top: 45px;
+        left: 162px;
+        padding-right: 1%;
+        color: #8892b0;
+    }
+  
+    .experience-box-1:hover {
+      background-color: #ffffff46; /* Change the background color on hover */
+    }
+  
+    .experience-box-1:hover .experience-title-1 {
+      color: #00bbff;
+    }
+  
+  .counterapi{
+      color: #a6a6a6;
+      font-size: 18px;
+      position: fixed;
+      text-decoration: none;
+      bottom: 53px;
+      margin-left: 167px;
+  }
+  
+  .visits{
+      color: #a6a6a6;
+      position: fixed;
+      bottom: 66px;
+      left: 126px;
+  
+  }
+  
+  .ion-icon{
+      color: #a6a6a6;
+      filter: transparent(50%);
+  }
+  
+  .bolded {
+    font-weight: bold;
+    color: #ccd6f6;
+  }
+  .weirdtitleabout {
     font-size: 17px;
+    letter-spacing: 3px;
+    color: #ccd6f6;
   }
-
-  .experience-title-1{
+  
+  .weirdtitleprojects {
+    margin-top: 150px;
+    font-size: 17px;
+    letter-spacing: 3px;
+    color: #ccd6f6;
+  }
+  
+  .hidden-in-desktop {
+    display: none;
+  }
+  
+  .flashlight {
     position: absolute;
-    top: 8px;
-    left: 160px;
+    width: 200px;
+    height: 200px;
+    border-radius: 150%;
+    background: radial-gradient(
+      transparent,
+      rgba(255, 255, 255, 1)
+    ); /* Use radial gradient for fading */
+    pointer-events: none; /* Ensure the flashlight does not interfere with cursor interaction */
+    z-index: 9999; /* Ensure the flashlight appears on top of other elements */
+    transition: all 0.1s ease; /* Smooth transition for the flashlight effect */
+    mix-blend-mode: difference; /* Blend mode for the flashlight effect */
+    transform: translate(-50%, -50%); /* Center the flashlight on the cursor */
+    pointer-events: none; /* Prevent the flashlight from capturing mouse events */
+    filter: blur(200px); /* Add blur effect */
   }
-
-  .experience-description-1{
-    
-  }
-
-  .experience-box-1:hover {
-    background-color: #ffffff46; /* Change the background color on hover */
-  }
-
-  .experience-box-1:hover .experience-title-1 {
-    color: #00bbff;
-  }
-
-.counterapi{
-    color: #a6a6a6;
-    font-size: 18px;
+  
+  .say-hello-button {
+    display: inline-block;
     position: fixed;
-    text-decoration: none;
-    bottom: 53px;
-    margin-left: 167px;
-}
-
-.visits{
-    color: #a6a6a6;
-    position: fixed;
-    bottom: 66px;
-    left: 126px;
-
-}
-
-.ion-icon{
-    color: #a6a6a6;
-    filter: transparent(50%);
-}
-
-.bolded {
-  font-weight: bold;
-  color: #ccd6f6;
-}
-.weirdtitleabout {
-  font-size: 17px;
-  letter-spacing: 3px;
-  color: #ccd6f6;
-}
-
-.weirdtitleprojects {
-  margin-top: 150px;
-  font-size: 17px;
-  letter-spacing: 3px;
-  color: #ccd6f6;
-}
-
-.hidden-in-desktop {
-  display: none;
-}
-
-.flashlight {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border-radius: 150%;
-  background: radial-gradient(
-    transparent,
-    rgba(255, 255, 255, 1)
-  ); /* Use radial gradient for fading */
-  pointer-events: none; /* Ensure the flashlight does not interfere with cursor interaction */
-  z-index: 9999; /* Ensure the flashlight appears on top of other elements */
-  transition: all 0.1s ease; /* Smooth transition for the flashlight effect */
-  mix-blend-mode: difference; /* Blend mode for the flashlight effect */
-  transform: translate(-50%, -50%); /* Center the flashlight on the cursor */
-  pointer-events: none; /* Prevent the flashlight from capturing mouse events */
-  filter: blur(200px); /* Add blur effect */
-}
-
-.say-hello-button {
-  display: inline-block;
-  position: fixed;
-  padding: 10px 20px;
-  color: #bdc9eb;
-  border: 2px solid #00bbff; /* Set border color and style */
-  border-radius: 5px;
-  font-size: 16px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-
-  filter: brightness(100%);
-  margin-left: 340px;
-  bottom: 123px;
-}
-
-.say-hello-button:hover {
-  background-color: #0099dd; /* Set your desired background color on hover */
-}
-
-.geo {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 14px;
-}
-
-.name-text {
-  font-size: 50px;
-  width: 400px;
-  position: fixed;
-  top: 60px;
-  margin-left: 130px;
-  z-index: 100;
-}
-
-.school-text {
-  font-size: 25px;
-  position: fixed;
-  width: 700px;
-  top: 135px;
-  margin-left: 130px;
-  z-index: 100;
-}
-
-#navbar {
-  position: fixed;
-  top: 350px;
-  margin-left: 130px;
-  height: 100%;
-  width: 100px;
-  color: rgba(255, 255, 255, 0.877);
-  padding: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  z-index: 100;
-}
-
-#navbar a {
-  color: rgba(255, 255, 255, 0.305);
-  text-decoration: none;
-  margin: 10px 0;
-  transition: all 0.3s ease;
-  position: sticky;
-}
-
-#navbar a.active {
-  position: relative;
-  color: rgba(255, 255, 255, 0.877);
-  left: 50px;
-  width: 150px;
-}
-
-#navbar a::before {
-  content: "";
-  position: fixed;
-  left: -50px;
-  top: 8px;
-  width: 35px;
-  background-color: rgb(255, 255, 255);
-  transition: height 0.3s ease;
-  transform: translateY(-50%);
-}
-
-#navbar a.active::before {
-  position: absolute;
-  height: 2px;
-}
-
-#navbar a:hover {
-  color: rgba(255, 255, 255, 0.877);
-  content: "";
-}
-
-#sections {
-  margin-top: 0px;
-  margin-left: 50%;
-}
-
-section {
-  position: absolute;
-  padding: 20px;
-  color: rgba(255, 255, 255, 0.877);
-}
-
-#about-me {
-  position: absolute;
-  margin-top: 2%;
-  width: 600px;
-  color: #8892b0;
-  font-size: 18px;
-  line-height: 30px;
-}
-
-#projects {
-  position: absolute;
-  margin-top: 10%;
-}
-
-#experience {
-  position: absolute;
-  margin-top: 400%;
-}
-
-.sticky-image-git:hover,
-.sticky-image-linkedin:hover,
-.sticky-image-ig:hover {
-  filter: brightness(100%);
-}
-
-.pill-cpp, .pill-cpp-2, .pill-aws-3, .pill-CSS-3,
-.pill-github, .pill-github-2, .pill-github-3,
-.pill-HTML-3, .pill-Javascript-3, .pill-react-2, 
-.pill-sdl2, .pill-vscode{
+    padding: 10px 20px;
+    color: #bdc9eb;
+    border: 2px solid #00bbff; /* Set border color and style */
+    border-radius: 5px;
     font-size: 16px;
-}
-
-.sticky-image-git {
-  filter: brightness(65%);
-  transition: 0.3s ease;
-  position: fixed;
-  margin-left: 130px;
-  bottom: 128px;
-  z-index: 1000;
-}
-
-.sticky-image-linkedin {
-  filter: brightness(65%);
-  transition: 0.3s ease;
-  position: fixed;
-  margin-left: 200px;
-  bottom: 128px;
-  z-index: 1000;
-}
-
-.sticky-image-ig {
-  filter: brightness(65%);
-  transition: 0.3s ease;
-  position: fixed;
-  margin-left: 270px;
-  bottom: 128px;
-  z-index: 1000;
-}
-
-
-::selection {
-  background-color: #00bbff;
-  color: rgba(255, 255, 255, 0.877);
-}
-
-.project-box-1 .project-title-1,
-.project-box-1, .experience-box-1{
-  color: white; /* Or any other color you prefer */
-}
-
-.project-box-2 .project-title-2,
-.project-box-2 {
-  color: white; /* Or any other color you prefer */
-}
-
-.project-box-3 .project-title-3,
-.project-box-3 {
-  color: white; /* Or any other color you prefer */
-}
-
-
-
-/* project 1 stuff */
-.project-box-1 {
-    width: 600px;
-  height: 180px;
-  background-color: #0f132800;
-  position: absolute;
-  left: 1.5%;
-  right: 1.5%;
-  z-index: 0;
-  border-radius: 6px;
-  transition: background-color 0.3s ease-in-out; /* Define transition for both default and hover states */
-}
-
-.project-box-1 img {
-  border-radius: 6px;
-}
-
-.project-title-1 {
-  font-size: 20px;
-  position: absolute;
-  top: 8px; /* Adjust this value to move the title up or down */
-  left: 160px; /* Adjust this value to move the title left or right */
-}
-
-.project-box-1-image {
-  position: absolute;
-  top: 30px; /* Adjust this value to vertically center the image */
-  left: 12px; /* Adjust this value to move the image left or right */
-  transform: translateY(-50%); /* Center the image vertically */
-  width: 10px;
-  height: 30px;
-}
-
-.project-box-1-description {
-  position: absolute;
-  top: 45px;
-  left: 162px;
-  padding-right: 1%;
-  color: #8892b0;
-}
-
-.project-box-1:hover {
-  background-color: #ffffff46; /* Change the background color on hover */
-}
-
-.project-box-1:hover .project-title-1 {
-  color: #00bbff;
-}
-
-.project-box-1 .svgarrow img {
-  content: url("link.svg");
-  position: absolute;
-  width: 20px;
-  left: 0px;
-  transition: all 0.3s ease-out; /* Transition for all properties */
-  left: 0; /* Add initial left position */
-  top: 0; /* Add initial top position */
-}
-
-.project-box-1:hover .svgarrow img {
-  content: url("bluearrow.svg");
-  left: 5px;
-  top: -5px;
-  filter: brightness(100%);
-}
-
-.pill-cpp {
-  background-color: #00bbff6b; /* Set your desired background color */
-  position: absolute;
-  color: #00bbff; /* Set your desired text color */
-  left: 160px;
-  border-radius: 50px; /* Set the border-radius to create a pill shape */
-  padding: 10px 10px; /* Adjust padding as needed */
-  height: 15px; /* Adjust the height of the pill */
-  width: 40px; /* Adjust the width of the pill */
-  display: inline-flex; /* Display as inline-flex to vertically center the content */
-  align-items: center; /* Center the content vertically */
-  justify-content: center; /* Center the content horizontally */
-  text-align: center;
-}
-
-.pill-sdl2 {
-  background-color: #00bbff6b; /* Set your desired background color */
-  position: absolute;
-  color: #00bbff; /* Set your desired text color */
-  left: 237px;
-  border-radius: 50px; /* Set the border-radius to create a pill shape */
-  padding: 10px 10px; /* Adjust padding as needed */
-  height: 15px; /* Adjust the height of the pill */
-  width: 45px; /* Adjust the width of the pill */
-  display: inline-flex; /* Display as inline-flex to vertically center the content */
-  align-items: center; /* Center the content vertically */
-  justify-content: center; /* Center the content horizontally */
-  text-align: center;
-}
-
-.pill-github {
-  background-color: #00bbff6b; /* Set your desired background color */
-  position: absolute;
-  color: #00bbff; /* Set your desired text color */
-  left: 320px;
-  border-radius: 50px; /* Set the border-radius to create a pill shape */
-  padding: 10px 10px; /* Adjust padding as needed */
-  height: 15px; /* Adjust the height of the pill */
-  width: 55px; /* Adjust the width of the pill */
-  display: inline-flex; /* Display as inline-flex to vertically center the content */
-  align-items: center; /* Center the content vertically */
-  justify-content: center; /* Center the content horizontally */
-  text-align: center;
-}
-
-.pill-vscode {
-  background-color: #00bbff6b; /* Set your desired background color */
-  position: absolute;
-  color: #00bbff; /* Set your desired text color */
-  left: 413px;
-  border-radius: 50px; /* Set the border-radius to create a pill shape */
-  padding: 10px 10px; /* Adjust padding as needed */
-  height: 15px; /* Adjust the height of the pill */
-  width: 75px; /* Adjust the width of the pill */
-  display: inline-flex; /* Display as inline-flex to vertically center the content */
-  align-items: center; /* Center the content vertically */
-  justify-content: center; /* Center the content horizontally */
-  text-align: center;
-}
-
-.svgarrow {
-  left: 274px;
-  top: 15px;
-  position: absolute;
-}
-/* project 1 stuff */
-
-/* project 2 stuff */
-.project-box-2 {
-    width: 600px;
-  height: 180px;
-  background-color: #0f132800;
-  transition: background-color 0.3s ease;
-  position: absolute;
-  left: 1.5%;
-  right: 1.5%;
-  top: 168%;
-  z-index: 0;
-  border-radius: 6px;
-}
-
-.project-box-2 img {
-  border-radius: 6px;
-}
-
-.project-title-2 {
-  font-size: 20px;
-  position: absolute;
-  top: 8px; /* Adjust this value to move the title up or down */
-  left: 160px; /* Adjust this value to move the title left or right */
-}
-
-.project-box-2-image {
-  position: absolute;
-  top: 30px; /* Adjust this value to vertically center the image */
-  left: 12px; /* Adjust this value to move the image left or right */
-  transform: translateY(-50%); /* Center the image vertically */
-  width: 10px;
-  height: 30px;
-}
-
-.project-box-2-description {
-    padding-right: 1%;
-  position: absolute;
-  top: 45px;
-  left: 162px;
-
-  color: #8892b0;
-}
-
-.project-box-2:hover {
-  background-color: #ffffff46;
-}
-.project-box-2:hover .project-title-2 {
-  color: #00bbff;
-}
-
-.project-box-2 .svgarrow-2 img {
-  content: url("link.svg");
-  position: absolute;
-  width: 20px;
-  transition: all 0.3s ease-out; /* Transition for all properties */
-  left: 0; /* Add initial left position */
-  top: 0; /* Add initial top position */
-}
-
-.project-box-2:hover .svgarrow-2 img {
-  content: url("bluearrow.svg");
-  left: 5px;
-  top: -5px;
-  filter: brightness(100%);
-}
-
-.pill-cpp-2 {
-  background-color: #00bbff6b; /* Set your desired background color */
-  position: absolute;
-  color: #00bbff; /* Set your desired text color */
-  bottom: 15px;
-  left: 160px;
-  border-radius: 50px; /* Set the border-radius to create a pill shape */
-  padding: 10px 10px; /* Adjust padding as needed */
-  height: 15px; /* Adjust the height of the pill */
-  width: 40px; /* Adjust the width of the pill */
-  display: inline-flex; /* Display as inline-flex to vertically center the content */
-  align-items: center; /* Center the content vertically */
-  justify-content: center; /* Center the content horizontally */
-  text-align: center;
-}
-
-.pill-react-2 {
-  background-color: #00bbff6b; /* Set your desired background color */
-  position: absolute;
-  color: #00bbff; /* Set your desired text color */
-  bottom: 15px;
-  left: 237px;
-  border-radius: 50px; /* Set the border-radius to create a pill shape */
-  padding: 10px 10px; /* Adjust padding as needed */
-  height: 15px; /* Adjust the height of the pill */
-  width: 45px; /* Adjust the width of the pill */
-  display: inline-flex; /* Display as inline-flex to vertically center the content */
-  align-items: center; /* Center the content vertically */
-  justify-content: center; /* Center the content horizontally */
-  text-align: center;
-}
-
-.pill-github-2 {
-  background-color: #00bbff6b; /* Set your desired background color */
-  position: absolute;
-  color: #00bbff; /* Set your desired text color */
-  bottom: 15px;
-  left: 320px;
-  border-radius: 50px; /* Set the border-radius to create a pill shape */
-  padding: 10px 10px; /* Adjust padding as needed */
-  height: 15px; /* Adjust the height of the pill */
-  width: 55px; /* Adjust the width of the pill */
-  display: inline-flex; /* Display as inline-flex to vertically center the content */
-  align-items: center; /* Center the content vertically */
-  justify-content: center; /* Center the content horizontally */
-  text-align: center;
-}
-
-.pill-vscode-2 {
-  background-color: #00bbff6b; /* Set your desired background color */
-  position: absolute;
-  color: #00bbff; /* Set your desired text color */
-  bottom: 15px;
-  left: 413px;
-  border-radius: 50px; /* Set the border-radius to create a pill shape */
-  padding: 10px 10px; /* Adjust padding as needed */
-  height: 15px; /* Adjust the height of the pill */
-  width: 75px; /* Adjust the width of the pill */
-  display: inline-flex; /* Display as inline-flex to vertically center the content */
-  align-items: center; /* Center the content vertically */
-  justify-content: center; /* Center the content horizontally */
-  text-align: center;
-}
-
-.svgarrow-2 {
-  left: 242px;
-  top: 15px;
-  position: absolute;
-}
-/* project 2 stuff */
-
-/* project 3 stuff */
-.project-box-3 {
-    width: 600px;
-  height: 3500px;
-  background-color: #0f132800;
-  transition: background-color 0.3s ease;
-  position: absolute;
-  left: 1.5%;
-  right: 1.5%;
-  margin-top: 440px;
-  z-index: 0;
-  border-radius: 6px;
-}
-
-.project-box-3 img {
-  border-radius: 6px;
-}
-
-.project-title-3 {
-  font-size: 20px;
-  position: absolute;
-  top: 8px; /* Adjust this value to move the title up or down */
-  left: 160px; /* Adjust this value to move the title left or right */
-}
-
-.project-box-3-image {
-  position: absolute;
-  top: 30px; /* Adjust this value to vertically center the image */
-  left: 12px; /* Adjust this value to move the image left or right */
-  transform: translateY(-50%); /* Center the image vertically */
-  width: 10px;
-  height: 30px;
-}
-
-.project-box-3-description {
-    padding-right: 1%;
-  position: absolute;
-  top: 45px;
-  left: 162px;
-
-  color: #8892b0;
-}
-
-.project-box-3:hover {
-  background-color: #ffffff46;
-}
-.project-box-3:hover .project-title-3 {
-  color: #00bbff;
-}
-
-.project-box-3 .svgarrow-3 img {
-  content: url("link.svg");
-  position: absolute;
-  width: 20px;
-  transition: all 0.3s ease-out; /* Transition for all properties */
-  left: 0; /* Add initial left position */
-  top: 0; /* Add initial top position */
-}
-
-.project-box-3:hover .svgarrow-3 img {
-  content: url("bluearrow.svg");
-  left: 5px;
-  top: -5px;
-  filter: brightness(100%);
-}
-
-.pill-HTML-3 {
-  background-color: #00bbff6b; /* Set your desired background color */
-  position: absolute;
-  color: #00bbff; /* Set your desired text color */
-  bottom: 60px;
-  left: 160px;
-  border-radius: 50px; /* Set the border-radius to create a pill shape */
-  padding: 10px 10px; /* Adjust padding as needed */
-  height: 15px; /* Adjust the height of the pill */
-  width: 50px; /* Adjust the width of the pill */
-  display: inline-flex; /* Display as inline-flex to vertically center the content */
-  align-items: center; /* Center the content vertically */
-  justify-content: center; /* Center the content horizontally */
-  text-align: center;
-}
-
-.pill-CSS-3 {
-  background-color: #00bbff6b; /* Set your desired background color */
-  position: absolute;
-  color: #00bbff; /* Set your desired text color */
-  bottom: 60px;
-  left: 245px;
-  border-radius: 50px; /* Set the border-radius to create a pill shape */
-  padding: 10px 10px; /* Adjust padding as needed */
-  height: 15px; /* Adjust the height of the pill */
-  width: 45px; /* Adjust the width of the pill */
-  display: inline-flex; /* Display as inline-flex to vertically center the content */
-  align-items: center; /* Center the content vertically */
-  justify-content: center; /* Center the content horizontally */
-  text-align: center;
-}
-
-.pill-Javascript-3 {
-  background-color: #00bbff6b; /* Set your desired background color */
-  position: absolute;
-  color: #00bbff; /* Set your desired text color */
-  bottom: 60px;
-  left: 325px;
-  border-radius: 50px; /* Set the border-radius to create a pill shape */
-  padding: 10px 10px; /* Adjust padding as needed */
-  height: 15px; /* Adjust the height of the pill */
-  width: 85px; /* Adjust the width of the pill */
-  display: inline-flex; /* Display as inline-flex to vertically center the content */
-  align-items: center; /* Center the content vertically */
-  justify-content: center; /* Center the content horizontally */
-  text-align: center;
-}
-
-.pill-aws-3 {
-  background-color: #00bbff6b; /* Set your desired background color */
-  position: absolute;
-  color: #00bbff; /* Set your desired text color */
-  bottom: 60px;
-  left: 445px;
-  border-radius: 50px; /* Set the border-radius to create a pill shape */
-  padding: 10px 10px; /* Adjust padding as needed */
-  height: 15px; /* Adjust the height of the pill */
-  width: 45px; /* Adjust the width of the pill */
-  display: inline-flex; /* Display as inline-flex to vertically center the content */
-  align-items: center; /* Center the content vertically */
-  justify-content: center; /* Center the content horizontally */
-  text-align: center;
-}
-
-.pill-github-3 {
-  background-color: #00bbff6b; /* Set your desired background color */
-  position: absolute;
-  color: #00bbff; /* Set your desired text color */
-  left: 525px;
-  border-radius: 50px; /* Set the border-radius to create a pill shape */
-  padding: 10px 10px; /* Adjust padding as needed */
-  height: 15px; /* Adjust the height of the pill */
-  width: 55px; /* Adjust the width of the pill */
-  display: inline-flex; /* Display as inline-flex to vertically center the content */
-  align-items: center; /* Center the content vertically */
-  justify-content: center; /* Center the content horizontally */
-  text-align: center;
-}
-
-.pill-vscode-3 {
-  background-color: #00bbff6b; /* Set your desired background color */
-  position: absolute;
-  color: #00bbff; /* Set your desired text color */
-  left: 160px;
-  border-radius: 50px; /* Set the border-radius to create a pill shape */
-  padding: 10px 10px; /* Adjust padding as needed */
-  height: 15px; /* Adjust the height of the pill */
-  width: 75px; /* Adjust the width of the pill */
-  display: inline-flex; /* Display as inline-flex to vertically center the content */
-  align-items: center; /* Center the content vertically */
-  justify-content: center; /* Center the content horizontally */
-  text-align: center;
-}
-
-.svgarrow-3 {
-  left: 296px;
-  top: 15px;
-  position: absolute;
-}
-/* project 3 stuff */
-
-.project-archive {
-    position: relative;
-    color: white;
-    text-decoration: none; /* Hides the underline by default */
-    top: 1300px;
-    display: inline-block; /* Ensures the pseudo-element aligns correctly */
-}
-
-.project-archive::after {
-    content: '';
-    display: block;
-    margin: auto; /* Centers the underline */
-    height: 2px; /* Height of the underline */
-    width: 0; /* Starts with no width */
-    background: #00bbff; /* Color of the underline */
-    transition: width 0.5s ease; /* Animates the width */
-}
-
-.project-archive:hover::after {
-    width: 100%; /* Expands the underline to full width on hover */
-}
-
-
-.project-archive .svgarrow-archive img {
-    position: absolute;
-    content: url("link.svg");
-    width: 20px;
-    left: -25px;
-    top: 2px;
-    transition: transform 0.3s ease-out, filter 0.3s ease; /* Transition for transform and filter properties */
-}
-
-.project-archive:hover .svgarrow-archive img {
-    transform: translate(5px, -5px); /* Moves the image */
-    filter: brightness(100%); /* Adjusts the image filter */
-}
-
-
-
-.svgarrow-archive {
-    position: absolute;
-    left: -95px;
-    top: 0px;
-}
-
-@media only screen and (max-width: 1300px) {
-    .project-box-1 {
-        width: 95%
-        /* ... your other styles ... */
-      }
-      .project-box-2 {
-        width: 95%;
-        /* ... your other styles ... */
-      }
-      .project-box-3 {
-        width: 95%
-
-      }
-
-      #about-me{
-        width: auto;
-      }
-}
-
-/* tablet */
-@media only screen and (max-width: 1024px) and (min-width: 750px) {
-
-    .counterapi{
-        color: #a6a6a6;
-        font-size: 18px;
-        position: absolute;
-        text-decoration: none;
-        top: 290px;
-        margin-left: 90px;
-    }
-    
-    .visits{
-        color: #a6a6a6;
-        position: absolute;
-        top: 286px;
-        left: 47px;
-    
-    }
-    
-    .ion-icon{
-        color: #a6a6a6;
-        filter: transparent(50%);
-    }
-
-
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  
+    filter: brightness(100%);
+    margin-left: 340px;
+    bottom: 123px;
+  }
+  
+  .say-hello-button:hover {
+    background-color: #0099dd; /* Set your desired background color on hover */
+  }
+  
+  .geo {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+  }
+  
   .name-text {
     font-size: 50px;
-    position: absolute;
-    margin-top: 25px;
-    margin-left: 250px;
+    width: 400px;
+    position: fixed;
+    top: 60px;
+    margin-left: 130px;
     z-index: 100;
-    transform: translateX(-50%);
   }
-
+  
   .school-text {
     font-size: 25px;
-    position: absolute;
-    margin-top: 20px;
-    margin-left: 400px; /* Adjusted margin-left to left */
-    transform: translateX(-50%);
+    position: fixed;
+    width: 700px;
+    top: 135px;
+    margin-left: 130px;
     z-index: 100;
   }
-
+  
   #navbar {
     position: fixed;
-    top: 0;
-    margin-left: 0px;
-    height: 50px; /* Adjust the height of the horizontal bar */
-    width: 100%; /* Make it span the entire width */
-    background-color: rgba(
-      15,
-      19,
-      40,
-      1
-    ); /* Background color of the horizontal bar */
-    color: rgba(188, 36, 36, 0.877);
-    padding: 0;
+    top: 350px;
+    margin-left: 130px;
+    height: 100%;
+    width: 100px;
+    color: rgba(255, 255, 255, 0.877);
+    padding: 0px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly; /* Distribute items evenly along the main axis */
-    align-items: center; /* Center the content vertically */
+    flex-direction: column;
+    justify-content: flex-start;
     z-index: 100;
   }
-
-  #navbar a.active::before {
-    position: absolute;
-    height: 0px;
-  }
-
-  #navbar a.active {
-    position: relative;
-    color: rgb(177, 17, 17);
-    left: 0px;
-  }
-
+  
   #navbar a {
     color: rgba(255, 255, 255, 0.305);
     text-decoration: none;
+    margin: 10px 0;
     transition: all 0.3s ease;
-    padding: 0 10px; /* Add padding to create space around the link */
-    width: 150px; /* Set a fixed width for all links */
+    position: sticky;
   }
-
-  #navbar a.active,
+  
+  #navbar a.active {
+    position: relative;
+    color: rgba(255, 255, 255, 0.877);
+    left: 50px;
+    width: 150px;
+  }
+  
+  #navbar a::before {
+    content: "";
+    position: fixed;
+    left: -50px;
+    top: 8px;
+    width: 35px;
+    background-color: rgb(255, 255, 255);
+    transition: height 0.3s ease;
+    transform: translateY(-50%);
+  }
+  
+  #navbar a.active::before {
+    position: absolute;
+    height: 2px;
+  }
+  
   #navbar a:hover {
     color: rgba(255, 255, 255, 0.877);
+    content: "";
   }
-
+  
   #sections {
     margin-top: 0px;
     margin-left: 50%;
   }
-
+  
   section {
-    position: relative;
+    position: absolute;
     padding: 20px;
     color: rgba(255, 255, 255, 0.877);
   }
-
+  
   #about-me {
     position: absolute;
-    margin-top: 250px;
-    left: 30px;
-    right: 40px;
+    margin-top: 2%;
+    width: 600px;
     color: #8892b0;
     font-size: 18px;
     line-height: 30px;
   }
-
+  
   #projects {
     position: absolute;
     margin-top: 10%;
-    left: 20px;
-    right: 40px;
   }
-
-
-  .experience-box-1 {
-    width: 99%;
-    height: 180px;
-    background-color: #0f132800;
-    transition: background-color 0.3s ease;
+  
+  #experience {
     position: absolute;
-    left: 1.5%;
-    right: 1.5%;
-
-    z-index: 0;
-    border-radius: 6px;
+    margin-top: 400%;
   }
-
-  .experience-title-1{
-
-  }
-
-  .experience-description-1{
-
-  }
-
-  .hidden-in-desktop {
-    display: block; /* Show the text in tablet mode */
-  }
-
+  
   .sticky-image-git:hover,
   .sticky-image-linkedin:hover,
   .sticky-image-ig:hover {
     filter: brightness(100%);
   }
-
+  
+  .pill-cpp, .pill-cpp-2, .pill-aws-3, .pill-CSS-3,
+  .pill-github, .pill-github-2, .pill-github-3,
+  .pill-HTML-3, .pill-Javascript-3, .pill-react-2, 
+  .pill-sdl2, .pill-vscode{
+      font-size: 16px;
+  }
+  
   .sticky-image-git {
     filter: brightness(65%);
     transition: 0.3s ease;
-    position: absolute;
-    margin-left: 50px;
-    top: 240px;
-    z-index: 99;
+    position: fixed;
+    margin-left: 130px;
+    bottom: 128px;
+    z-index: 1000;
   }
-
+  
   .sticky-image-linkedin {
     filter: brightness(65%);
     transition: 0.3s ease;
-    position: absolute;
-    margin-left: 120px;
-    top: 240px;
-    z-index: 99;
+    position: fixed;
+    margin-left: 200px;
+    bottom: 128px;
+    z-index: 1000;
   }
-
+  
   .sticky-image-ig {
     filter: brightness(65%);
     transition: 0.3s ease;
-    position: absolute;
-    margin-left: 190px;
-    top: 240px;
-    z-index: 99;
+    position: fixed;
+    margin-left: 270px;
+    bottom: 128px;
+    z-index: 1000;
   }
-
+  
+  
+  ::selection {
+    background-color: #00bbff;
+    color: rgba(255, 255, 255, 0.877);
+  }
+  
+  .project-box-1 .project-title-1,
+  .project-box-1, .experience-box-1{
+    color: white; /* Or any other color you prefer */
+  }
+  
+  .project-box-2 .project-title-2,
+  .project-box-2 {
+    color: white; /* Or any other color you prefer */
+  }
+  
+  .project-box-3 .project-title-3,
+  .project-box-3 {
+    color: white; /* Or any other color you prefer */
+  }
+  
+  
+  
+  /* project 1 stuff */
   .project-box-1 {
-    width: 99%;
+      width: 600px;
     height: 180px;
     background-color: #0f132800;
-    transition: background-color 0.3s ease;
     position: absolute;
     left: 1.5%;
     right: 1.5%;
-
     z-index: 0;
     border-radius: 6px;
+    transition: background-color 0.3s ease-in-out; /* Define transition for both default and hover states */
   }
-
+  
   .project-box-1 img {
-    width: 200px;
-    height: 150px;
+    border-radius: 6px;
   }
-
+  
   .project-title-1 {
-    left: 225px;
+    font-size: 20px;
+    position: absolute;
+    top: 8px; /* Adjust this value to move the title up or down */
+    left: 160px; /* Adjust this value to move the title left or right */
   }
-
-  .project-box-1-description {
-    left: 225px;
-  }
-
+  
   .project-box-1-image {
     position: absolute;
     top: 30px; /* Adjust this value to vertically center the image */
-    left: 10px; /* Adjust this value to move the image left or right */
+    left: 12px; /* Adjust this value to move the image left or right */
     transform: translateY(-50%); /* Center the image vertically */
-    width: 30px;
+    width: 10px;
+    height: 30px;
   }
-
-  .project-box-2 {
-    width: 99%;
-    height: 180px;
-    background-color: #0f132800;
-    transition: background-color 0.3s ease;
+  
+  .project-box-1-description {
     position: absolute;
-    left: 1.5%;
-    right: 1.5%;
-    margin-top: 0%;
-    z-index: 0;
-    border-radius: 6px;
+    top: 45px;
+    left: 162px;
+    padding-right: 1%;
+    color: #8892b0;
   }
-
-  .project-box-2 img {
-    width: 200px;
-    height: 130px;
+  
+  .project-box-1:hover {
+    background-color: #ffffff46; /* Change the background color on hover */
   }
-
-  .project-title-2 {
-    left: 225px;
+  
+  .project-box-1:hover .project-title-1 {
+    color: #00bbff;
   }
-
-  .project-box-2-description {
-    left: 225px;
-  }
-
-  .project-box-2-image {
+  
+  .project-box-1 .svgarrow img {
+    content: url("link.svg");
     position: absolute;
-    top: 30px; /* Adjust this value to vertically center the image */
-    left: 10px; /* Adjust this value to move the image left or right */
-    transform: translateY(-50%); /* Center the image vertically */
-    width: 30px;
+    width: 20px;
+    left: 0px;
+    transition: all 0.3s ease-out; /* Transition for all properties */
+    left: 0; /* Add initial left position */
+    top: 0; /* Add initial top position */
   }
-
-  .project-title-3 {
-    left: 225px;
+  
+  .project-box-1:hover .svgarrow img {
+    content: url("bluearrow.svg");
+    left: 5px;
+    top: -5px;
+    filter: brightness(100%);
   }
-
-  .project-box-3 img {
-    width: 200px;
-    height: 130px;
-  }
-  .project-box-3-description {
-    left: 225px;
-  }
-
+  
   .pill-cpp {
     background-color: #00bbff6b; /* Set your desired background color */
     position: absolute;
     color: #00bbff; /* Set your desired text color */
-    left: 225px;
+    left: 160px;
     border-radius: 50px; /* Set the border-radius to create a pill shape */
     padding: 10px 10px; /* Adjust padding as needed */
     height: 15px; /* Adjust the height of the pill */
@@ -1072,12 +385,12 @@ section {
     justify-content: center; /* Center the content horizontally */
     text-align: center;
   }
-
+  
   .pill-sdl2 {
     background-color: #00bbff6b; /* Set your desired background color */
     position: absolute;
     color: #00bbff; /* Set your desired text color */
-    left: 300px;
+    left: 237px;
     border-radius: 50px; /* Set the border-radius to create a pill shape */
     padding: 10px 10px; /* Adjust padding as needed */
     height: 15px; /* Adjust the height of the pill */
@@ -1087,12 +400,12 @@ section {
     justify-content: center; /* Center the content horizontally */
     text-align: center;
   }
-
+  
   .pill-github {
     background-color: #00bbff6b; /* Set your desired background color */
     position: absolute;
     color: #00bbff; /* Set your desired text color */
-    left: 380px;
+    left: 320px;
     border-radius: 50px; /* Set the border-radius to create a pill shape */
     padding: 10px 10px; /* Adjust padding as needed */
     height: 15px; /* Adjust the height of the pill */
@@ -1102,12 +415,12 @@ section {
     justify-content: center; /* Center the content horizontally */
     text-align: center;
   }
-
+  
   .pill-vscode {
     background-color: #00bbff6b; /* Set your desired background color */
     position: absolute;
     color: #00bbff; /* Set your desired text color */
-    left: 470px;
+    left: 413px;
     border-radius: 50px; /* Set the border-radius to create a pill shape */
     padding: 10px 10px; /* Adjust padding as needed */
     height: 15px; /* Adjust the height of the pill */
@@ -1117,12 +430,65 @@ section {
     justify-content: center; /* Center the content horizontally */
     text-align: center;
   }
-
-  .project-box-2 {
-    margin-top: 210px;
+  
+  .svgarrow {
+    left: 274px;
+    top: 15px;
+    position: absolute;
   }
-
-  .project-box-1 .svgarrow img {
+  /* project 1 stuff */
+  
+  /* project 2 stuff */
+  .project-box-2 {
+      width: 600px;
+    height: 180px;
+    background-color: #0f132800;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    left: 1.5%;
+    right: 1.5%;
+    top: 168%;
+    z-index: 0;
+    border-radius: 6px;
+  }
+  
+  .project-box-2 img {
+    border-radius: 6px;
+  }
+  
+  .project-title-2 {
+    font-size: 20px;
+    position: absolute;
+    top: 8px; /* Adjust this value to move the title up or down */
+    left: 160px; /* Adjust this value to move the title left or right */
+  }
+  
+  .project-box-2-image {
+    position: absolute;
+    top: 30px; /* Adjust this value to vertically center the image */
+    left: 12px; /* Adjust this value to move the image left or right */
+    transform: translateY(-50%); /* Center the image vertically */
+    width: 10px;
+    height: 30px;
+  }
+  
+  .project-box-2-description {
+      padding-right: 1%;
+    position: absolute;
+    top: 45px;
+    left: 162px;
+  
+    color: #8892b0;
+  }
+  
+  .project-box-2:hover {
+    background-color: #ffffff46;
+  }
+  .project-box-2:hover .project-title-2 {
+    color: #00bbff;
+  }
+  
+  .project-box-2 .svgarrow-2 img {
     content: url("link.svg");
     position: absolute;
     width: 20px;
@@ -1130,47 +496,20 @@ section {
     left: 0; /* Add initial left position */
     top: 0; /* Add initial top position */
   }
-
-  .project-box-1:hover .svgarrow img {
+  
+  .project-box-2:hover .svgarrow-2 img {
     content: url("bluearrow.svg");
     left: 5px;
     top: -5px;
     filter: brightness(100%);
   }
-
-  .svgarrow {
-    left: 338px;
-    top: -51px;
-    position: absolute;
-  }
-
-  .say-hello-button {
-    display: inline-block;
-    position: absolute;
-    padding: 18px 20px;
-    color: #fff; /* Set your desired text color */
-    border: 2px solid #00bbff; /* Set border color and style */
-    border-radius: 5px;
-    font-size: 16px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    z-index: 0;
-    text-align: center; /* Center the text horizontally */
-    filter: brightness(100%);
-    margin-left: 265px; /* Adjust this value to position horizontally */
-    top: 230px; /* Adjust this value to position vertically */
-    line-height: 0px; /* Adjust this value to vertically center the text */
-  }
-
-  .say-hello-button:hover {
-    background-color: #0099dd; /* Set your desired background color on hover */
-  }
-
+  
   .pill-cpp-2 {
     background-color: #00bbff6b; /* Set your desired background color */
     position: absolute;
     color: #00bbff; /* Set your desired text color */
-    left: 225px;
+    bottom: 15px;
+    left: 160px;
     border-radius: 50px; /* Set the border-radius to create a pill shape */
     padding: 10px 10px; /* Adjust padding as needed */
     height: 15px; /* Adjust the height of the pill */
@@ -1180,12 +519,13 @@ section {
     justify-content: center; /* Center the content horizontally */
     text-align: center;
   }
-
+  
   .pill-react-2 {
     background-color: #00bbff6b; /* Set your desired background color */
     position: absolute;
     color: #00bbff; /* Set your desired text color */
-    left: 300px;
+    bottom: 15px;
+    left: 237px;
     border-radius: 50px; /* Set the border-radius to create a pill shape */
     padding: 10px 10px; /* Adjust padding as needed */
     height: 15px; /* Adjust the height of the pill */
@@ -1195,12 +535,13 @@ section {
     justify-content: center; /* Center the content horizontally */
     text-align: center;
   }
-
+  
   .pill-github-2 {
     background-color: #00bbff6b; /* Set your desired background color */
     position: absolute;
     color: #00bbff; /* Set your desired text color */
-    left: 380px;
+    bottom: 15px;
+    left: 320px;
     border-radius: 50px; /* Set the border-radius to create a pill shape */
     padding: 10px 10px; /* Adjust padding as needed */
     height: 15px; /* Adjust the height of the pill */
@@ -1210,12 +551,13 @@ section {
     justify-content: center; /* Center the content horizontally */
     text-align: center;
   }
-
+  
   .pill-vscode-2 {
     background-color: #00bbff6b; /* Set your desired background color */
     position: absolute;
     color: #00bbff; /* Set your desired text color */
-    left: 470px;
+    bottom: 15px;
+    left: 413px;
     border-radius: 50px; /* Set the border-radius to create a pill shape */
     padding: 10px 10px; /* Adjust padding as needed */
     height: 15px; /* Adjust the height of the pill */
@@ -1225,434 +567,1096 @@ section {
     justify-content: center; /* Center the content horizontally */
     text-align: center;
   }
-
+  
   .svgarrow-2 {
-    left: 305px;
-    top: -41px;
+    left: 242px;
+    top: 15px;
     position: absolute;
   }
-
+  /* project 2 stuff */
+  
+  /* project 3 stuff */
+  .project-box-3 {
+      width: 600px;
+    height: 3500px;
+    background-color: #0f132800;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    left: 1.5%;
+    right: 1.5%;
+    margin-top: 440px;
+    z-index: 0;
+    border-radius: 6px;
+  }
+  
+  .project-box-3 img {
+    border-radius: 6px;
+  }
+  
+  .project-title-3 {
+    font-size: 20px;
+    position: absolute;
+    top: 8px; /* Adjust this value to move the title up or down */
+    left: 160px; /* Adjust this value to move the title left or right */
+  }
+  
+  .project-box-3-image {
+    position: absolute;
+    top: 30px; /* Adjust this value to vertically center the image */
+    left: 12px; /* Adjust this value to move the image left or right */
+    transform: translateY(-50%); /* Center the image vertically */
+    width: 10px;
+    height: 30px;
+  }
+  
+  .project-box-3-description {
+      padding-right: 1%;
+    position: absolute;
+    top: 45px;
+    left: 162px;
+  
+    color: #8892b0;
+  }
+  
+  .project-box-3:hover {
+    background-color: #ffffff46;
+  }
+  .project-box-3:hover .project-title-3 {
+    color: #00bbff;
+  }
+  
+  .project-box-3 .svgarrow-3 img {
+    content: url("link.svg");
+    position: absolute;
+    width: 20px;
+    transition: all 0.3s ease-out; /* Transition for all properties */
+    left: 0; /* Add initial left position */
+    top: 0; /* Add initial top position */
+  }
+  
+  .project-box-3:hover .svgarrow-3 img {
+    content: url("bluearrow.svg");
+    left: 5px;
+    top: -5px;
+    filter: brightness(100%);
+  }
+  
+  .pill-HTML-3 {
+    background-color: #00bbff6b; /* Set your desired background color */
+    position: absolute;
+    color: #00bbff; /* Set your desired text color */
+    bottom: 60px;
+    left: 160px;
+    border-radius: 50px; /* Set the border-radius to create a pill shape */
+    padding: 10px 10px; /* Adjust padding as needed */
+    height: 15px; /* Adjust the height of the pill */
+    width: 50px; /* Adjust the width of the pill */
+    display: inline-flex; /* Display as inline-flex to vertically center the content */
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+    text-align: center;
+  }
+  
+  .pill-CSS-3 {
+    background-color: #00bbff6b; /* Set your desired background color */
+    position: absolute;
+    color: #00bbff; /* Set your desired text color */
+    bottom: 60px;
+    left: 245px;
+    border-radius: 50px; /* Set the border-radius to create a pill shape */
+    padding: 10px 10px; /* Adjust padding as needed */
+    height: 15px; /* Adjust the height of the pill */
+    width: 45px; /* Adjust the width of the pill */
+    display: inline-flex; /* Display as inline-flex to vertically center the content */
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+    text-align: center;
+  }
+  
+  .pill-Javascript-3 {
+    background-color: #00bbff6b; /* Set your desired background color */
+    position: absolute;
+    color: #00bbff; /* Set your desired text color */
+    bottom: 60px;
+    left: 325px;
+    border-radius: 50px; /* Set the border-radius to create a pill shape */
+    padding: 10px 10px; /* Adjust padding as needed */
+    height: 15px; /* Adjust the height of the pill */
+    width: 85px; /* Adjust the width of the pill */
+    display: inline-flex; /* Display as inline-flex to vertically center the content */
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+    text-align: center;
+  }
+  
+  .pill-aws-3 {
+    background-color: #00bbff6b; /* Set your desired background color */
+    position: absolute;
+    color: #00bbff; /* Set your desired text color */
+    bottom: 60px;
+    left: 445px;
+    border-radius: 50px; /* Set the border-radius to create a pill shape */
+    padding: 10px 10px; /* Adjust padding as needed */
+    height: 15px; /* Adjust the height of the pill */
+    width: 45px; /* Adjust the width of the pill */
+    display: inline-flex; /* Display as inline-flex to vertically center the content */
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+    text-align: center;
+  }
+  
+  .pill-github-3 {
+    background-color: #00bbff6b; /* Set your desired background color */
+    position: absolute;
+    color: #00bbff; /* Set your desired text color */
+    left: 525px;
+    border-radius: 50px; /* Set the border-radius to create a pill shape */
+    padding: 10px 10px; /* Adjust padding as needed */
+    height: 15px; /* Adjust the height of the pill */
+    width: 55px; /* Adjust the width of the pill */
+    display: inline-flex; /* Display as inline-flex to vertically center the content */
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+    text-align: center;
+  }
+  
+  .pill-vscode-3 {
+    background-color: #00bbff6b; /* Set your desired background color */
+    position: absolute;
+    color: #00bbff; /* Set your desired text color */
+    left: 160px;
+    border-radius: 50px; /* Set the border-radius to create a pill shape */
+    padding: 10px 10px; /* Adjust padding as needed */
+    height: 15px; /* Adjust the height of the pill */
+    width: 75px; /* Adjust the width of the pill */
+    display: inline-flex; /* Display as inline-flex to vertically center the content */
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+    text-align: center;
+  }
+  
   .svgarrow-3 {
-    left: 360px;
-    top: -41px;
+    left: 296px;
+    top: 15px;
     position: absolute;
   }
-}
-
-
-@media only screen and (max-width: 750px) {
-    .counterapi{
-        color: #a6a6a6;
-        font-size: 18px;
-        position: absolute;
-        text-decoration: none;
-        top: 290px;
-        margin-left: 90px;
-    }
-    
-    .visits{
-        color: #a6a6a6;
-        position: absolute;
-        top: 286px;
-        left: 47px;
-    
-    }
-    
-    .ion-icon{
-        color: #a6a6a6;
-        filter: transparent(50%);
-    }
-    
+  /* project 3 stuff */
+  
+  .project-archive {
+      position: relative;
+      color: white;
+      text-decoration: none; /* Hides the underline by default */
+      top: 1300px;
+      display: inline-block; /* Ensures the pseudo-element aligns correctly */
+  }
+  
+  .project-archive::after {
+      content: '';
+      display: block;
+      margin: auto; /* Centers the underline */
+      height: 2px; /* Height of the underline */
+      width: 0; /* Starts with no width */
+      background: #00bbff; /* Color of the underline */
+      transition: width 0.5s ease; /* Animates the width */
+  }
+  
+  .project-archive:hover::after {
+      width: 100%; /* Expands the underline to full width on hover */
+  }
+  
+  
+  .project-archive .svgarrow-archive img {
+      position: absolute;
+      content: url("link.svg");
+      width: 20px;
+      left: -25px;
+      top: 2px;
+      transition: transform 0.3s ease-out, filter 0.3s ease; /* Transition for transform and filter properties */
+  }
+  
+  .project-archive:hover .svgarrow-archive img {
+      transform: translate(5px, -5px); /* Moves the image */
+      filter: brightness(100%); /* Adjusts the image filter */
+  }
+  
+  
+  
+  .svgarrow-archive {
+      position: absolute;
+      left: -95px;
+      top: 0px;
+  }
+  
+  @media only screen and (max-width: 1300px) {
+      .project-box-1 {
+          width: 95%
+          /* ... your other styles ... */
+        }
+        .project-box-2 {
+          width: 95%;
+          /* ... your other styles ... */
+        }
+        .project-box-3 {
+          width: 95%
+  
+        }
+  
+        #about-me{
+          width: auto;
+        }
+  }
+  
+  /* tablet */
+  @media only screen and (max-width: 1024px) and (min-width: 750px) {
+  
+      .counterapi{
+          color: #a6a6a6;
+          font-size: 18px;
+          position: absolute;
+          text-decoration: none;
+          top: 290px;
+          margin-left: 90px;
+      }
+      
+      .visits{
+          color: #a6a6a6;
+          position: absolute;
+          top: 286px;
+          left: 47px;
+      
+      }
+      
+      .ion-icon{
+          color: #a6a6a6;
+          filter: transparent(50%);
+      }
+  
+  
     .name-text {
-        font-size: 50px;
-        position: absolute;
-        margin-top: 25px;
-        margin-left: 250px;
-        z-index: 100;
-        transform: translateX(-50%);
+      font-size: 50px;
+      position: absolute;
+      margin-top: 25px;
+      margin-left: 250px;
+      z-index: 100;
+      transform: translateX(-50%);
     }
-    
+  
     .school-text {
-        font-size: 25px;
-        position: absolute;
-        margin-top: 20px;
-        margin-left: 400px; /* Adjusted margin-left to left */
-        transform: translateX(-50%);
-        z-index: 100;
+      font-size: 25px;
+      position: absolute;
+      margin-top: 20px;
+      margin-left: 400px; /* Adjusted margin-left to left */
+      transform: translateX(-50%);
+      z-index: 100;
     }
-    
+  
     #navbar {
-        position: fixed;
-        top: 0;
-        margin-left: 0px;
-        height: 50px; /* Adjust the height of the horizontal bar */
-        width: 100%; /* Make it span the entire width */
-        background-color: rgba(
+      position: fixed;
+      top: 0;
+      margin-left: 0px;
+      height: 50px; /* Adjust the height of the horizontal bar */
+      width: 100%; /* Make it span the entire width */
+      background-color: rgba(
         15,
         19,
         40,
         1
-        ); /* Background color of the horizontal bar */
-        color: rgba(188, 36, 36, 0.877);
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly; /* Distribute items evenly along the main axis */
-        align-items: center; /* Center the content vertically */
-        z-index: 100;
+      ); /* Background color of the horizontal bar */
+      color: rgba(188, 36, 36, 0.877);
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly; /* Distribute items evenly along the main axis */
+      align-items: center; /* Center the content vertically */
+      z-index: 100;
     }
-    
+  
     #navbar a.active::before {
-        position: absolute;
-        height: 0px;
+      position: absolute;
+      height: 0px;
     }
-    
+  
     #navbar a.active {
-        position: relative;
-        color: rgb(177, 17, 17);
-        left: 0px;
+      position: relative;
+      color: rgb(177, 17, 17);
+      left: 0px;
     }
-    
+  
     #navbar a {
-        color: rgba(255, 255, 255, 0.305);
-        text-decoration: none;
-        transition: all 0.3s ease;
-        padding: 0 10px; /* Add padding to create space around the link */
-        width: 150px; /* Set a fixed width for all links */
+      color: rgba(255, 255, 255, 0.305);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      padding: 0 10px; /* Add padding to create space around the link */
+      width: 150px; /* Set a fixed width for all links */
     }
-    
+  
     #navbar a.active,
     #navbar a:hover {
-        color: rgba(255, 255, 255, 0.877);
+      color: rgba(255, 255, 255, 0.877);
     }
-    
+  
     #sections {
-        margin-top: 0px;
-        margin-left: 50%;
+      margin-top: 0px;
+      margin-left: 50%;
     }
-    
+  
     section {
-        position: relative;
-        padding: 20px;
-        color: rgba(255, 255, 255, 0.877);
+      position: relative;
+      padding: 20px;
+      color: rgba(255, 255, 255, 0.877);
     }
-    
+  
     #about-me {
-        position: absolute;
-        margin-top: 250px;
-        left: 30px;
-        right: 40px;
-        color: #8892b0;
-        font-size: 18px;
-        line-height: 30px;
+      position: absolute;
+      margin-top: 250px;
+      left: 30px;
+      right: 40px;
+      color: #8892b0;
+      font-size: 18px;
+      line-height: 30px;
     }
-    
+  
     #projects {
-        position: absolute;
-        margin-top: 10%;
-        left: 20px;
-        right: 40px;
+      position: absolute;
+      margin-top: 10%;
+      left: 20px;
+      right: 40px;
     }
-    
-    #experience {
-        position: absolute;
-        margin-top: 400%;
+  
+  
+    .experience-box-1 {
+      width: 99%;
+      height: 180px;
+      background-color: #0f132800;
+      transition: background-color 0.3s ease;
+      position: absolute;
+      left: 1.5%;
+      right: 1.5%;
+  
+      z-index: 0;
+      border-radius: 6px;
     }
-    
+  
+    .experience-title-1{
+  
+    }
+  
+    .experience-description-1{
+  
+    }
+  
     .hidden-in-desktop {
-        display: block; /* Show the text in tablet mode */
+      display: block; /* Show the text in tablet mode */
     }
-    
+  
     .sticky-image-git:hover,
     .sticky-image-linkedin:hover,
     .sticky-image-ig:hover {
-        filter: brightness(100%);
+      filter: brightness(100%);
     }
-    
+  
     .sticky-image-git {
-        filter: brightness(65%);
-        transition: 0.3s ease;
-        position: absolute;
-        margin-left: 50px;
-        top: 240px;
-        z-index: 99;
+      filter: brightness(65%);
+      transition: 0.3s ease;
+      position: absolute;
+      margin-left: 50px;
+      top: 240px;
+      z-index: 99;
     }
-    
+  
     .sticky-image-linkedin {
-        filter: brightness(65%);
-        transition: 0.3s ease;
-        position: absolute;
-        margin-left: 120px;
-        top: 240px;
-        z-index: 99;
+      filter: brightness(65%);
+      transition: 0.3s ease;
+      position: absolute;
+      margin-left: 120px;
+      top: 240px;
+      z-index: 99;
     }
-    
+  
     .sticky-image-ig {
-        filter: brightness(65%);
-        transition: 0.3s ease;
-        position: absolute;
-        margin-left: 190px;
-        top: 240px;
-        z-index: 99;
+      filter: brightness(65%);
+      transition: 0.3s ease;
+      position: absolute;
+      margin-left: 190px;
+      top: 240px;
+      z-index: 99;
     }
-    
+  
     .project-box-1 {
-        width: 99%;
-        height: 180px;
-        background-color: #0f132800;
-        transition: background-color 0.3s ease;
-        position: absolute;
-        left: 1.5%;
-        right: 1.5%;
-    
-        z-index: 0;
-        border-radius: 6px;
+      width: 99%;
+      height: 180px;
+      background-color: #0f132800;
+      transition: background-color 0.3s ease;
+      position: absolute;
+      left: 1.5%;
+      right: 1.5%;
+  
+      z-index: 0;
+      border-radius: 6px;
     }
-    
+  
     .project-box-1 img {
-        width: 200px;
-        height: 150px;
+      width: 200px;
+      height: 150px;
     }
-    
+  
     .project-title-1 {
-        left: 225px;
+      left: 225px;
     }
-    
+  
     .project-box-1-description {
-        left: 225px;
+      left: 225px;
     }
-    
+  
     .project-box-1-image {
-        position: absolute;
-        top: 30px; /* Adjust this value to vertically center the image */
-        left: 10px; /* Adjust this value to move the image left or right */
-        transform: translateY(-50%); /* Center the image vertically */
-        width: 30px;
+      position: absolute;
+      top: 30px; /* Adjust this value to vertically center the image */
+      left: 10px; /* Adjust this value to move the image left or right */
+      transform: translateY(-50%); /* Center the image vertically */
+      width: 30px;
     }
-    
+  
     .project-box-2 {
-        width: 99%;
-        height: 180px;
-        background-color: #0f132800;
-        transition: background-color 0.3s ease;
-        position: absolute;
-        left: 1.5%;
-        right: 1.5%;
-        margin-top: 0%;
-        z-index: 0;
-        border-radius: 6px;
+      width: 99%;
+      height: 180px;
+      background-color: #0f132800;
+      transition: background-color 0.3s ease;
+      position: absolute;
+      left: 1.5%;
+      right: 1.5%;
+      margin-top: 0%;
+      z-index: 0;
+      border-radius: 6px;
     }
-    
+  
     .project-box-2 img {
-        width: 200px;
-        height: 130px;
+      width: 200px;
+      height: 130px;
     }
-    
+  
     .project-title-2 {
-        left: 225px;
+      left: 225px;
     }
-    
+  
     .project-box-2-description {
-        left: 225px;
+      left: 225px;
     }
-    
+  
     .project-box-2-image {
-        position: absolute;
-        top: 30px; /* Adjust this value to vertically center the image */
-        left: 10px; /* Adjust this value to move the image left or right */
-        transform: translateY(-50%); /* Center the image vertically */
-        width: 30px;
+      position: absolute;
+      top: 30px; /* Adjust this value to vertically center the image */
+      left: 10px; /* Adjust this value to move the image left or right */
+      transform: translateY(-50%); /* Center the image vertically */
+      width: 30px;
     }
-    
+  
     .project-title-3 {
-        left: 225px;
+      left: 225px;
     }
-    
+  
     .project-box-3 img {
-        width: 200px;
-        height: 130px;
+      width: 200px;
+      height: 130px;
     }
     .project-box-3-description {
-        left: 225px;
+      left: 225px;
     }
-    
+  
     .pill-cpp {
-        background-color: #00bbff6b; /* Set your desired background color */
-        position: absolute;
-        color: #00bbff; /* Set your desired text color */
-        left: 225px;
-        border-radius: 50px; /* Set the border-radius to create a pill shape */
-        padding: 10px 10px; /* Adjust padding as needed */
-        height: 15px; /* Adjust the height of the pill */
-        width: 40px; /* Adjust the width of the pill */
-        display: inline-flex; /* Display as inline-flex to vertically center the content */
-        align-items: center; /* Center the content vertically */
-        justify-content: center; /* Center the content horizontally */
-        text-align: center;
+      background-color: #00bbff6b; /* Set your desired background color */
+      position: absolute;
+      color: #00bbff; /* Set your desired text color */
+      left: 225px;
+      border-radius: 50px; /* Set the border-radius to create a pill shape */
+      padding: 10px 10px; /* Adjust padding as needed */
+      height: 15px; /* Adjust the height of the pill */
+      width: 40px; /* Adjust the width of the pill */
+      display: inline-flex; /* Display as inline-flex to vertically center the content */
+      align-items: center; /* Center the content vertically */
+      justify-content: center; /* Center the content horizontally */
+      text-align: center;
     }
-    
+  
     .pill-sdl2 {
-        background-color: #00bbff6b; /* Set your desired background color */
-        position: absolute;
-        color: #00bbff; /* Set your desired text color */
-        left: 300px;
-        border-radius: 50px; /* Set the border-radius to create a pill shape */
-        padding: 10px 10px; /* Adjust padding as needed */
-        height: 15px; /* Adjust the height of the pill */
-        width: 45px; /* Adjust the width of the pill */
-        display: inline-flex; /* Display as inline-flex to vertically center the content */
-        align-items: center; /* Center the content vertically */
-        justify-content: center; /* Center the content horizontally */
-        text-align: center;
+      background-color: #00bbff6b; /* Set your desired background color */
+      position: absolute;
+      color: #00bbff; /* Set your desired text color */
+      left: 300px;
+      border-radius: 50px; /* Set the border-radius to create a pill shape */
+      padding: 10px 10px; /* Adjust padding as needed */
+      height: 15px; /* Adjust the height of the pill */
+      width: 45px; /* Adjust the width of the pill */
+      display: inline-flex; /* Display as inline-flex to vertically center the content */
+      align-items: center; /* Center the content vertically */
+      justify-content: center; /* Center the content horizontally */
+      text-align: center;
     }
-    
+  
     .pill-github {
-        background-color: #00bbff6b; /* Set your desired background color */
-        position: absolute;
-        color: #00bbff; /* Set your desired text color */
-        left: 380px;
-        border-radius: 50px; /* Set the border-radius to create a pill shape */
-        padding: 10px 10px; /* Adjust padding as needed */
-        height: 15px; /* Adjust the height of the pill */
-        width: 55px; /* Adjust the width of the pill */
-        display: inline-flex; /* Display as inline-flex to vertically center the content */
-        align-items: center; /* Center the content vertically */
-        justify-content: center; /* Center the content horizontally */
-        text-align: center;
+      background-color: #00bbff6b; /* Set your desired background color */
+      position: absolute;
+      color: #00bbff; /* Set your desired text color */
+      left: 380px;
+      border-radius: 50px; /* Set the border-radius to create a pill shape */
+      padding: 10px 10px; /* Adjust padding as needed */
+      height: 15px; /* Adjust the height of the pill */
+      width: 55px; /* Adjust the width of the pill */
+      display: inline-flex; /* Display as inline-flex to vertically center the content */
+      align-items: center; /* Center the content vertically */
+      justify-content: center; /* Center the content horizontally */
+      text-align: center;
     }
-    
+  
     .pill-vscode {
-        background-color: #00bbff6b; /* Set your desired background color */
-        position: absolute;
-        color: #00bbff; /* Set your desired text color */
-        left: 470px;
-        border-radius: 50px; /* Set the border-radius to create a pill shape */
-        padding: 10px 10px; /* Adjust padding as needed */
-        height: 15px; /* Adjust the height of the pill */
-        width: 75px; /* Adjust the width of the pill */
-        display: inline-flex; /* Display as inline-flex to vertically center the content */
-        align-items: center; /* Center the content vertically */
-        justify-content: center; /* Center the content horizontally */
-        text-align: center;
+      background-color: #00bbff6b; /* Set your desired background color */
+      position: absolute;
+      color: #00bbff; /* Set your desired text color */
+      left: 470px;
+      border-radius: 50px; /* Set the border-radius to create a pill shape */
+      padding: 10px 10px; /* Adjust padding as needed */
+      height: 15px; /* Adjust the height of the pill */
+      width: 75px; /* Adjust the width of the pill */
+      display: inline-flex; /* Display as inline-flex to vertically center the content */
+      align-items: center; /* Center the content vertically */
+      justify-content: center; /* Center the content horizontally */
+      text-align: center;
     }
-    
+  
     .project-box-2 {
-        margin-top: 210px;
+      margin-top: 210px;
     }
-    
+  
     .project-box-1 .svgarrow img {
-        content: url("link.svg");
-        position: absolute;
-        width: 20px;
-        transition: all 0.3s ease-out; /* Transition for all properties */
-        left: 0; /* Add initial left position */
-        top: 0; /* Add initial top position */
+      content: url("link.svg");
+      position: absolute;
+      width: 20px;
+      transition: all 0.3s ease-out; /* Transition for all properties */
+      left: 0; /* Add initial left position */
+      top: 0; /* Add initial top position */
     }
-    
+  
     .project-box-1:hover .svgarrow img {
-        content: url("bluearrow.svg");
-        left: 5px;
-        top: -5px;
-        filter: brightness(100%);
+      content: url("bluearrow.svg");
+      left: 5px;
+      top: -5px;
+      filter: brightness(100%);
     }
-    
+  
     .svgarrow {
-        left: 338px;
-        top: -51px;
-        position: absolute;
+      left: 338px;
+      top: -51px;
+      position: absolute;
     }
-    
+  
     .say-hello-button {
-        display: inline-block;
-        position: absolute;
-        padding: 18px 20px;
-        color: #fff; /* Set your desired text color */
-        border: 2px solid #00bbff; /* Set border color and style */
-        border-radius: 5px;
-        font-size: 16px;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-        z-index: 0;
-        text-align: center; /* Center the text horizontally */
-        filter: brightness(100%);
-        margin-left: 265px; /* Adjust this value to position horizontally */
-        top: 230px; /* Adjust this value to position vertically */
-        line-height: 0px; /* Adjust this value to vertically center the text */
+      display: inline-block;
+      position: absolute;
+      padding: 18px 20px;
+      color: #fff; /* Set your desired text color */
+      border: 2px solid #00bbff; /* Set border color and style */
+      border-radius: 5px;
+      font-size: 16px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      z-index: 0;
+      text-align: center; /* Center the text horizontally */
+      filter: brightness(100%);
+      margin-left: 265px; /* Adjust this value to position horizontally */
+      top: 230px; /* Adjust this value to position vertically */
+      line-height: 0px; /* Adjust this value to vertically center the text */
     }
-    
+  
     .say-hello-button:hover {
-        background-color: #0099dd; /* Set your desired background color on hover */
+      background-color: #0099dd; /* Set your desired background color on hover */
     }
-    
+  
     .pill-cpp-2 {
-        background-color: #00bbff6b; /* Set your desired background color */
-        position: absolute;
-        color: #00bbff; /* Set your desired text color */
-        left: 225px;
-        border-radius: 50px; /* Set the border-radius to create a pill shape */
-        padding: 10px 10px; /* Adjust padding as needed */
-        height: 15px; /* Adjust the height of the pill */
-        width: 40px; /* Adjust the width of the pill */
-        display: inline-flex; /* Display as inline-flex to vertically center the content */
-        align-items: center; /* Center the content vertically */
-        justify-content: center; /* Center the content horizontally */
-        text-align: center;
+      background-color: #00bbff6b; /* Set your desired background color */
+      position: absolute;
+      color: #00bbff; /* Set your desired text color */
+      left: 225px;
+      border-radius: 50px; /* Set the border-radius to create a pill shape */
+      padding: 10px 10px; /* Adjust padding as needed */
+      height: 15px; /* Adjust the height of the pill */
+      width: 40px; /* Adjust the width of the pill */
+      display: inline-flex; /* Display as inline-flex to vertically center the content */
+      align-items: center; /* Center the content vertically */
+      justify-content: center; /* Center the content horizontally */
+      text-align: center;
     }
-    
+  
     .pill-react-2 {
-        background-color: #00bbff6b; /* Set your desired background color */
-        position: absolute;
-        color: #00bbff; /* Set your desired text color */
-        left: 300px;
-        border-radius: 50px; /* Set the border-radius to create a pill shape */
-        padding: 10px 10px; /* Adjust padding as needed */
-        height: 15px; /* Adjust the height of the pill */
-        width: 45px; /* Adjust the width of the pill */
-        display: inline-flex; /* Display as inline-flex to vertically center the content */
-        align-items: center; /* Center the content vertically */
-        justify-content: center; /* Center the content horizontally */
-        text-align: center;
+      background-color: #00bbff6b; /* Set your desired background color */
+      position: absolute;
+      color: #00bbff; /* Set your desired text color */
+      left: 300px;
+      border-radius: 50px; /* Set the border-radius to create a pill shape */
+      padding: 10px 10px; /* Adjust padding as needed */
+      height: 15px; /* Adjust the height of the pill */
+      width: 45px; /* Adjust the width of the pill */
+      display: inline-flex; /* Display as inline-flex to vertically center the content */
+      align-items: center; /* Center the content vertically */
+      justify-content: center; /* Center the content horizontally */
+      text-align: center;
     }
-    
+  
     .pill-github-2 {
-        background-color: #00bbff6b; /* Set your desired background color */
-        position: absolute;
-        color: #00bbff; /* Set your desired text color */
-        left: 380px;
-        border-radius: 50px; /* Set the border-radius to create a pill shape */
-        padding: 10px 10px; /* Adjust padding as needed */
-        height: 15px; /* Adjust the height of the pill */
-        width: 55px; /* Adjust the width of the pill */
-        display: inline-flex; /* Display as inline-flex to vertically center the content */
-        align-items: center; /* Center the content vertically */
-        justify-content: center; /* Center the content horizontally */
-        text-align: center;
+      background-color: #00bbff6b; /* Set your desired background color */
+      position: absolute;
+      color: #00bbff; /* Set your desired text color */
+      left: 380px;
+      border-radius: 50px; /* Set the border-radius to create a pill shape */
+      padding: 10px 10px; /* Adjust padding as needed */
+      height: 15px; /* Adjust the height of the pill */
+      width: 55px; /* Adjust the width of the pill */
+      display: inline-flex; /* Display as inline-flex to vertically center the content */
+      align-items: center; /* Center the content vertically */
+      justify-content: center; /* Center the content horizontally */
+      text-align: center;
     }
-    
+  
     .pill-vscode-2 {
-        background-color: #00bbff6b; /* Set your desired background color */
-        position: absolute;
-        color: #00bbff; /* Set your desired text color */
-        left: 470px;
-        border-radius: 50px; /* Set the border-radius to create a pill shape */
-        padding: 10px 10px; /* Adjust padding as needed */
-        height: 15px; /* Adjust the height of the pill */
-        width: 75px; /* Adjust the width of the pill */
-        display: inline-flex; /* Display as inline-flex to vertically center the content */
-        align-items: center; /* Center the content vertically */
-        justify-content: center; /* Center the content horizontally */
-        text-align: center;
+      background-color: #00bbff6b; /* Set your desired background color */
+      position: absolute;
+      color: #00bbff; /* Set your desired text color */
+      left: 470px;
+      border-radius: 50px; /* Set the border-radius to create a pill shape */
+      padding: 10px 10px; /* Adjust padding as needed */
+      height: 15px; /* Adjust the height of the pill */
+      width: 75px; /* Adjust the width of the pill */
+      display: inline-flex; /* Display as inline-flex to vertically center the content */
+      align-items: center; /* Center the content vertically */
+      justify-content: center; /* Center the content horizontally */
+      text-align: center;
     }
-    
+  
     .svgarrow-2 {
-        left: 305px;
-        top: -41px;
-        position: absolute;
+      left: 305px;
+      top: -41px;
+      position: absolute;
     }
-    
+  
     .svgarrow-3 {
-        left: 360px;
-        top: -41px;
-        position: absolute;
+      left: 360px;
+      top: -41px;
+      position: absolute;
     }
-}
+  }
+  
+  
+  @media only screen and (max-width: 750px) {
+      .counterapi{
+          color: #a6a6a6;
+          font-size: 18px;
+          position: absolute;
+          text-decoration: none;
+          top: 290px;
+          margin-left: 90px;
+      }
+      
+      .visits{
+          color: #a6a6a6;
+          position: absolute;
+          top: 286px;
+          left: 47px;
+      
+      }
+      
+      .ion-icon{
+          color: #a6a6a6;
+          filter: transparent(50%);
+      }
+      
+      .name-text {
+          font-size: 50px;
+          position: absolute;
+          margin-top: 25px;
+          margin-left: 250px;
+          z-index: 100;
+          transform: translateX(-50%);
+      }
+      
+      .school-text {
+          font-size: 25px;
+          position: absolute;
+          margin-top: 20px;
+          margin-left: 400px; /* Adjusted margin-left to left */
+          transform: translateX(-50%);
+          z-index: 100;
+      }
+      
+      #navbar {
+          position: fixed;
+          top: 0;
+          margin-left: 0px;
+          height: 50px; /* Adjust the height of the horizontal bar */
+          width: 100%; /* Make it span the entire width */
+          background-color: rgba(
+          15,
+          19,
+          40,
+          1
+          ); /* Background color of the horizontal bar */
+          color: rgba(188, 36, 36, 0.877);
+          padding: 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly; /* Distribute items evenly along the main axis */
+          align-items: center; /* Center the content vertically */
+          z-index: 100;
+      }
+      
+      #navbar a.active::before {
+          position: absolute;
+          height: 0px;
+      }
+      
+      #navbar a.active {
+          position: relative;
+          color: rgb(177, 17, 17);
+          left: 0px;
+      }
+      
+      #navbar a {
+          color: rgba(255, 255, 255, 0.305);
+          text-decoration: none;
+          transition: all 0.3s ease;
+          padding: 0 10px; /* Add padding to create space around the link */
+          width: 150px; /* Set a fixed width for all links */
+      }
+      
+      #navbar a.active,
+      #navbar a:hover {
+          color: rgba(255, 255, 255, 0.877);
+      }
+      
+      #sections {
+          margin-top: 0px;
+          margin-left: 50%;
+      }
+      
+      section {
+          position: relative;
+          padding: 20px;
+          color: rgba(255, 255, 255, 0.877);
+      }
+      
+      #about-me {
+          position: absolute;
+          margin-top: 250px;
+          left: 30px;
+          right: 40px;
+          color: #8892b0;
+          font-size: 18px;
+          line-height: 30px;
+      }
+      
+      #projects {
+          position: absolute;
+          margin-top: 10%;
+          left: 20px;
+          right: 40px;
+      }
+      
+      #experience {
+          position: absolute;
+          margin-top: 400%;
+      }
+      
+      .hidden-in-desktop {
+          display: block; /* Show the text in tablet mode */
+      }
+      
+      .sticky-image-git:hover,
+      .sticky-image-linkedin:hover,
+      .sticky-image-ig:hover {
+          filter: brightness(100%);
+      }
+      
+      .sticky-image-git {
+          filter: brightness(65%);
+          transition: 0.3s ease;
+          position: absolute;
+          margin-left: 50px;
+          top: 240px;
+          z-index: 99;
+      }
+      
+      .sticky-image-linkedin {
+          filter: brightness(65%);
+          transition: 0.3s ease;
+          position: absolute;
+          margin-left: 120px;
+          top: 240px;
+          z-index: 99;
+      }
+      
+      .sticky-image-ig {
+          filter: brightness(65%);
+          transition: 0.3s ease;
+          position: absolute;
+          margin-left: 190px;
+          top: 240px;
+          z-index: 99;
+      }
+      
+      .project-box-1 {
+          width: 99%;
+          height: 180px;
+          background-color: #0f132800;
+          transition: background-color 0.3s ease;
+          position: absolute;
+          left: 1.5%;
+          right: 1.5%;
+      
+          z-index: 0;
+          border-radius: 6px;
+      }
+      
+      .project-box-1 img {
+          width: 200px;
+          height: 150px;
+      }
+      
+      .project-title-1 {
+          left: 225px;
+      }
+      
+      .project-box-1-description {
+          left: 225px;
+      }
+      
+      .project-box-1-image {
+          position: absolute;
+          top: 30px; /* Adjust this value to vertically center the image */
+          left: 10px; /* Adjust this value to move the image left or right */
+          transform: translateY(-50%); /* Center the image vertically */
+          width: 30px;
+      }
+      
+      .project-box-2 {
+          width: 99%;
+          height: 180px;
+          background-color: #0f132800;
+          transition: background-color 0.3s ease;
+          position: absolute;
+          left: 1.5%;
+          right: 1.5%;
+          margin-top: 0%;
+          z-index: 0;
+          border-radius: 6px;
+      }
+      
+      .project-box-2 img {
+          width: 200px;
+          height: 130px;
+      }
+      
+      .project-title-2 {
+          left: 225px;
+      }
+      
+      .project-box-2-description {
+          left: 225px;
+      }
+      
+      .project-box-2-image {
+          position: absolute;
+          top: 30px; /* Adjust this value to vertically center the image */
+          left: 10px; /* Adjust this value to move the image left or right */
+          transform: translateY(-50%); /* Center the image vertically */
+          width: 30px;
+      }
+      
+      .project-title-3 {
+          left: 225px;
+      }
+      
+      .project-box-3 img {
+          width: 200px;
+          height: 130px;
+      }
+      .project-box-3-description {
+          left: 225px;
+      }
+      
+      .pill-cpp {
+          background-color: #00bbff6b; /* Set your desired background color */
+          position: absolute;
+          color: #00bbff; /* Set your desired text color */
+          left: 225px;
+          border-radius: 50px; /* Set the border-radius to create a pill shape */
+          padding: 10px 10px; /* Adjust padding as needed */
+          height: 15px; /* Adjust the height of the pill */
+          width: 40px; /* Adjust the width of the pill */
+          display: inline-flex; /* Display as inline-flex to vertically center the content */
+          align-items: center; /* Center the content vertically */
+          justify-content: center; /* Center the content horizontally */
+          text-align: center;
+      }
+      
+      .pill-sdl2 {
+          background-color: #00bbff6b; /* Set your desired background color */
+          position: absolute;
+          color: #00bbff; /* Set your desired text color */
+          left: 300px;
+          border-radius: 50px; /* Set the border-radius to create a pill shape */
+          padding: 10px 10px; /* Adjust padding as needed */
+          height: 15px; /* Adjust the height of the pill */
+          width: 45px; /* Adjust the width of the pill */
+          display: inline-flex; /* Display as inline-flex to vertically center the content */
+          align-items: center; /* Center the content vertically */
+          justify-content: center; /* Center the content horizontally */
+          text-align: center;
+      }
+      
+      .pill-github {
+          background-color: #00bbff6b; /* Set your desired background color */
+          position: absolute;
+          color: #00bbff; /* Set your desired text color */
+          left: 380px;
+          border-radius: 50px; /* Set the border-radius to create a pill shape */
+          padding: 10px 10px; /* Adjust padding as needed */
+          height: 15px; /* Adjust the height of the pill */
+          width: 55px; /* Adjust the width of the pill */
+          display: inline-flex; /* Display as inline-flex to vertically center the content */
+          align-items: center; /* Center the content vertically */
+          justify-content: center; /* Center the content horizontally */
+          text-align: center;
+      }
+      
+      .pill-vscode {
+          background-color: #00bbff6b; /* Set your desired background color */
+          position: absolute;
+          color: #00bbff; /* Set your desired text color */
+          left: 470px;
+          border-radius: 50px; /* Set the border-radius to create a pill shape */
+          padding: 10px 10px; /* Adjust padding as needed */
+          height: 15px; /* Adjust the height of the pill */
+          width: 75px; /* Adjust the width of the pill */
+          display: inline-flex; /* Display as inline-flex to vertically center the content */
+          align-items: center; /* Center the content vertically */
+          justify-content: center; /* Center the content horizontally */
+          text-align: center;
+      }
+      
+      .project-box-2 {
+          margin-top: 210px;
+      }
+      
+      .project-box-1 .svgarrow img {
+          content: url("link.svg");
+          position: absolute;
+          width: 20px;
+          transition: all 0.3s ease-out; /* Transition for all properties */
+          left: 0; /* Add initial left position */
+          top: 0; /* Add initial top position */
+      }
+      
+      .project-box-1:hover .svgarrow img {
+          content: url("bluearrow.svg");
+          left: 5px;
+          top: -5px;
+          filter: brightness(100%);
+      }
+      
+      .svgarrow {
+          left: 338px;
+          top: -51px;
+          position: absolute;
+      }
+      
+      .say-hello-button {
+          display: inline-block;
+          position: absolute;
+          padding: 18px 20px;
+          color: #fff; /* Set your desired text color */
+          border: 2px solid #00bbff; /* Set border color and style */
+          border-radius: 5px;
+          font-size: 16px;
+          text-decoration: none;
+          transition: background-color 0.3s ease;
+          z-index: 0;
+          text-align: center; /* Center the text horizontally */
+          filter: brightness(100%);
+          margin-left: 265px; /* Adjust this value to position horizontally */
+          top: 230px; /* Adjust this value to position vertically */
+          line-height: 0px; /* Adjust this value to vertically center the text */
+      }
+      
+      .say-hello-button:hover {
+          background-color: #0099dd; /* Set your desired background color on hover */
+      }
+      
+      .pill-cpp-2 {
+          background-color: #00bbff6b; /* Set your desired background color */
+          position: absolute;
+          color: #00bbff; /* Set your desired text color */
+          left: 225px;
+          border-radius: 50px; /* Set the border-radius to create a pill shape */
+          padding: 10px 10px; /* Adjust padding as needed */
+          height: 15px; /* Adjust the height of the pill */
+          width: 40px; /* Adjust the width of the pill */
+          display: inline-flex; /* Display as inline-flex to vertically center the content */
+          align-items: center; /* Center the content vertically */
+          justify-content: center; /* Center the content horizontally */
+          text-align: center;
+      }
+      
+      .pill-react-2 {
+          background-color: #00bbff6b; /* Set your desired background color */
+          position: absolute;
+          color: #00bbff; /* Set your desired text color */
+          left: 300px;
+          border-radius: 50px; /* Set the border-radius to create a pill shape */
+          padding: 10px 10px; /* Adjust padding as needed */
+          height: 15px; /* Adjust the height of the pill */
+          width: 45px; /* Adjust the width of the pill */
+          display: inline-flex; /* Display as inline-flex to vertically center the content */
+          align-items: center; /* Center the content vertically */
+          justify-content: center; /* Center the content horizontally */
+          text-align: center;
+      }
+      
+      .pill-github-2 {
+          background-color: #00bbff6b; /* Set your desired background color */
+          position: absolute;
+          color: #00bbff; /* Set your desired text color */
+          left: 380px;
+          border-radius: 50px; /* Set the border-radius to create a pill shape */
+          padding: 10px 10px; /* Adjust padding as needed */
+          height: 15px; /* Adjust the height of the pill */
+          width: 55px; /* Adjust the width of the pill */
+          display: inline-flex; /* Display as inline-flex to vertically center the content */
+          align-items: center; /* Center the content vertically */
+          justify-content: center; /* Center the content horizontally */
+          text-align: center;
+      }
+      
+      .pill-vscode-2 {
+          background-color: #00bbff6b; /* Set your desired background color */
+          position: absolute;
+          color: #00bbff; /* Set your desired text color */
+          left: 470px;
+          border-radius: 50px; /* Set the border-radius to create a pill shape */
+          padding: 10px 10px; /* Adjust padding as needed */
+          height: 15px; /* Adjust the height of the pill */
+          width: 75px; /* Adjust the width of the pill */
+          display: inline-flex; /* Display as inline-flex to vertically center the content */
+          align-items: center; /* Center the content vertically */
+          justify-content: center; /* Center the content horizontally */
+          text-align: center;
+      }
+      
+      .svgarrow-2 {
+          left: 305px;
+          top: -41px;
+          position: absolute;
+      }
+      
+      .svgarrow-3 {
+          left: 360px;
+          top: -41px;
+          position: absolute;
+      }
+  }
