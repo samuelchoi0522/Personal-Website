@@ -150,14 +150,25 @@ function updateActiveLink(id) {
     var svgArrowArchive = document.querySelector('.svgarrow-archive'); // If you're adjusting the arrow position too
   
   
-  
-  //   var expBox1 = document.querySelector(".experience-box-1");
-  //   var expTitle1 = document.querySelector(".experience-title-1");
-  //   var expDesc1 = document.querySelector(".experience-description-1");
-  //   var expTotalHeight1 =
-  //   expTitle1.offsetHeight + expDesc1.offsetHeight + 120; // Add some padding
-  //   expTotalHeight1 = Math.max(expTotalHeight1, minHeight);
-  //   expBox1.style.height = expTotalHeight1 + 30 + "px";
+    //exp1
+    var expBox1 = document.querySelector(".experience-box-1");
+    var expTitle1 = document.querySelector(".experience-title-1");
+    var exp1Description = document.querySelector(
+      ".experience-description-1"
+    );
+    var expPill_aws = document.querySelector(".expPill-AWS");
+    var expPill_gcp = document.querySelector(".expPill-GCP");
+    var expPill_node = document.querySelector(".expPill-Node");
+    var expPill_cicd = document.querySelector(".expPill-Cicd");
+    var expPill_jenkins = document.querySelector(".expPill-Jenkins");
+    var expPill_github = document.querySelector(".expPill-Github");
+    var expPill_vs = document.querySelector(".expPill-Visualstudio");
+    var expTotalHeight1 =
+    expTitle1.offsetHeight + exp1Description.offsetHeight + 120; // Add some padding
+    expTotalHeight1 = Math.max(expTotalHeight1, minHeight);
+    expBox1.style.height = expTotalHeight1 + 30 + "px";
+    var expBox1Bottom = expBox1.offsetTop + expBox1.offsetHeight;
+
   
   
     
@@ -279,6 +290,50 @@ function updateActiveLink(id) {
   
         var projectBoxRect = projectBox3.getBoundingClientRect();
         var pillVscodeRect = pill_vscode3.getBoundingClientRect();
+  
+        var distanceFromTopToBottom = pillVscodeRect.bottom - projectBoxRect.top;
+  
+        pills.forEach((pill) => {
+          // Check if placing the next pill exceeds the project box width
+          if (
+            currentLineWidth +
+              pill.offsetWidth +
+              pillSpacing +
+              pill.offsetWidth +
+              50 >
+            projectBoxWidth
+          ) {
+            currentLine--; // Move to the next line
+            currentLineWidth = 0; // Reset the line width
+            // Update the bottom position of all pills to bring them up
+            pills.forEach((p) => {
+              p.style.bottom =
+                parseInt(p.style.bottom) - (lineHeight + pillSpacing) + 45 + "px";
+            });
+          }
+          // Set the position of the pill
+          pill.style.bottom =
+            currentLine * (lineHeight + pillSpacing) + 60 + "px";
+          pill.style.left = initialLeft + currentLineWidth + "px";
+  
+          // Update the current line width
+          currentLineWidth += pill.offsetWidth + pillSpacing;
+        });
+      }
+      function moveExpPillsToNextLine1(pills, projectBoxWidth) {
+        var currentLine = 0;
+        var currentLineWidth = 0;
+        var lineHeight = 25; // Adjust according to your layout
+        var pillSpacing = 15; // Adjust according to your layout
+        var initialLeft = 160; // Adjust according to your layout
+  
+        // Calculate the maximum bottom position of existing pills
+        var maxBottom = Math.max(
+          ...pills.map((pill) => parseInt(pill.style.bottom))
+        );
+  
+        var projectBoxRect = expBox1.getBoundingClientRect();
+        var pillVscodeRect = expPill_aws.getBoundingClientRect();
   
         var distanceFromTopToBottom = pillVscodeRect.bottom - projectBoxRect.top;
   
@@ -475,6 +530,17 @@ function updateActiveLink(id) {
       pill_vscode3,
     ];
     movePillsToNextLine3(pillsInP3, projectBox3.clientWidth - 30); // Adjusted for padding
+
+    var pillsInE3 = [
+        expPill_aws,
+        expPill_gcp,
+        expPill_node,
+        expPill_cicd,
+        expPill_jenkins,
+        expPill_github,
+        expPill_vs
+      ];
+      moveExpPillsToNextLine1(pillsInE3, expBox1.clientWidth - 30); // Adjusted for padding
   }
   
   // Call the adjustProjectBoxHeight function when the page loads

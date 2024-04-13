@@ -14,6 +14,9 @@
       position: relative;
   }
   
+/* expereince stuff */
+
+
   .experience-box-1 {
       width: 600px;
       height: 240px;
@@ -56,6 +59,108 @@
     .experience-box-1:hover .experience-title-1 {
       color: #00bbff;
     }
+
+    .expPill-AWS{
+        background-color: #00bbff6b; /* Set your desired background color */
+        position: absolute;
+        color: #00bbff; /* Set your desired text color */
+        left: 320px;
+        border-radius: 50px; /* Set the border-radius to create a pill shape */
+        padding: 10px 10px; /* Adjust padding as needed */
+        height: 15px; /* Adjust the height of the pill */
+        width: 45px; /* Adjust the width of the pill */
+        display: inline-flex; /* Display as inline-flex to vertically center the content */
+        align-items: center; /* Center the content vertically */
+        justify-content: center; /* Center the content horizontally */
+        text-align: center;
+    }
+    .expPill-GCP{
+        background-color: #00bbff6b; /* Set your desired background color */
+        position: absolute;
+        color: #00bbff; /* Set your desired text color */
+        left: 320px;
+        border-radius: 50px; /* Set the border-radius to create a pill shape */
+        padding: 10px 10px; /* Adjust padding as needed */
+        height: 15px; /* Adjust the height of the pill */
+        width: 45px; /* Adjust the width of the pill */
+        display: inline-flex; /* Display as inline-flex to vertically center the content */
+        align-items: center; /* Center the content vertically */
+        justify-content: center; /* Center the content horizontally */
+        text-align: center;
+    }
+    .expPill-Node{
+        background-color: #00bbff6b; /* Set your desired background color */
+        position: absolute;
+        color: #00bbff; /* Set your desired text color */
+        left: 320px;
+        border-radius: 50px; /* Set the border-radius to create a pill shape */
+        padding: 10px 10px; /* Adjust padding as needed */
+        height: 15px; /* Adjust the height of the pill */
+        width: 60px; /* Adjust the width of the pill */
+        display: inline-flex; /* Display as inline-flex to vertically center the content */
+        align-items: center; /* Center the content vertically */
+        justify-content: center; /* Center the content horizontally */
+        text-align: center;
+    }
+    .expPill-Cicd{
+        background-color: #00bbff6b; /* Set your desired background color */
+        position: absolute;
+        color: #00bbff; /* Set your desired text color */
+        left: 320px;
+        border-radius: 50px; /* Set the border-radius to create a pill shape */
+        padding: 10px 10px; /* Adjust padding as needed */
+        height: 15px; /* Adjust the height of the pill */
+        width: 50px; /* Adjust the width of the pill */
+        display: inline-flex; /* Display as inline-flex to vertically center the content */
+        align-items: center; /* Center the content vertically */
+        justify-content: center; /* Center the content horizontally */
+        text-align: center;
+    }
+    .expPill-Jenkins{
+        background-color: #00bbff6b; /* Set your desired background color */
+        position: absolute;
+        color: #00bbff; /* Set your desired text color */
+        left: 320px;
+        border-radius: 50px; /* Set the border-radius to create a pill shape */
+        padding: 10px 10px; /* Adjust padding as needed */
+        height: 15px; /* Adjust the height of the pill */
+        width: 65px; /* Adjust the width of the pill */
+        display: inline-flex; /* Display as inline-flex to vertically center the content */
+        align-items: center; /* Center the content vertically */
+        justify-content: center; /* Center the content horizontally */
+        text-align: center;
+    }
+    .expPill-Github{
+        background-color: #00bbff6b; /* Set your desired background color */
+        position: absolute;
+        color: #00bbff; /* Set your desired text color */
+        left: 220px;
+        border-radius: 50px; /* Set the border-radius to create a pill shape */
+        padding: 10px 10px; /* Adjust padding as needed */
+        height: 15px; /* Adjust the height of the pill */
+        width: 60px; /* Adjust the width of the pill */
+        display: inline-flex; /* Display as inline-flex to vertically center the content */
+        align-items: center; /* Center the content vertically */
+        justify-content: center; /* Center the content horizontally */
+        text-align: center;
+    }
+    .expPill-Visualstudio{
+        background-color: #00bbff6b; /* Set your desired background color */
+        position: absolute;
+        color: #00bbff; /* Set your desired text color */
+        left: 413px;
+        border-radius: 50px; /* Set the border-radius to create a pill shape */
+        padding: 10px 10px; /* Adjust padding as needed */
+        height: 15px; /* Adjust the height of the pill */
+        width: 75px; /* Adjust the width of the pill */
+        display: inline-flex; /* Display as inline-flex to vertically center the content */
+        align-items: center; /* Center the content vertically */
+        justify-content: center; /* Center the content horizontally */
+        text-align: center;
+    }
+
+
+/* expereince stuff */
   
   .counterapi{
       color: #a6a6a6;
@@ -800,6 +905,11 @@
           width: 95%
   
         }
+
+        .experience-box-1 {
+            width: 94%
+    
+          }
   
         #about-me{
           width: auto;
