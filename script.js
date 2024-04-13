@@ -513,6 +513,51 @@ function updateActiveLink(id) {
           currentLineWidth += pill.offsetWidth + pillSpacing;
         });
       }
+
+      function moveExpPillsToNextLine1(pills, projectBoxWidth) {
+        var currentLine = 0;
+        var currentLineWidth = 0;
+        var lineHeight = 25; // Adjust according to your layout
+        var pillSpacing = 15; // Adjust according to your layout
+        var initialLeft = 225; // Adjust according to your layout
+  
+        // Calculate the maximum bottom position of existing pills
+        var maxBottom = Math.max(
+          ...pills.map((pill) => parseInt(pill.style.bottom))
+        );
+  
+        var projectBoxRect = expBox1.getBoundingClientRect();
+        var pillVscodeRect = expPill_aws.getBoundingClientRect();
+  
+        var distanceFromTopToBottom = pillVscodeRect.bottom - projectBoxRect.top;
+  
+        pills.forEach((pill) => {
+          // Check if placing the next pill exceeds the project box width
+          if (
+            currentLineWidth +
+              pill.offsetWidth +
+              pillSpacing +
+              pill.offsetWidth +
+              130 >
+            projectBoxWidth
+          ) {
+            currentLine--; // Move to the next line
+            currentLineWidth = 0; // Reset the line width
+            // Update the bottom position of all pills to bring them up
+            pills.forEach((p) => {
+              p.style.bottom =
+                parseInt(p.style.bottom) - (lineHeight + pillSpacing) + 45 + "px";
+            });
+          }
+          // Set the position of the pill
+          pill.style.bottom =
+            currentLine * (lineHeight + pillSpacing) + 60 + "px";
+          pill.style.left = initialLeft + currentLineWidth + "px";
+  
+          // Update the current line width
+          currentLineWidth += pill.offsetWidth + pillSpacing;
+        });
+      }
     }
   
     var pillsInP1 = [pill_cpp, pill_sdl, pill_github, pill_vsc];
