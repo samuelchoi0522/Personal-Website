@@ -30,7 +30,7 @@ function updateActiveLink(id) {
     var projectBox3Bottom =
     document.querySelector(".project-box-3").offsetTop +
     document.querySelector(".project-box-3").offsetHeight;
-    expBox1.style.top = projectBox3Bottom + 130 + "px";
+    expBox1.style.top = projectBox3Bottom + 310 + "px";
     expBox1.style.marginTop = 0 + "px";
   
     adjustProjectBoxHeight();

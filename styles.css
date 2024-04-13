@@ -54,6 +54,13 @@
     letter-spacing: 3px;
     color: #ccd6f6;
   }
+
+  .weirdtitleexperience{
+    margin-top: 1100px;
+    font-size: 17px;
+    letter-spacing: 3px;
+    color: #ccd6f6;
+  }
   
   .hidden-in-desktop {
     display: none;
@@ -1553,7 +1560,7 @@
     position: relative;
     color: white;
     text-decoration: none; /* Hides the underline by default */
-    top: 1300px;
+    top: 340px;
     display: inline-block; /* Ensures the pseudo-element aligns correctly */
 }
 
