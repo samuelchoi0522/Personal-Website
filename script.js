@@ -30,7 +30,7 @@ function updateActiveLink(id) {
     var projectBox3Bottom =
     document.querySelector(".project-box-3").offsetTop +
     document.querySelector(".project-box-3").offsetHeight;
-    expBox1.style.top = projectBox3Bottom + 310 + "px";
+    expBox1.style.top = projectBox3Bottom + 140 + "px";
     expBox1.style.marginTop = 0 + "px";
   
     adjustProjectBoxHeight();
@@ -148,6 +148,8 @@ function updateActiveLink(id) {
     // Set the position of the project archives link
     var projectArchiveLink = document.querySelector('.project-archive');
     var svgArrowArchive = document.querySelector('.svgarrow-archive'); // If you're adjusting the arrow position too
+    var viewResume = document.querySelector('.viewResume');
+    var svgArrowResume = document.querySelector('.svgarrow-viewResume'); // If you're adjusting the arrow position too
   
   
     //exp1
@@ -179,11 +181,19 @@ function updateActiveLink(id) {
   
       projectArchiveLink.style.position = 'absolute';
       projectArchiveLink.style.top = (projectBox3Bottom + 50) + 'px';
+
+      viewResume.style.position = 'absolute';
+      viewResume.style.top = (projectBox3Bottom + 520) + 'px';
+
     
       // Optionally, adjust the arrow position relative to the link if needed
       svgArrowArchive.style.position = 'absolute';
       svgArrowArchive.style.left = '200' + 'px'; // Adjust according to your layout
       svgArrowArchive.style.top = '4' + 'px'; // This will be relative to the projectArchiveLink's position
+
+      svgArrowResume.style.position = 'absolute';
+      svgArrowResume.style.left = '-97' + 'px'; // Adjust according to your layout
+      svgArrowResume.style.top = '1' + 'px'; // This will be relative to the projectArchiveLink's position
   
   
       function movePillsToNextLine1(pills, projectBoxWidth) {
@@ -365,9 +375,14 @@ function updateActiveLink(id) {
         });
       }
     } else if (mode === "tablet") {
+
+        var weirdtitleexp = document.querySelector(".weirdtitleexperience");
   
       projectArchiveLink.style.position = 'absolute';
       projectArchiveLink.style.top = (projectBox3Bottom + 30) + 'px';
+
+      weirdtitleexp.style.position = 'absolute';
+      weirdtitleexp.style.top = (projectBox3Bottom - 1300) + 'px';
     
       // Optionally, adjust the arrow position relative to the link if needed
       svgArrowArchive.style.position = 'absolute';

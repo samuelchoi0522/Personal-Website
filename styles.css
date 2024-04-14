@@ -56,7 +56,7 @@
   }
 
   .weirdtitleexperience{
-    margin-top: 1100px;
+    margin-top: 1400px;
     font-size: 17px;
     letter-spacing: 3px;
     color: #ccd6f6;
@@ -1560,7 +1560,7 @@
     position: relative;
     color: white;
     text-decoration: none; /* Hides the underline by default */
-    top: 340px;
+    top: 500px;
     display: inline-block; /* Ensures the pseudo-element aligns correctly */
 }
 
