@@ -1390,6 +1390,11 @@
       justify-content: center; /* Center the content horizontally */
       text-align: center;
     }
+
+    .svgarrow {
+        left: 352px;
+        position: absolute;
+      }
   
     .svgarrow-2 {
       left: 305px;

@@ -171,6 +171,7 @@ function updateActiveLink(id) {
     expBox1.style.height = expTotalHeight1 + 30 + "px";
     var expBox1Bottom = expBox1.offsetTop + expBox1.offsetHeight;
 
+
   
   
     
@@ -183,7 +184,7 @@ function updateActiveLink(id) {
       projectArchiveLink.style.top = (projectBox3Bottom + 50) + 'px';
 
       viewResume.style.position = 'absolute';
-      viewResume.style.top = (projectBox3Bottom + 520) + 'px';
+      viewResume.style.top = (expBox1Bottom + 50) + 'px';
 
     
       // Optionally, adjust the arrow position relative to the link if needed
@@ -377,17 +378,27 @@ function updateActiveLink(id) {
     } else if (mode === "tablet") {
 
         var weirdtitleexp = document.querySelector(".weirdtitleexperience");
-  
-      projectArchiveLink.style.position = 'absolute';
-      projectArchiveLink.style.top = (projectBox3Bottom + 30) + 'px';
 
+        projectArchiveLink.style.position = 'absolute';
+        projectArchiveLink.style.top = (projectBox3Bottom + 50) + 'px';
+  
+        viewResume.style.position = 'absolute';
+        viewResume.style.top = (expBox1Bottom + 50) + 'px';
+  
+      
+        // Optionally, adjust the arrow position relative to the link if needed
+        svgArrowArchive.style.position = 'absolute';
+        svgArrowArchive.style.left = '200' + 'px'; // Adjust according to your layout
+        svgArrowArchive.style.top = '4' + 'px'; // This will be relative to the projectArchiveLink's position
+  
+        svgArrowResume.style.position = 'absolute';
+        svgArrowResume.style.left = '-97' + 'px'; // Adjust according to your layout
+        svgArrowResume.style.top = '1' + 'px'; // This will be relative to the projectArchiveLink's position
+
+
+        
       weirdtitleexp.style.position = 'absolute';
       weirdtitleexp.style.top = (projectBox3Bottom - 1300) + 'px';
-    
-      // Optionally, adjust the arrow position relative to the link if needed
-      svgArrowArchive.style.position = 'absolute';
-      svgArrowArchive.style.left = '200' + 'px'; // Adjust according to your layout
-      svgArrowArchive.style.top = '4' + 'px'; // This will be relative to the projectArchiveLink's position
   
   
   
