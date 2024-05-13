@@ -319,20 +319,19 @@
   .project-box-1:hover .project-title-1 {
     color: #00bbff;
   }
-  
+
   .project-box-1 .svgarrow img {
     content: url("link.svg");
     position: absolute;
     width: 20px;
-    left: 0px;
     transition: all 0.3s ease-out; /* Transition for all properties */
-    left: 0; /* Add initial left position */
+    left: 13px; /* Add initial left position */
     top: 0; /* Add initial top position */
   }
   
   .project-box-1:hover .svgarrow img {
     content: url("bluearrow.svg");
-    left: 5px;
+    left: 18px;
     top: -5px;
     filter: brightness(100%);
   }
@@ -459,13 +458,13 @@
     position: absolute;
     width: 20px;
     transition: all 0.3s ease-out; /* Transition for all properties */
-    left: 0; /* Add initial left position */
+    left: 10px; /* Add initial left position */
     top: 0; /* Add initial top position */
   }
   
   .project-box-2:hover .svgarrow-2 img {
     content: url("bluearrow.svg");
-    left: 5px;
+    left: 15px;
     top: -5px;
     filter: brightness(100%);
   }
@@ -596,13 +595,13 @@
     position: absolute;
     width: 20px;
     transition: all 0.3s ease-out; /* Transition for all properties */
-    left: 0; /* Add initial left position */
+    left: 20px; /* Add initial left position */
     top: 0; /* Add initial top position */
   }
   
   .project-box-3:hover .svgarrow-3 img {
     content: url("bluearrow.svg");
-    left: 5px;
+    left: 25px;
     top: -5px;
     filter: brightness(100%);
   }
@@ -735,7 +734,7 @@
       position: absolute;
       content: url("link.svg");
       width: 20px;
-      left: -25px;
+      left: -2px;
       top: 2px;
       transition: transform 0.3s ease-out, filter 0.3s ease; /* Transition for transform and filter properties */
   }
@@ -927,7 +926,7 @@
     position: absolute;
     content: url("link.svg");
     width: 20px;
-    left: 220px;
+    left: 240px;
     top: 5px;
     transition: transform 0.3s ease-out, filter 0.3s ease; /* Transition for transform and filter properties */
 }
