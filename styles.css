@@ -7,14 +7,32 @@
   
   body {
       background-color: #0f1328f7;
-      margin: 0;
-      padding: 0;
+      padding-bottom: 100px;
       font-family: "Calibre", Arial, sans-serif;
       color: rgba(255, 255, 255, 0.877);
       position: relative;
+      margin-bottom: 150px;
+  }
+
+  .weirdLinkStyles{
+    color: #c9cedc;
+    text-decoration: none;
+  }
+  .weirdLinkStyles:hover{
+    color: #0099dd;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+  }
+
+  .final-remarks{
+    position: absolute;
   }
   
-
+  .spacer{
+    height: 380px;
+    box-sizing: content-box; /* Ensures the height is only the content height */
+    clear: both; /* If floats are used, this can prevent layout issues */
+  }
   
   .counterapi{
       color: #a6a6a6;
@@ -926,7 +944,7 @@
     position: absolute;
     content: url("link.svg");
     width: 20px;
-    left: 240px;
+    left: 242px;
     top: 5px;
     transition: transform 0.3s ease-out, filter 0.3s ease; /* Transition for transform and filter properties */
 }
@@ -940,6 +958,35 @@
     position: absolute;
     left: -95px;
     top: 0px;
+}
+
+
+#myBtn {
+    display: none; /* Hidden by default */
+    opacity: 0; /* Start with 0 opacity for fade-in effect */
+    transition: opacity 0.2s ease-in-out; /* Smooth transition for the opacity */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 30px; /* Place the button at the bottom of the page */
+    right: 40px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 0px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    filter: brightness(70%); /* Brighten button on hover */
+    font-size: 0px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    animation: hoverAnimation 0.8s linear infinite; /* Apply the animation */
+    filter: brightness(100%); /* Brighten button on hover */
+  }
+
+  @keyframes hoverAnimation {
+    0%, 100% { transform: translateY(0); } /* Starting and ending state (no movement) */
+    50% { transform: translateY(-8px); } /* Move up 20px from the starting position */
 }
 
   
@@ -1096,14 +1143,6 @@
   
       z-index: 0;
       border-radius: 6px;
-    }
-  
-    .experience-title-1{
-  
-    }
-  
-    .experience-description-1{
-  
     }
   
     .hidden-in-desktop {
@@ -1587,7 +1626,7 @@
     position: absolute;
     content: url("link.svg");
     width: 20px;
-    left: 220px;
+    left: 243px;
     top: 5px;
     transition: transform 0.3s ease-out, filter 0.3s ease; /* Transition for transform and filter properties */
 }
@@ -1602,10 +1641,12 @@
     left: -95px;
     top: 0px;
 }
-  }
+}
   
   
   @media only screen and (max-width: 750px) {
+
+  
     .counterapi{
         color: #a6a6a6;
         font-size: 18px;
@@ -1732,14 +1773,6 @@
 
     z-index: 0;
     border-radius: 6px;
-  }
-
-  .experience-title-1{
-
-  }
-
-  .experience-description-1{
-
   }
 
   .hidden-in-desktop {
@@ -2027,6 +2060,11 @@
     text-align: center;
   }
 
+  .svgarrow {
+      left: 352px;
+      position: absolute;
+    }
+
   .svgarrow-2 {
     left: 305px;
     top: -41px;
@@ -2218,7 +2256,7 @@
   position: absolute;
   content: url("link.svg");
   width: 20px;
-  left: 220px;
+  left: 243px;
   top: 5px;
   transition: transform 0.3s ease-out, filter 0.3s ease; /* Transition for transform and filter properties */
 }
@@ -2233,4 +2271,4 @@
   left: -95px;
   top: 0px;
 }
-  }
+}

@@ -150,6 +150,9 @@ function updateActiveLink(id) {
     var svgArrowArchive = document.querySelector('.svgarrow-archive'); // If you're adjusting the arrow position too
     var viewResume = document.querySelector('.viewResume');
     var svgArrowResume = document.querySelector('.svgarrow-viewResume'); // If you're adjusting the arrow position too
+
+
+    var finalRemarks = document.querySelector('.final-remarks');
   
   
     //exp1
@@ -185,6 +188,8 @@ function updateActiveLink(id) {
 
       viewResume.style.position = 'absolute';
       viewResume.style.top = (expBox1Bottom + 50) + 'px';
+
+      finalRemarks.style.top = (expBox1Bottom + 260) + 'px';
 
     
       // Optionally, adjust the arrow position relative to the link if needed
@@ -384,6 +389,9 @@ function updateActiveLink(id) {
   
         viewResume.style.position = 'absolute';
         viewResume.style.top = (expBox1Bottom + 50) + 'px';
+
+
+      finalRemarks.style.top = (expBox1Bottom + 240) + 'px';
   
       
         // Optionally, adjust the arrow position relative to the link if needed
@@ -675,3 +683,31 @@ function updateActiveLink(id) {
           });
       });
     });
+
+
+// Get the button:
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show or hide the button
+window.onscroll = function() { scrollFunction() };
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block"; // Set display first without transition
+    // Use a timeout to delay the opacity change just enough for the display change to take hold
+    setTimeout(function() {
+      mybutton.style.opacity = "1"; // Fade in
+    }, 10); // Small delay
+  } else {
+    // Use a timeout to set display to 'none' after the transition completes
+    setTimeout(function() {
+        mybutton.style.opacity = "0"; // Fade out
+    }, 10); // This should match the duration of the opacity transition
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
