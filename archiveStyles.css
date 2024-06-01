@@ -86,12 +86,12 @@ a {
     color: #ccd6f68a;
     text-decoration: none;
     display: inline-flex;
+    transition: ease-in-out 0.3s;
     align-items: center;
 }
 
 a:hover {
     color: #0099dd;
-    transition: ease-in-out 0.3s;
 }
 
 .link-icon {
