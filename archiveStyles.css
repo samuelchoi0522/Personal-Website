@@ -1,0 +1,165 @@
+@font-face {
+    font-family: "Calibre";
+    src: url("/Users/sam/Desktop/projecs/Personal Website/Calibre/calibre.ttf")
+        format("truetype");
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0f1328f7;
+    color: #CCD6F6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.flashlight {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 150%;
+    background: radial-gradient(
+        transparent,
+        rgba(255, 255, 255, 1)
+    );
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    filter: blur(200px);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.back-link {
+    color: #0099dd;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-top: 5%;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccd6f616; /* Add bottom border to each cell */
+}
+
+th {
+    color: #ccd6f6;
+}
+
+td {
+    padding-top: 15px;
+    padding-bottom: 40px;
+}
+
+tbody tr:last-child {
+    border-bottom: none; /* Remove the bottom border from the last row */
+}
+
+a {
+    color: #ccd6f68a;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+a:hover {
+    color: #0099dd;
+    transition: ease-in-out 0.3s;
+}
+
+.link-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+    filter: brightness(65%); /* Adjusts the image filter */
+    transition: ease-in-out 0.3s;
+}
+
+a:hover .link-icon{
+    content: url("bluearrow.svg");
+    transform: translate(3px, -3px); /* Moves the image */
+    filter: brightness(100%); /* Adjusts the image filter */
+}
+
+
+.tag {
+    background-color: #112240;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    display: inline-block;
+    font-size: 0.9em;
+    color: #0099dd; /* Text color inside the bubble */
+}
+
+.header-icon{
+    width: 20px;
+    height: 20px;
+    margin-left: -20px;
+    transition: ease-in-out 0.3s;
+}
+
+.back-link:hover .header-icon{
+    transform: translate(-10px); /* Moves the image */
+}
+
+@media (max-width: 768px) {
+    th, td {
+        display: block;
+        width: 100%;
+    }
+
+    th {
+        text-align: right;
+    }
+
+    th::after {
+        content: ":";
+        padding-right: 10px;
+    }
+
+    td {
+        text-align: left;
+        padding-left: 50%;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+    }
+
+    tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 1px solid #112240;
+    }
+}

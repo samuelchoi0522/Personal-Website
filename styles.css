@@ -95,7 +95,6 @@
     ); /* Use radial gradient for fading */
     pointer-events: none; /* Ensure the flashlight does not interfere with cursor interaction */
     z-index: 9999; /* Ensure the flashlight appears on top of other elements */
-    transition: all 0.1s ease; /* Smooth transition for the flashlight effect */
     mix-blend-mode: difference; /* Blend mode for the flashlight effect */
     transform: translate(-50%, -50%); /* Center the flashlight on the cursor */
     pointer-events: none; /* Prevent the flashlight from capturing mouse events */

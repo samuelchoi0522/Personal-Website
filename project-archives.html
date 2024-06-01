@@ -3,36 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Archive</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Assuming you use the same stylesheet -->
+    <title>All Projects</title>
+    <link rel="stylesheet" href="archiveStyles.css">
 </head>
 <body>
-    <header>
-        <h1>Project Archive</h1>
-        <!-- Navigation back to the homepage or other sections could go here -->
-        <nav>
-            <a href="index.html">Home</a>
-            <!-- Add other links as needed -->
-        </nav>
-    </header>
-
-    <main>
-        <!-- List your projects here. Example: -->
-        <section>
-            <h2>Project 1</h2>
-            <p>Description of Project 1.</p>
-            <!-- Link to the project or more details -->
-            <a href="project1-detail.html">More about Project 1</a>
-        </section>
-
-        <section>
-            <h2>Project 2</h2>
-            <p>Description of Project 2.</p>
-            <!-- Link to the project or more details -->
-            <a href="project2-detail.html">More about Project 2</a>
-        </section>
-
-        <!-- Continue listing projects -->
-    </main>
+    <div class="flashlight"></div>
+    <div class="container">
+        <header>
+            <a href="index.html" class="back-link"><img src="left-arrow-alt-svgrepo-com.svg" alt="Link icon" class="header-icon">Jaemin Choi</a>
+            <h1>All Projects</h1>
+        </header>
+        <main>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Project</th>
+                        <th>Built with</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Repeat this block for each project -->
+                    <tr>
+                        <td style="color: #ccd6f68a;">2024</td>
+                        <td style="font-size: 1.1em;">Spotify Statistics App</td>
+                        <td><span class="tag">React</span> <span class="tag">CSS</span> <span class="tag">OAuth</span><span class="tag">Node.js</span><span class="tag">AWS</span></td>
+                        <td><a href="" target="_blank">N/A Yet<img src="link.svg" alt="Link icon" class="link-icon"></a></td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ccd6f68a;">2024</td>
+                        <td style="font-size: 1.1em;">Personal Portfolio V1</td>
+                        <td><span class="tag">HTML</span> <span class="tag">CSS</span> <span class="tag">JavaScript</span><span class="tag">AWS</span></td>
+                        <td><a href="https://www.jaeminschoi.com/" target="_blank">jaeminschoi.com<img src="link.svg" alt="Link icon" class="link-icon"></a></td>
+                    </tr>
+                    <tr>
+                        <td style="color: #ccd6f68a;">2023</td>
+                        <td style="font-size: 1.1em;">Tetris Remake</td>
+                        <td><span class="tag">C++</span> <span class="tag">SDL2</span> </td>
+                        <td><a href="https://github.com/luke-bryant1/CSI-Group-Project" target="_blank">Github Repository<img src="link.svg" alt="Link icon" class="link-icon"></a></td>
+                    </tr>
+                    
+                    <!-- Add more projects here -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <script src="archiveScript.js"></script>
 </body>
 </html>
