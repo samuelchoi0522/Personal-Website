@@ -130,36 +130,71 @@ a:hover .link-icon{
     transform: translate(-10px); /* Moves the image */
 }
 
+
+.link-icon-mobile {
+    display: none;
+}
+
+.project-mobile {
+    display: none; /* Show the project name as a link on mobile */
+}
+
+.project-desktop {
+    display: inline; /* Hide the project name on desktop */
+}
+
+
 @media (max-width: 768px) {
-    th, td {
-        display: block;
-        width: 100%;
+    .link{
+        display: none;
     }
 
-    th {
-        text-align: right;
-    }
-
-    th::after {
-        content: ":";
-        padding-right: 10px;
+    .tag{
+        display: none;
     }
 
     td {
-        text-align: left;
-        padding-left: 50%;
+        padding-top: 15px;
+        padding-bottom: 10px;
     }
 
-    td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 10px;
-        font-weight: bold;
+    .link-icon-mobile {
+        display: inline;
+        transition: ease-in-out 0.3s;
+        width: 18px;
+        height: 18px;
+        margin-left: 2px;
+        filter: brightness(65%); /* Adjusts the image filter */
+        transition: ease-in-out 0.3s;
     }
 
-    tr {
-        margin-bottom: 10px;
-        display: block;
-        border-bottom: 1px solid #112240;
+    td:hover{
+        color: #0099dd;
+    }
+
+    td:hover .link-icon-mobile{
+        content: url("bluearrow.svg");
+        transform: translate(3px, -3px); /* Moves the image */
+        filter: brightness(100%); /* Adjusts the image filter */
+    }
+
+    .header-icon{
+        width: 20px;
+        height: 20px;
+        margin-left: 0px;
+        transition: ease-in-out 0.3s;
+    }
+
+    .project-mobile {
+        display: inline; /* Show the project name as a link on mobile */
+    }
+
+    .project-desktop {
+        display: none; /* Hide the project name on desktop */
+    }
+
+    a{
+        transition: ease-in-out 0.3s;
+        color: #CCD6F6;
     }
 }
