@@ -119,6 +119,10 @@ a:hover .link-icon{
     color: #0099dd; /* Text color inside the bubble */
 }
 
+.tag1 {
+    display: inline-block;
+}
+
 .header-icon{
     width: 20px;
     height: 20px;
@@ -150,6 +154,10 @@ a:hover .link-icon{
     }
 
     .tag{
+        display: none;
+    }
+
+    .tag1 {
         display: none;
     }
 
