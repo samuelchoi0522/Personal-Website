@@ -438,7 +438,7 @@ function updateActiveLink(id) {
             currentLine--; // Move to the next line
             currentLineWidth = 0; // Reset the line width
   
-            projectBox1.style.height = 320 + "px";
+            projectBox1.style.height = 420 + "px";
             pill_cpp.style.bottom = 55 + "px";
             pill_sdl.style.bottom = 55 + "px";
             pill_vsc.style.bottom = 10 + "px";

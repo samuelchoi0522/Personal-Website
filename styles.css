@@ -361,7 +361,7 @@
     border-radius: 50px; /* Set the border-radius to create a pill shape */
     padding: 10px 10px; /* Adjust padding as needed */
     height: 15px; /* Adjust the height of the pill */
-    width: 40px; /* Adjust the width of the pill */
+    width: 50px; /* Adjust the width of the pill */
     display: inline-flex; /* Display as inline-flex to vertically center the content */
     align-items: center; /* Center the content vertically */
     justify-content: center; /* Center the content horizontally */
@@ -376,7 +376,7 @@
     border-radius: 50px; /* Set the border-radius to create a pill shape */
     padding: 10px 10px; /* Adjust padding as needed */
     height: 15px; /* Adjust the height of the pill */
-    width: 45px; /* Adjust the width of the pill */
+    width: 40px; /* Adjust the width of the pill */
     display: inline-flex; /* Display as inline-flex to vertically center the content */
     align-items: center; /* Center the content vertically */
     justify-content: center; /* Center the content horizontally */
@@ -391,7 +391,7 @@
     border-radius: 50px; /* Set the border-radius to create a pill shape */
     padding: 10px 10px; /* Adjust padding as needed */
     height: 15px; /* Adjust the height of the pill */
-    width: 55px; /* Adjust the width of the pill */
+    width: 75px; /* Adjust the width of the pill */
     display: inline-flex; /* Display as inline-flex to vertically center the content */
     align-items: center; /* Center the content vertically */
     justify-content: center; /* Center the content horizontally */
@@ -406,7 +406,7 @@
     border-radius: 50px; /* Set the border-radius to create a pill shape */
     padding: 10px 10px; /* Adjust padding as needed */
     height: 15px; /* Adjust the height of the pill */
-    width: 75px; /* Adjust the width of the pill */
+    width: 35px; /* Adjust the width of the pill */
     display: inline-flex; /* Display as inline-flex to vertically center the content */
     align-items: center; /* Center the content vertically */
     justify-content: center; /* Center the content horizontally */
@@ -414,7 +414,7 @@
   }
   
   .svgarrow {
-    left: 274px;
+    left: 354px;
     top: 15px;
     position: absolute;
   }
@@ -475,13 +475,13 @@
     position: absolute;
     width: 20px;
     transition: all 0.3s ease-out; /* Transition for all properties */
-    left: 10px; /* Add initial left position */
+    left: 48px; /* Add initial left position */
     top: 0; /* Add initial top position */
   }
   
   .project-box-2:hover .svgarrow-2 img {
     content: url("bluearrow.svg");
-    left: 15px;
+    left: 53px;
     top: -5px;
     filter: brightness(100%);
   }
@@ -495,7 +495,7 @@
     border-radius: 50px; /* Set the border-radius to create a pill shape */
     padding: 10px 10px; /* Adjust padding as needed */
     height: 15px; /* Adjust the height of the pill */
-    width: 40px; /* Adjust the width of the pill */
+    width: 47px; /* Adjust the width of the pill */
     display: inline-flex; /* Display as inline-flex to vertically center the content */
     align-items: center; /* Center the content vertically */
     justify-content: center; /* Center the content horizontally */
@@ -527,7 +527,7 @@
     border-radius: 50px; /* Set the border-radius to create a pill shape */
     padding: 10px 10px; /* Adjust padding as needed */
     height: 15px; /* Adjust the height of the pill */
-    width: 55px; /* Adjust the width of the pill */
+    width: 50px; /* Adjust the width of the pill */
     display: inline-flex; /* Display as inline-flex to vertically center the content */
     align-items: center; /* Center the content vertically */
     justify-content: center; /* Center the content horizontally */
@@ -543,7 +543,7 @@
     border-radius: 50px; /* Set the border-radius to create a pill shape */
     padding: 10px 10px; /* Adjust padding as needed */
     height: 15px; /* Adjust the height of the pill */
-    width: 75px; /* Adjust the width of the pill */
+    width: 35px; /* Adjust the width of the pill */
     display: inline-flex; /* Display as inline-flex to vertically center the content */
     align-items: center; /* Center the content vertically */
     justify-content: center; /* Center the content horizontally */
